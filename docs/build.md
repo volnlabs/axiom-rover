@@ -1,5 +1,20 @@
 # Reproduce Rev B review artifacts
 
+Install [Git LFS](https://github.com/git-lfs/git-lfs), then run these commands
+from your cloned repository to obtain the large CAD and viewer files:
+
+```sh
+git lfs install --local
+git lfs pull
+git lfs fsck
+```
+
+The assembly STEP, Pi reference STEP and `viewer/meshes.json` are tracked in
+LFS; their checked-out contents remain the original full files. The six local
+commits were migrated before the first successful GitHub push. Historical audit
+references retain their original commit IDs; [lfs-commit-map.csv](lfs-commit-map.csv)
+maps those IDs to the corresponding migrated commits.
+
 Open `electronics/carrier.kicad_pro` in KiCad 10.0.6. The saved board is editable
 and routed. `electronics/generate.py` is the parametric source; regenerating it
 overwrites manual KiCad edits and removes routing. Preserve manual revisions

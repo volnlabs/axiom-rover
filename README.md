@@ -2,6 +2,8 @@
 
 **Interactive 3D inspection:** [open the hosted viewer](https://axiom-rover.vercel.app/) or [inspect the PCB](https://axiom-rover.vercel.app/?mode=pcb) — rotate, zoom, inspect all sides, hide the shell, or separate parts. [Local viewing and deployment instructions](viewer/README.md).
 
+After cloning, use [the Git LFS checkout instructions](docs/build.md) to download the full assembly STEP, Pi reference STEP and viewer mesh before opening or rebuilding them.
+
 A reusable 2WD release-test robot: one fixed Shrike/RP2040 + ForgeFPGA actuator base, a removable compute tray, an independent motor-power stop, and a wheels-raised stand. This is an **independent hardware repository**, not part of the AxiomOS source tree.
 
 **Revision B is a design-review prototype, not released for fabrication or powered motion.** The carrier now has a bottom Pi 5 socket, two top Shrike R0.4 sockets, an onboard DRV8833 motor driver, and HC-SR04, wheel-encoder and IMU connectors. Vendor CAD and nominal socket models establish design coordinates; physical fit and powered tests remain outstanding.

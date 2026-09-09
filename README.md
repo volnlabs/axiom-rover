@@ -1,5 +1,7 @@
 # Axiom Rover
 
+**Interactive 3D inspection:** [open the local viewer](http://127.0.0.1:8765/viewer/) — rotate, zoom, inspect all sides, hide the shell, or separate parts. [Start/restart instructions](viewer/README.md).
+
 A reusable 2WD release-test robot: one fixed Shrike/RP2040 + ForgeFPGA actuator base, a removable compute tray, an independent motor-power stop, and a wheels-raised stand. This is an **independent hardware repository**, not part of the AxiomOS source tree.
 
 **Revision A is a design-review prototype, not released for fabrication or powered motion.** Native KiCad checks and CAD geometry checks are reproducible. Purchased-part dimensions, the FPGA bitstream/runtime, motor power ratings, thermal performance and physical measurements still need qualification.

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+    "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+  },
+  {
+    "path": "Connector_IDC.3dshapes/IDC-Header_2x08_P2.54mm_Vertical.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Connector_IDC.3dshapes/IDC-Header_2x08_P2.54mm_Vertical.step",
+    "sha256": "b5cb8ba55564999d7db361023fe8e370448ccb21865df04947edc053d5dded9e"
+  },
+  {
+    "path": "Connector_JST.3dshapes/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Connector_JST.3dshapes/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.step",
+    "sha256": "7287616fdad677e9b54cf5494f17efc4b3fb77be002659d73e215772393f20c6"
+  },
+  {
+    "path": "Connector_JST.3dshapes/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Connector_JST.3dshapes/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.step",
+    "sha256": "7eb17ded8ec4a3216753a234254e22a2d8e07826f0816045bfb803a19cac75ea"
+  },
+  {
+    "path": "Connector_JST.3dshapes/JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Connector_JST.3dshapes/JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical.step",
+    "sha256": "1bb97b20d376ec144d76b14f70549acb961148d6bd5bb8cab5f89c8defe2b2c1"
+  },
+  {
+    "path": "Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+    "sha256": "d9b46f6dd6cf8c5e2028838eed38e2a6a7f26235856078511e5a71a594ca809e"
+  },
+  {
+    "path": "Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+    "sha256": "3b70f1b6dd947543fda90b947f91f2e2804766c39b78e56c87f1448dfd575ed8"
+  },
+  {
+    "path": "Resistor_SMD.3dshapes/R_0805_2012Metric.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Resistor_SMD.3dshapes/R_0805_2012Metric.step",
+    "sha256": "ded342cdb394fb45395227beaaa75cc390613cf2581b29cd6d22c12abd6103b2"
+  }
+]

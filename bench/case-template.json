@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "evidence": {
+    "kind": "physical",
+    "hardware_revision": null,
+    "software_ids": {
+      "host_commit": null,
+      "rp2040_commit": null,
+      "rp2040_sha256": null,
+      "fpga_commit": null,
+      "fpga_sha256": null,
+      "timing_manifest_sha256": null
+    },
+    "instruments": [
+      {
+        "name": null,
+        "calibration": null,
+        "time_resolution_us": null,
+        "timing_uncertainty_us": null
+      }
+    ],
+    "power_state": "motor_disconnected",
+    "limits_declared_before_evaluation": false
+  },
+  "limits": {
+    "digital_tolerance_us": null,
+    "min_direction_mask_us": null,
+    "min_wakeup_us": 1000,
+    "max_sample_gap_us": null
+  },
+  "startup": {
+    "observe_until_us": null
+  },
+  "off_intervals": [
+    {
+      "id": "uart-loss",
+      "event_us": null,
+      "max_pre_event_drive_gap_us": null,
+      "stop_deadline_us": null,
+      "observe_until_us": null
+    }
+  ]
+}

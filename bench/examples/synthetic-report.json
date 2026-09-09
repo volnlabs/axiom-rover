@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "id": "synthetic-estop",
+      "observed_pre_event_drive_gap_us": 1.0
+    }
+  ],
+  "checked_case_ids": [
+    "synthetic-estop"
+  ],
+  "checker_sha256": "631ccd257776619c56b0219c473155a066ad7d7938bac05deb14ec42338732f4",
+  "declared_limits": {
+    "digital_tolerance_us": 1,
+    "max_sample_gap_us": 1,
+    "min_direction_mask_us": 2,
+    "min_wakeup_us": 5
+  },
+  "errors": [],
+  "evidence_kind": "synthetic",
+  "hardware_revision": "RevB topology; synthetic signals only",
+  "limitation": "Synthetic evidence does not establish physical hardware behavior. Event times are externally annotated and need raw UART/SPI/reset capture corroboration. This report does not authenticate metadata, identify the stimulus or ack owner, or measure requested PWM duty.",
+  "manifest_sha256": "313cf33a67c12b9e2d7bf7dfbddfc7a82d64df9978daa7786c6a970281f5e24e",
+  "passed": true,
+  "physical_timing_margin_us": 0,
+  "power_state": "motor_disconnected",
+  "source_sha256": "35c4b03a979bd22e5de2835694e9257debe9486655895f5f203c590caf0f34b2",
+  "startup_checked": true
+}

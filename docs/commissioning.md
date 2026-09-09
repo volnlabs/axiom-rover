@@ -64,6 +64,9 @@ or flashed by this hardware repository.
 
 ## Controller and measurement acceptance
 
+Use the independent [bench fixture](bench.md) to prepare wire vectors and check
+logic captures. Offline fixture success is not a physical acceptance result.
+
 Motion remains blocked until the existing AxiomOS host, RP2040 adapter and FPGA
 bitstream have a validated timing manifest, atomic command/watchdog/e-stop
 handling, explicit rearm after stop or driver fault, and real Pi RP1-UART support.

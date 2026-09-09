@@ -1,0 +1,13 @@
+{
+  "status": "compatible",
+  "scope": "wire compatibility only; runtime safety not tested",
+  "resolved_commit": "4f5aa9037832b9ee27145c5ffc87f4c3ca707e18",
+  "source_sha256": "7c077b8a575e5d0474a9b22a10c92daef83d65eb33d6517f3a8b13139797c3ad",
+  "rustc_version": "rustc 1.92.0 (ded5c06cf 2025-12-08)",
+  "uart_vectors_checked": 6,
+  "decode_streams_checked": 12,
+  "fixture_sha256": {
+    "bench/wire.py": "c444ee7f8ab86dc3ceeed44bceaa53d3a7d57e904be1b4f3ee960cd2d7ae7016",
+    "bench/check_compat.py": "70ca772e10acd7f02113188338ec4df72f4e502ba0a3f7ba9c9acca5dcf27399"
+  }
+}

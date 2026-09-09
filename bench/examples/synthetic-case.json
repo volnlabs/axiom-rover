@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "evidence": {
+    "kind": "synthetic",
+    "hardware_revision": "RevB topology; synthetic signals only",
+    "software_ids": {
+      "fixture": "hand-defined digital sequence; no firmware executed"
+    },
+    "instruments": [
+      {
+        "name": "synthetic 1us samples",
+        "calibration": "not a physical instrument",
+        "time_resolution_us": 1,
+        "timing_uncertainty_us": 0
+      }
+    ],
+    "power_state": "motor_disconnected",
+    "limits_declared_before_evaluation": true
+  },
+  "limits": {
+    "digital_tolerance_us": 1,
+    "min_direction_mask_us": 2,
+    "min_wakeup_us": 5,
+    "max_sample_gap_us": 1
+  },
+  "startup": {
+    "observe_until_us": 3
+  },
+  "off_intervals": [
+    {
+      "id": "synthetic-estop",
+      "event_us": 30,
+      "max_pre_event_drive_gap_us": 4,
+      "stop_deadline_us": 35,
+      "observe_until_us": 60
+    }
+  ]
+}

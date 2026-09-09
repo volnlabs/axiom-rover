@@ -55,9 +55,12 @@ The current AxiomOS R0.4 profile, rather than an old roadmap table, assigns:
 | Reserved/no connect | J2-11/12 `GPIO14/15`, J4-15/16 `GPIO19/18` | none on carrier |
 
 J2/J4 are the two 1×19 headers shown in the pinned schematic. The carrier
-uses a keyed harness to a removable Shrike interposer; it does **not** invent a
-Shrike socket footprint before actual header spacing, board outline, and
-height are checked against the delivered board.
+has an IDC harness connector only; the proposed interposer has **not** been
+designed. There is no physical Shrike socket on this PCB. The 2026-09-09
+[audit](hardware-audit.md) located the official PCB/STEP: 25.4×58.5 mm outline,
+2.54 mm header pitch, 22.86 mm row separation. These sources are saved under
+`reference/`; a replacement socket interface still needs to be designed and
+checked against the delivered board and selected mating connectors.
 
 ## Carrier circuit / net contract
 
@@ -71,6 +74,24 @@ height are checked against the delivered board.
 | 4 | `H_RX` | host UART RX |
 
 No `HOST_5V`, motor power, or base ground appears on J1.
+
+For a Raspberry Pi 5 **40-pin GPIO header**, the required harness is:
+
+| Carrier J1 | Pi physical header pin | Function |
+|---:|---:|---|
+| 1 | 1 | Pi 3.3 V → `HOST_3V3` |
+| 2 | 6 | Pi GND → `H_GND` |
+| 3 | 8 | Pi GPIO14 TX → `H_TX` → U1 → Shrike GPIO17 RX |
+| 4 | 10 | Pi GPIO15 RX ← `H_RX` ← U1 ← Shrike GPIO16 TX |
+
+These are Pi physical pin numbers; Pi GPIO14/15 are unrelated to Shrike's
+reserved GPIO14/15. J1 is not a plug-compatible Pi header. The Pi 5 default
+primary/debug UART is UART10 on its separate three-pin debug connector;
+do not assume `/dev/serial0` reaches physical pins 8/10. The selected OS must
+configure the GPIO14/15 UART and keep firmware/kernel/console output off the
+rover protocol. For AxiomOS this requires actual Pi/RP1 UART and pinmux support,
+not merely copying a Linux configuration setting. Pin mapping is source-based;
+runtime communication has not been tested. [Official UART documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#configure-uarts).
 
 ### U1 — power-off-safe UART boundary
 
@@ -130,6 +151,11 @@ assumption about the current RTL.
 `J3` is keyed 1×4: pin 1 `BASE_5V`, pin 2 `BASE_GND`, pin 3
 `SENSOR_TRIG`, pin 4 `US_ECHO_5V`. `US_TRIG` is the pre-resistor RP2040 net;
 it is not carried to the sensor connector.
+
+**J3 is not pin-for-pin compatible with the HC-SR04 header.** Its harness
+must connect J3-1 → sensor VCC, J3-2 → sensor GND, J3-3 → sensor TRIG,
+J3-4 → sensor ECHO. The usual sensor header order is VCC, TRIG, ECHO, GND;
+verify the actual unit's markings. A straight four-position cable is wrong.
 
 `J6` is a separate keyed 1×2 low-current sensor-power input: pin 1
 `BASE_5V`, pin 2 `BASE_GND`. It supplies only the sensor branch; do not use

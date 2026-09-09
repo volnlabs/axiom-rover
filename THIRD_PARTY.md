@@ -4,4 +4,6 @@
 
 Shrike pin assignments are derived from the pinned official Vicharak schematic; source URLs and SHA-256 values are in `docs/electrical-contract.md`. The schematic itself is not vendored here. U1/U2 assignments use Texas Instruments datasheets linked there. Raspberry Pi's mechanical drawing is linked in `docs/mechanical.md`. Their product names remain their owners' names; this is an independent reference prototype.
 
+Unmodified official Shrike R0.4 PCB/STEP files and their CERN OHL v1.2 license, and unmodified Raspberry Pi Ltd reference mechanical PDFs, are retained in `reference/`. See its README and `sources.json` for provenance and hashes. The Raspberry Pi drawings retain their original notices and are not covered by the Shrike license.
+
 KiCad, Freerouting and CadQuery are external tools, not project dependencies vendored into Git. The ignored `.cache/` directory may contain locally downloaded tooling. No repository-wide public license is chosen on the user's behalf; retain third-party attribution if the project is later published.

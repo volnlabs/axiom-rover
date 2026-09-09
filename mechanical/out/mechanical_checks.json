@@ -2,7 +2,7 @@
   "design": "Axiom modular 2WD rover",
   "units": "mm",
   "measured": false,
-  "source_sha256": "20e66c7bbbc4bceb8e7ac00cbce2e9a3da905887a261d553d938cba758e094f4",
+  "source_sha256": "fa08279d837c31d5f3ba0bd1b5d9e800514c5b2f04c01f00a29ded663667e583",
   "status": "CONCEPT \u2014 envelopes require purchase verification",
   "parameters": {
     "base_w": 200.0,
@@ -101,6 +101,24 @@
       "shrike_module_plate": 1,
       "test_stand": 1
     },
+    "pi5_drawing_hole_centres": [
+      [
+        -89.0,
+        -24.5
+      ],
+      [
+        -89.0,
+        24.5
+      ],
+      [
+        -31.0,
+        -24.5
+      ],
+      [
+        -31.0,
+        24.5
+      ]
+    ],
     "passed": true
   },
   "parts_printable": [

@@ -53,8 +53,9 @@ def motor_bracket(side=1):
 def compute_tray():
     s=rounded_plate(P["tray_w"],P["tray_l"],3,9).translate((0,0,P["tray_z"]))
     s=drill(s,[(x,y) for x in (-85,85) for y in (-65,65)],3.4,110)
-    # Pi 5 official 58x49 hole grid; open 85x56 zone, not a tight board pocket.
-    for dx in (-29,29):
+    # Official Pi 5 outline datum: holes at x=3.5/61.5 within an 85 mm board.
+    # The 58x49 grid centre is 10 mm left of the board centre.
+    for dx in (-39,19):
         for y in (-24.5,24.5):
             x=P["pi_x"]+dx
             spacer=cq.Workplane("XY").center(x,y).circle(4).extrude(P["pi_standoff_h"]).translate((0,0,83))
@@ -169,7 +170,15 @@ def main(output):
     wheel_low=[(wheel_envelope(side).BoundingBox().zmin) for side in (-1,1)]
     caster_low=env["caster_ENVELOPE"].val().BoundingBox().zmin
     support_top=printable["base_chassis"].val().BoundingBox().zmax
+    # Independent drawing-coordinate check: catch a centred, but misplaced, hole grid.
+    pi_holes=[(P["pi_x"]-85/2+x,-56/2+y) for x in (3.5,61.5) for y in (3.5,52.5)]
+    for x,y in pi_holes:
+        bore=cq.Workplane("XY").center(x,y).circle(1.3).extrude(110)
+        assert intersection_volume(printable["tray"],bore)<.01, "Pi 5 mounting bore misplaced"
+        spacer=cq.Workplane("XY").center(x,y).circle(3).circle(1.5).extrude(5).translate((0,0,83.5))
+        assert abs(intersection_volume(printable["tray"],spacer)-spacer.val().Volume())<.01, "Pi 5 spacer misplaced"
     checks={"base_outer_width_mm":P["base_w"],"base_outer_length_mm":P["base_l"],"tray_width_mm":P["tray_w"],"tray_length_mm":P["tray_l"],"ground_z_mm":P["ground_z"],"wheel_centres_x_mm":[-110,110],"wheel_lowest_z_mm":wheel_low,"caster_lowest_z_mm":caster_low,"pcb_hole_centres":pcb_holes,"pcb_m3_hole_residual_mm3":hole_residual_mm3,"pcb_support_top_z_mm":support_top,"common_mount_centres":[[-85,-65],[-85,65],[85,-65],[85,65]],"intended_intersections":collisions,"unexpected_intersections":unexpected,"printable_solid_counts":solids}
+    checks["pi5_drawing_hole_centres"]=pi_holes
     checks["passed"]=not unexpected and all(n==1 for name,n in solids.items() if name!="tray_posts") and solids["tray_posts"]==4 and max(hole_residual_mm3)<.01 and abs(support_top-P["pcb_z"])<.01 and all(abs(z-P["ground_z"])<.01 for z in wheel_low+[caster_low])
     report={"design":"Axiom modular 2WD rover","units":"mm","measured":False,"source_sha256":hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),"status":"CONCEPT — envelopes require purchase verification","parameters":P,"checks":checks,"parts_printable":list(printable),"parts_envelope_only":list(env)}
     (output/"mechanical_checks.json").write_text(json.dumps(report,indent=2)+"\n")

@@ -6,6 +6,8 @@ A reusable 2WD release-test robot: one fixed Shrike/RP2040 + ForgeFPGA actuator 
 
 **Revision A is a design-review prototype, not released for fabrication or powered motion.** Native KiCad checks and CAD geometry checks are reproducible. Purchased-part dimensions, the FPGA bitstream/runtime, motor power ratings, thermal performance and physical measurements still need qualification.
 
+**The PCB has no plug-in Shrike socket or Pi 40-pin connector.** The [hardware audit](docs/hardware-audit.md) records what is verified, missing and incorrect. The Pi mounting datum has been corrected; the actuator carrier and full enclosure still require redesign around actual parts.
+
 ![Mechanical assembly](mechanical/out/assembly_preview.png)
 
 - [Editable KiCad project](electronics/carrier.kicad_pro), [schematic](electronics/carrier.kicad_sch), [routed PCB](electronics/carrier.kicad_pcb), and [schematic drawing](electronics/out/schematic/carrier.svg).

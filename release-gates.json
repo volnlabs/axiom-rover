@@ -1,5 +1,5 @@
 {
-  "revision": "A-review",
+  "revision": "B-review",
   "fabrication_released": false,
   "powered_motion_released": false,
   "physical_tests_run": false,
@@ -14,6 +14,8 @@
     "atomic_uart_watchdog_estop_runtime": null,
     "partial_power_and_backfeed_measurements": null,
     "estop_watchdog_and_recovery_captures": null,
-    "raised_wheel_and_thermal_tests": null
+    "raised_wheel_and_thermal_tests": null,
+    "driver_current_limit_regeneration_and_thermal_capture": null,
+    "pi_rp1_uart_and_encoder_imu_runtime_capture": null
   }
 }

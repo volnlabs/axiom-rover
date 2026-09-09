@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/tmp/axiom-rover-build/electronics/carrier.kicad_sch</source>
-    <date>2026-09-09T21:17:33</date>
+    <source>/home/utkarsh/Work/volnlabs/axiom-rover/electronics/carrier.kicad_sch</source>
+    <date>2026-09-10T01:25:24</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title>Axiom Rover — isolated low-current carrier</title>
+        <title>Axiom Rover — Pi 5 / Shrike socket carrier</title>
         <company/>
-        <rev>A REVIEW</rev>
+        <rev>B REVIEW</rev>
         <date>2026-09-09</date>
         <source>carrier.kicad_sch</source>
         <comment number="1" value=""/>
@@ -90,11 +90,165 @@
         </unit>
       </units>
     </comp>
-    <comp ref="J1">
-      <value>HOST_UART_3V3</value>
-      <footprint>Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
+    <comp ref="C4">
+      <value>100nF 16V X7R</value>
+      <footprint>Rover:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Footprint">Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
+        <field name="Footprint">Rover:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="C4" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>da628e2a-75e5-5505-902f-29a3d179ea1a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>10uF 16V X7R</value>
+      <footprint>Rover:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="C5" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2dfcd7f0-a3f2-5314-8d8f-9ec330e68241</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>10nF 25V X7R</value>
+      <footprint>Rover:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="C6" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f73a9a58-6347-51e5-8ad2-3c9179525627</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>2.2uF 16V X7R</value>
+      <footprint>Rover:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="C7" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ed892eb6-9e24-58f9-bdd2-fff4f05eb4e4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>470uF 16V</value>
+      <footprint>Rover:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="C8" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>859a07f7-8e2b-5973-8e35-51a0897586e6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>100nF 16V X7R</value>
+      <footprint>Rover:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="C9" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f94fcf4f-caee-5fdb-b7f1-edf091239777</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>SMBJ6.0A</value>
+      <footprint>Rover:D_SMB</footprint>
+      <fields>
+        <field name="Footprint">Rover:D_SMB</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="D1" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8e64742-04cd-5404-9aa3-b7ac274f005b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>ESQ-120-24-G-D_PI5_BOTTOM</value>
+      <footprint>Rover:Pi5_Socket_2x20</footprint>
+      <fields>
+        <field name="Footprint">Rover:Pi5_Socket_2x20</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -107,18 +261,54 @@
         <unit name="A">
           <pins>
             <pin num="1"/>
-            <pin num="2"/>
             <pin num="3"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="15"/>
+            <pin num="17"/>
+            <pin num="19"/>
+            <pin num="21"/>
+            <pin num="23"/>
+            <pin num="25"/>
+            <pin num="27"/>
+            <pin num="29"/>
+            <pin num="31"/>
+            <pin num="33"/>
+            <pin num="35"/>
+            <pin num="37"/>
+            <pin num="39"/>
+            <pin num="2"/>
             <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="10"/>
+            <pin num="12"/>
+            <pin num="14"/>
+            <pin num="16"/>
+            <pin num="18"/>
+            <pin num="20"/>
+            <pin num="22"/>
+            <pin num="24"/>
+            <pin num="26"/>
+            <pin num="28"/>
+            <pin num="30"/>
+            <pin num="32"/>
+            <pin num="34"/>
+            <pin num="36"/>
+            <pin num="38"/>
+            <pin num="40"/>
           </pins>
         </unit>
       </units>
     </comp>
     <comp ref="J2">
-      <value>SHRIKE_HARNESS</value>
-      <footprint>Rover:IDC-Header_2x08_P2.54mm_Vertical</footprint>
+      <value>SHRIKE_J2_SSW-119-01-G-S</value>
+      <footprint>Rover:SSW-119-01-G-S</footprint>
       <fields>
-        <field name="Footprint">Rover:IDC-Header_2x08_P2.54mm_Vertical</field>
+        <field name="Footprint">Rover:SSW-119-01-G-S</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -146,12 +336,15 @@
             <pin num="14"/>
             <pin num="15"/>
             <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
           </pins>
         </unit>
       </units>
     </comp>
     <comp ref="J3">
-      <value>HC_SR04</value>
+      <value>HC_SR04_VCC_TRIG_ECHO_GND</value>
       <footprint>Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
       <fields>
         <field name="Footprint">Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
@@ -175,10 +368,10 @@
       </units>
     </comp>
     <comp ref="J4">
-      <value>L298N_LOGIC</value>
-      <footprint>Rover:JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical</footprint>
+      <value>SHRIKE_J4_SSW-119-01-G-S</value>
+      <footprint>Rover:SSW-119-01-G-S</footprint>
       <fields>
-        <field name="Footprint">Rover:JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical</field>
+        <field name="Footprint">Rover:SSW-119-01-G-S</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -197,12 +390,24 @@
             <pin num="5"/>
             <pin num="6"/>
             <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
           </pins>
         </unit>
       </units>
     </comp>
     <comp ref="J5">
-      <value>ESTOP_NC_LOOP</value>
+      <value>ESTOP_LOGIC_NC</value>
       <footprint>Rover:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
       <fields>
         <field name="Footprint">Rover:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
@@ -224,7 +429,7 @@
       </units>
     </comp>
     <comp ref="J6">
-      <value>SENSOR_5V_IN</value>
+      <value>BASE_SENSOR_5V_IN</value>
       <footprint>Rover:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
       <fields>
         <field name="Footprint">Rover:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
@@ -241,6 +446,169 @@
           <pins>
             <pin num="1"/>
             <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J7">
+      <value>6V_AFTER_FUSE_AND_STOP_RELAY</value>
+      <footprint>Rover:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Rover:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="J7" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>21a255c1-448c-5960-862f-669168ead3aa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J8">
+      <value>LEFT_MOTOR</value>
+      <footprint>Rover:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Rover:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="J8" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6eae3de4-c30d-58f7-8f3c-3a4677d237b1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J9">
+      <value>RIGHT_MOTOR</value>
+      <footprint>Rover:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Rover:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="J9" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eb582cd8-cf28-5095-8796-f580a11ce61f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J10">
+      <value>ENCODER_LEFT_3V3</value>
+      <footprint>Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="J10" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ba690dcf-8bbc-55a6-89b9-ee98be6ca5f2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J11">
+      <value>ENCODER_RIGHT_3V3</value>
+      <footprint>Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="J11" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8f8b0aa7-00ad-508e-8dc4-a06d505549ec</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J12">
+      <value>ALTERNATE_HOST_UART</value>
+      <footprint>Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="J12" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>12192130-b955-5eaa-8f56-66fe1611d3a4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J13">
+      <value>IMU_3V3_I2C_INT</value>
+      <footprint>Rover:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Rover:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="J13" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>60f596f5-cda0-5f45-85ab-becd529198b7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
           </pins>
         </unit>
       </units>
@@ -377,6 +745,292 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R7">
+      <value>0.20R 1W CSRT1206FTR200</value>
+      <footprint>Rover:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R7" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>250bfe39-1f35-5bb1-a637-3c668dec4f64</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>0.20R 1W CSRT1206FTR200</value>
+      <footprint>Rover:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R8" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bdd727ac-1a46-561d-a6c7-d63427acfec6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>10k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R9" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>67ab86be-945d-5d3e-bef4-003f240753b7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>10k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R10" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8ae3603a-7878-5a1b-a743-d46eabf504a6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>10k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R11" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bf827440-ebdd-5709-b613-602d534f2e06</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>10k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R12" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>81bee596-ab9c-5183-9b6d-c7cb2bf40676</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>10k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R13" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8a373e0d-8c17-5b91-9e6f-8839244678e5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>4.7k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R14" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3ded454e-3775-5162-8361-e1fcfa088e15</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>4.7k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R15" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9003ffb1-0a49-57b1-a7a6-b4114eb37a2b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>1k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R16" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2145d581-15e2-5c5b-9e34-7c6e420ffd31</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>1k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R17" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a42ec356-e870-5425-b54c-ab962ff8df92</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>1k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R18" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>403acb6b-7d54-5fbd-b272-a0317c246f25</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>1k 1%</value>
+      <footprint>Rover:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="R19" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>001aa6e8-5de6-5110-8238-421cfa59f1cb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U1">
       <value>ISO7721DR</value>
       <footprint>Rover:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
@@ -430,6 +1084,111 @@
         </unit>
       </units>
     </comp>
+    <comp ref="U3">
+      <value>DRV8833PWPR</value>
+      <footprint>Rover:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.46x2.31mm_ThermalVias</footprint>
+      <fields>
+        <field name="Footprint">Rover:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.46x2.31mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="U3" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>789b319a-dded-56ea-9b4f-fcdce28e953e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="17"/>
+            <pin num="16"/>
+            <pin num="15"/>
+            <pin num="14"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="11"/>
+            <pin num="10"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>SN74LVC08ADR</value>
+      <footprint>Rover:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:SOIC-14_3.9x8.7mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="U4" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>50a259cf-0a03-51ec-a97e-c30eb5590adc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="14"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="11"/>
+            <pin num="10"/>
+            <pin num="9"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U5">
+      <value>SN74LVC125ADR</value>
+      <footprint>Rover:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:SOIC-14_3.9x8.7mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="U5" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9fd0eb03-ffe7-50c7-aa16-76667c7aef91</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="14"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="11"/>
+            <pin num="10"/>
+            <pin num="9"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
   </components>
   <libparts>
     <libpart lib="Rover" part="C1">
@@ -471,26 +1230,102 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Rover" part="J1">
+    <libpart lib="Rover" part="C4">
       <fields>
-        <field name="Reference">J1</field>
-        <field name="Value">HOST_UART_3V3</field>
-        <field name="Footprint">Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
+        <field name="Reference">C4</field>
+        <field name="Value">100nF 16V X7R</field>
+        <field name="Footprint">Rover:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <pins>
         <pin num="1" name="1" type="passive"/>
         <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
-        <pin num="4" name="4" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Rover" part="J2">
+    <libpart lib="Rover" part="C5">
       <fields>
-        <field name="Reference">J2</field>
-        <field name="Value">SHRIKE_HARNESS</field>
-        <field name="Footprint">Rover:IDC-Header_2x08_P2.54mm_Vertical</field>
+        <field name="Reference">C5</field>
+        <field name="Value">10uF 16V X7R</field>
+        <field name="Footprint">Rover:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="C6">
+      <fields>
+        <field name="Reference">C6</field>
+        <field name="Value">10nF 25V X7R</field>
+        <field name="Footprint">Rover:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="C7">
+      <fields>
+        <field name="Reference">C7</field>
+        <field name="Value">2.2uF 16V X7R</field>
+        <field name="Footprint">Rover:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="C8">
+      <fields>
+        <field name="Reference">C8</field>
+        <field name="Value">470uF 16V</field>
+        <field name="Footprint">Rover:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="C9">
+      <fields>
+        <field name="Reference">C9</field>
+        <field name="Value">100nF 16V X7R</field>
+        <field name="Footprint">Rover:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="D1">
+      <fields>
+        <field name="Reference">D1</field>
+        <field name="Value">SMBJ6.0A</field>
+        <field name="Footprint">Rover:D_SMB</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="J1">
+      <fields>
+        <field name="Reference">J1</field>
+        <field name="Value">ESQ-120-24-G-D_PI5_BOTTOM</field>
+        <field name="Footprint">Rover:Pi5_Socket_2x20</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -511,12 +1346,127 @@
         <pin num="14" name="14" type="passive"/>
         <pin num="15" name="15" type="passive"/>
         <pin num="16" name="16" type="passive"/>
+        <pin num="17" name="17" type="passive"/>
+        <pin num="18" name="18" type="passive"/>
+        <pin num="19" name="19" type="passive"/>
+        <pin num="20" name="20" type="passive"/>
+        <pin num="21" name="21" type="passive"/>
+        <pin num="22" name="22" type="passive"/>
+        <pin num="23" name="23" type="passive"/>
+        <pin num="24" name="24" type="passive"/>
+        <pin num="25" name="25" type="passive"/>
+        <pin num="26" name="26" type="passive"/>
+        <pin num="27" name="27" type="passive"/>
+        <pin num="28" name="28" type="passive"/>
+        <pin num="29" name="29" type="passive"/>
+        <pin num="30" name="30" type="passive"/>
+        <pin num="31" name="31" type="passive"/>
+        <pin num="32" name="32" type="passive"/>
+        <pin num="33" name="33" type="passive"/>
+        <pin num="34" name="34" type="passive"/>
+        <pin num="35" name="35" type="passive"/>
+        <pin num="36" name="36" type="passive"/>
+        <pin num="37" name="37" type="passive"/>
+        <pin num="38" name="38" type="passive"/>
+        <pin num="39" name="39" type="passive"/>
+        <pin num="40" name="40" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="J10">
+      <fields>
+        <field name="Reference">J10</field>
+        <field name="Value">ENCODER_LEFT_3V3</field>
+        <field name="Footprint">Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="J11">
+      <fields>
+        <field name="Reference">J11</field>
+        <field name="Value">ENCODER_RIGHT_3V3</field>
+        <field name="Footprint">Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="J12">
+      <fields>
+        <field name="Reference">J12</field>
+        <field name="Value">ALTERNATE_HOST_UART</field>
+        <field name="Footprint">Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="J13">
+      <fields>
+        <field name="Reference">J13</field>
+        <field name="Value">IMU_3V3_I2C_INT</field>
+        <field name="Footprint">Rover:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="J2">
+      <fields>
+        <field name="Reference">J2</field>
+        <field name="Value">SHRIKE_J2_SSW-119-01-G-S</field>
+        <field name="Footprint">Rover:SSW-119-01-G-S</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+        <pin num="17" name="17" type="passive"/>
+        <pin num="18" name="18" type="passive"/>
+        <pin num="19" name="19" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Rover" part="J3">
       <fields>
         <field name="Reference">J3</field>
-        <field name="Value">HC_SR04</field>
+        <field name="Value">HC_SR04_VCC_TRIG_ECHO_GND</field>
         <field name="Footprint">Rover:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -531,8 +1481,8 @@
     <libpart lib="Rover" part="J4">
       <fields>
         <field name="Reference">J4</field>
-        <field name="Value">L298N_LOGIC</field>
-        <field name="Footprint">Rover:JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical</field>
+        <field name="Value">SHRIKE_J4_SSW-119-01-G-S</field>
+        <field name="Footprint">Rover:SSW-119-01-G-S</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -544,12 +1494,24 @@
         <pin num="5" name="5" type="passive"/>
         <pin num="6" name="6" type="passive"/>
         <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+        <pin num="17" name="17" type="passive"/>
+        <pin num="18" name="18" type="passive"/>
+        <pin num="19" name="19" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Rover" part="J5">
       <fields>
         <field name="Reference">J5</field>
-        <field name="Value">ESTOP_NC_LOOP</field>
+        <field name="Value">ESTOP_LOGIC_NC</field>
         <field name="Footprint">Rover:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -562,8 +1524,47 @@
     <libpart lib="Rover" part="J6">
       <fields>
         <field name="Reference">J6</field>
-        <field name="Value">SENSOR_5V_IN</field>
+        <field name="Value">BASE_SENSOR_5V_IN</field>
         <field name="Footprint">Rover:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="J7">
+      <fields>
+        <field name="Reference">J7</field>
+        <field name="Value">6V_AFTER_FUSE_AND_STOP_RELAY</field>
+        <field name="Footprint">Rover:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="J8">
+      <fields>
+        <field name="Reference">J8</field>
+        <field name="Value">LEFT_MOTOR</field>
+        <field name="Footprint">Rover:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="J9">
+      <fields>
+        <field name="Reference">J9</field>
+        <field name="Value">RIGHT_MOTOR</field>
+        <field name="Footprint">Rover:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -575,6 +1576,136 @@
     <libpart lib="Rover" part="R1">
       <fields>
         <field name="Reference">R1</field>
+        <field name="Value">1k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R10">
+      <fields>
+        <field name="Reference">R10</field>
+        <field name="Value">10k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R11">
+      <fields>
+        <field name="Reference">R11</field>
+        <field name="Value">10k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R12">
+      <fields>
+        <field name="Reference">R12</field>
+        <field name="Value">10k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R13">
+      <fields>
+        <field name="Reference">R13</field>
+        <field name="Value">10k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R14">
+      <fields>
+        <field name="Reference">R14</field>
+        <field name="Value">4.7k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R15">
+      <fields>
+        <field name="Reference">R15</field>
+        <field name="Value">4.7k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R16">
+      <fields>
+        <field name="Reference">R16</field>
+        <field name="Value">1k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R17">
+      <fields>
+        <field name="Reference">R17</field>
+        <field name="Value">1k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R18">
+      <fields>
+        <field name="Reference">R18</field>
+        <field name="Value">1k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R19">
+      <fields>
+        <field name="Reference">R19</field>
         <field name="Value">1k 1%</field>
         <field name="Footprint">Rover:R_0805_2012Metric</field>
         <field name="Datasheet"/>
@@ -650,6 +1781,45 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Rover" part="R7">
+      <fields>
+        <field name="Reference">R7</field>
+        <field name="Value">0.20R 1W CSRT1206FTR200</field>
+        <field name="Footprint">Rover:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R8">
+      <fields>
+        <field name="Reference">R8</field>
+        <field name="Value">0.20R 1W CSRT1206FTR200</field>
+        <field name="Footprint">Rover:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="R9">
+      <fields>
+        <field name="Reference">R9</field>
+        <field name="Value">10k 1%</field>
+        <field name="Footprint">Rover:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Rover" part="U1">
       <fields>
         <field name="Reference">U1</field>
@@ -685,6 +1855,84 @@
         <pin num="5" name="VCC" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="Rover" part="U3">
+      <fields>
+        <field name="Reference">U3</field>
+        <field name="Value">DRV8833PWPR</field>
+        <field name="Footprint">Rover:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.46x2.31mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="nSLEEP" type="input"/>
+        <pin num="2" name="AOUT1" type="output"/>
+        <pin num="3" name="AISEN" type="passive"/>
+        <pin num="4" name="AOUT2" type="output"/>
+        <pin num="5" name="BOUT2" type="output"/>
+        <pin num="6" name="BISEN" type="passive"/>
+        <pin num="7" name="BOUT1" type="output"/>
+        <pin num="8" name="nFAULT" type="open_collector"/>
+        <pin num="9" name="BIN1" type="input"/>
+        <pin num="10" name="BIN2" type="input"/>
+        <pin num="11" name="VCP" type="passive"/>
+        <pin num="12" name="VM" type="power_in"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="VINT" type="power_out"/>
+        <pin num="15" name="AIN2" type="input"/>
+        <pin num="16" name="AIN1" type="input"/>
+        <pin num="17" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="U4">
+      <fields>
+        <field name="Reference">U4</field>
+        <field name="Value">SN74LVC08ADR</field>
+        <field name="Footprint">Rover:SOIC-14_3.9x8.7mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1A" type="input"/>
+        <pin num="2" name="1B" type="input"/>
+        <pin num="3" name="1Y" type="output"/>
+        <pin num="4" name="2A" type="input"/>
+        <pin num="5" name="2B" type="input"/>
+        <pin num="6" name="2Y" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="3Y" type="output"/>
+        <pin num="9" name="3A" type="input"/>
+        <pin num="10" name="3B" type="input"/>
+        <pin num="11" name="4Y" type="output"/>
+        <pin num="12" name="4A" type="input"/>
+        <pin num="13" name="4B" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="U5">
+      <fields>
+        <field name="Reference">U5</field>
+        <field name="Value">SN74LVC125ADR</field>
+        <field name="Footprint">Rover:SOIC-14_3.9x8.7mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1OE_N" type="input"/>
+        <pin num="2" name="1A" type="input"/>
+        <pin num="3" name="1Y" type="output"/>
+        <pin num="4" name="2OE_N" type="input"/>
+        <pin num="5" name="2A" type="input"/>
+        <pin num="6" name="2Y" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="3Y" type="output"/>
+        <pin num="9" name="3A" type="input"/>
+        <pin num="10" name="3OE_N" type="input"/>
+        <pin num="11" name="4Y" type="output"/>
+        <pin num="12" name="4A" type="input"/>
+        <pin num="13" name="4OE_N" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
     <library logical="Rover">
@@ -695,10 +1943,21 @@
     <net code="1" name="/BASE_3V3" class="Default">
       <node ref="C2" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="C3" pin="1" pinfunction="1_1" pintype="passive"/>
-      <node ref="J2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C9" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J10" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J11" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J13" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="J5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R14" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R15" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R9" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="VCC2_8" pintype="power_in"/>
       <node ref="U2" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U4" pin="14" pinfunction="VCC_14" pintype="power_in"/>
+      <node ref="U5" pin="14" pinfunction="VCC_14" pintype="power_in"/>
     </net>
     <net code="2" name="/BASE_5V" class="Default">
       <node ref="J3" pin="1" pinfunction="1_1" pintype="passive"/>
@@ -707,103 +1966,381 @@
     <net code="3" name="/BASE_GND" class="Default">
       <node ref="C2" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="C3" pin="2" pinfunction="2_2" pintype="passive"/>
-      <node ref="J2" pin="2" pinfunction="2_2" pintype="passive"/>
-      <node ref="J3" pin="2" pinfunction="2_2" pintype="passive"/>
-      <node ref="J4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C5" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C7" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C8" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C9" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="J10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J11" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J13" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J2" pin="13" pinfunction="13_13" pintype="passive"/>
+      <node ref="J2" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="J4" pin="13" pinfunction="13_13" pintype="passive"/>
+      <node ref="J4" pin="19" pinfunction="19_19" pintype="passive"/>
+      <node ref="J4" pin="7" pinfunction="7_7" pintype="passive"/>
       <node ref="J6" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J7" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R10" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R11" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R12" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R13" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R3" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R4" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R5" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R6" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R7" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R8" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="U1" pin="5" pinfunction="GND2_5" pintype="power_in"/>
       <node ref="U2" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U3" pin="13" pinfunction="GND_13" pintype="power_in"/>
+      <node ref="U3" pin="17" pinfunction="EP_17" pintype="power_in"/>
+      <node ref="U4" pin="7" pinfunction="GND_7" pintype="power_in"/>
+      <node ref="U5" pin="1" pinfunction="1OE_N_1" pintype="input"/>
+      <node ref="U5" pin="10" pinfunction="3OE_N_10" pintype="input"/>
+      <node ref="U5" pin="13" pinfunction="4OE_N_13" pintype="input"/>
+      <node ref="U5" pin="4" pinfunction="2OE_N_4" pintype="input"/>
+      <node ref="U5" pin="7" pinfunction="GND_7" pintype="power_in"/>
     </net>
-    <net code="4" name="/ECHO_DIV" class="Default">
+    <net code="4" name="/DRV_AIN1" class="Default">
+      <node ref="U3" pin="16" pinfunction="AIN1_16" pintype="input"/>
+      <node ref="U4" pin="3" pinfunction="1Y_3" pintype="output"/>
+    </net>
+    <net code="5" name="/DRV_AIN2" class="Default">
+      <node ref="U3" pin="15" pinfunction="AIN2_15" pintype="input"/>
+      <node ref="U4" pin="6" pinfunction="2Y_6" pintype="output"/>
+    </net>
+    <net code="6" name="/DRV_BIN1" class="Default">
+      <node ref="U3" pin="9" pinfunction="BIN1_9" pintype="input"/>
+      <node ref="U4" pin="8" pinfunction="3Y_8" pintype="output"/>
+    </net>
+    <net code="7" name="/DRV_BIN2" class="Default">
+      <node ref="U3" pin="10" pinfunction="BIN2_10" pintype="input"/>
+      <node ref="U4" pin="11" pinfunction="4Y_11" pintype="output"/>
+    </net>
+    <net code="8" name="/DRV_FAULT_N" class="Default">
+      <node ref="R9" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="8" pinfunction="nFAULT_8" pintype="open_collector"/>
+      <node ref="U5" pin="12" pinfunction="4A_12" pintype="input"/>
+      <node ref="U5" pin="9" pinfunction="3A_9" pintype="input"/>
+    </net>
+    <net code="9" name="/DRV_VCP" class="Default">
+      <node ref="C6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="11" pinfunction="VCP_11" pintype="passive"/>
+    </net>
+    <net code="10" name="/DRV_VINT" class="Default">
+      <node ref="C7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="14" pinfunction="VINT_14" pintype="power_out"/>
+    </net>
+    <net code="11" name="/ECHO_DIV" class="Default">
       <node ref="R2" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="A_2" pintype="input"/>
     </net>
-    <net code="5" name="/ESTOP_N" class="Default">
-      <node ref="J2" pin="12" pinfunction="12_12" pintype="passive"/>
-      <node ref="J2" pin="3" pinfunction="3_3" pintype="passive"/>
+    <net code="12" name="/ENC_L_A" class="Default">
+      <node ref="J10" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J4" pin="14" pinfunction="14_14" pintype="passive"/>
+    </net>
+    <net code="13" name="/ENC_L_B" class="Default">
+      <node ref="J10" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="J4" pin="12" pinfunction="12_12" pintype="passive"/>
+    </net>
+    <net code="14" name="/ENC_R_A" class="Default">
+      <node ref="J11" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J4" pin="11" pinfunction="11_11" pintype="passive"/>
+    </net>
+    <net code="15" name="/ENC_R_B" class="Default">
+      <node ref="J11" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="J4" pin="10" pinfunction="10_10" pintype="passive"/>
+    </net>
+    <net code="16" name="/ESTOP_FPGA" class="Default">
+      <node ref="J2" pin="16" pinfunction="16_16" pintype="passive"/>
+      <node ref="R17" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="17" name="/ESTOP_FPGA_DRIVE" class="Default">
+      <node ref="R17" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U5" pin="6" pinfunction="2Y_6" pintype="output"/>
+    </net>
+    <net code="18" name="/ESTOP_N" class="Default">
       <node ref="J5" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="nSLEEP_1" pintype="input"/>
+      <node ref="U5" pin="2" pinfunction="1A_2" pintype="input"/>
+      <node ref="U5" pin="5" pinfunction="2A_5" pintype="input"/>
     </net>
-    <net code="6" name="/FPGA_PWM_L" class="Default">
-      <node ref="J2" pin="13" pinfunction="13_13" pintype="passive"/>
-      <node ref="J4" pin="6" pinfunction="6_6" pintype="passive"/>
+    <net code="19" name="/ESTOP_RP" class="Default">
+      <node ref="J2" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="R16" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="20" name="/ESTOP_RP_DRIVE" class="Default">
+      <node ref="R16" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="1Y_3" pintype="output"/>
+    </net>
+    <net code="21" name="/FAULT_FPGA_DRIVE" class="Default">
+      <node ref="R19" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U5" pin="11" pinfunction="4Y_11" pintype="output"/>
+    </net>
+    <net code="22" name="/FAULT_FPGA_N" class="Default">
+      <node ref="J2" pin="19" pinfunction="19_19" pintype="passive"/>
+      <node ref="R19" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="23" name="/FAULT_RP_DRIVE" class="Default">
+      <node ref="R18" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U5" pin="8" pinfunction="3Y_8" pintype="output"/>
+    </net>
+    <net code="24" name="/FAULT_RP_N" class="Default">
+      <node ref="J4" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="R18" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="25" name="/FPGA_PWM_L" class="Default">
+      <node ref="J2" pin="17" pinfunction="17_17" pintype="passive"/>
       <node ref="R5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="1B_2" pintype="input"/>
+      <node ref="U4" pin="5" pinfunction="2B_5" pintype="input"/>
     </net>
-    <net code="7" name="/FPGA_PWM_R" class="Default">
-      <node ref="J2" pin="14" pinfunction="14_14" pintype="passive"/>
-      <node ref="J4" pin="7" pinfunction="7_7" pintype="passive"/>
+    <net code="26" name="/FPGA_PWM_R" class="Default">
+      <node ref="J2" pin="18" pinfunction="18_18" pintype="passive"/>
       <node ref="R6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U4" pin="10" pinfunction="3B_10" pintype="input"/>
+      <node ref="U4" pin="13" pinfunction="4B_13" pintype="input"/>
     </net>
-    <net code="8" name="/HOST_3V3" class="Default">
+    <net code="27" name="/HOST_3V3" class="Default">
       <node ref="C1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J1" pin="17" pinfunction="17_17" pintype="passive"/>
+      <node ref="J12" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="VCC1_1" pintype="power_in"/>
     </net>
-    <net code="9" name="/H_GND" class="Default">
+    <net code="28" name="/H_GND" class="Default">
       <node ref="C1" pin="2" pinfunction="2_2" pintype="passive"/>
-      <node ref="J1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J1" pin="14" pinfunction="14_14" pintype="passive"/>
+      <node ref="J1" pin="20" pinfunction="20_20" pintype="passive"/>
+      <node ref="J1" pin="25" pinfunction="25_25" pintype="passive"/>
+      <node ref="J1" pin="30" pinfunction="30_30" pintype="passive"/>
+      <node ref="J1" pin="34" pinfunction="34_34" pintype="passive"/>
+      <node ref="J1" pin="39" pinfunction="39_39" pintype="passive"/>
+      <node ref="J1" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="J1" pin="9" pinfunction="9_9" pintype="passive"/>
+      <node ref="J12" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="GND1_4" pintype="power_in"/>
     </net>
-    <net code="10" name="/H_RX" class="Default">
-      <node ref="J1" pin="4" pinfunction="4_4" pintype="passive"/>
+    <net code="29" name="/H_RX" class="Default">
+      <node ref="J1" pin="10" pinfunction="10_10" pintype="passive"/>
+      <node ref="J12" pin="4" pinfunction="4_4" pintype="passive"/>
       <node ref="U1" pin="2" pinfunction="OUTA_2" pintype="output"/>
     </net>
-    <net code="11" name="/H_TX" class="Default">
-      <node ref="J1" pin="3" pinfunction="3_3" pintype="passive"/>
+    <net code="30" name="/H_TX" class="Default">
+      <node ref="J1" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="J12" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="U1" pin="3" pinfunction="INB_3" pintype="input"/>
     </net>
-    <net code="12" name="/L_IN1" class="Default">
-      <node ref="J2" pin="4" pinfunction="4_4" pintype="passive"/>
-      <node ref="J4" pin="2" pinfunction="2_2" pintype="passive"/>
-    </net>
-    <net code="13" name="/L_IN2" class="Default">
-      <node ref="J2" pin="5" pinfunction="5_5" pintype="passive"/>
+    <net code="31" name="/IMU_INT" class="Default">
+      <node ref="J13" pin="5" pinfunction="5_5" pintype="passive"/>
       <node ref="J4" pin="3" pinfunction="3_3" pintype="passive"/>
     </net>
-    <net code="14" name="/RP_UART_RX" class="Default">
-      <node ref="J2" pin="11" pinfunction="11_11" pintype="passive"/>
+    <net code="32" name="/IMU_SCL" class="Default">
+      <node ref="J13" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="J4" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R15" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="33" name="/IMU_SDA" class="Default">
+      <node ref="J13" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J4" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R14" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="34" name="/L_IN1" class="Default">
+      <node ref="J2" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="R10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="1A_1" pintype="input"/>
+    </net>
+    <net code="35" name="/L_IN2" class="Default">
+      <node ref="J2" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R11" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U4" pin="4" pinfunction="2A_4" pintype="input"/>
+    </net>
+    <net code="36" name="/MOTOR_6V" class="Motor">
+      <node ref="C5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C6" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C8" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="J7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="12" pinfunction="VM_12" pintype="power_in"/>
+    </net>
+    <net code="37" name="/MOTOR_L_N" class="Motor">
+      <node ref="J8" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="AOUT2_4" pintype="output"/>
+    </net>
+    <net code="38" name="/MOTOR_L_P" class="Motor">
+      <node ref="J8" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="AOUT1_2" pintype="output"/>
+    </net>
+    <net code="39" name="/MOTOR_R_N" class="Motor">
+      <node ref="J9" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="BOUT2_5" pintype="output"/>
+    </net>
+    <net code="40" name="/MOTOR_R_P" class="Motor">
+      <node ref="J9" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="7" pinfunction="BOUT1_7" pintype="output"/>
+    </net>
+    <net code="41" name="/RP_UART_RX" class="Default">
+      <node ref="J4" pin="17" pinfunction="17_17" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="OUTB_6" pintype="output"/>
     </net>
-    <net code="15" name="/RP_UART_TX" class="Default">
-      <node ref="J2" pin="10" pinfunction="10_10" pintype="passive"/>
+    <net code="42" name="/RP_UART_TX" class="Default">
+      <node ref="J4" pin="18" pinfunction="18_18" pintype="passive"/>
       <node ref="U1" pin="7" pinfunction="INA_7" pintype="input"/>
     </net>
-    <net code="16" name="/R_IN3" class="Default">
+    <net code="43" name="/R_IN3" class="Default">
       <node ref="J2" pin="6" pinfunction="6_6" pintype="passive"/>
-      <node ref="J4" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="R12" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U4" pin="9" pinfunction="3A_9" pintype="input"/>
     </net>
-    <net code="17" name="/R_IN4" class="Default">
+    <net code="44" name="/R_IN4" class="Default">
       <node ref="J2" pin="7" pinfunction="7_7" pintype="passive"/>
-      <node ref="J4" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="R13" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U4" pin="12" pinfunction="4A_12" pintype="input"/>
     </net>
-    <net code="18" name="/SENSOR_TRIG" class="Default">
-      <node ref="J3" pin="3" pinfunction="3_3" pintype="passive"/>
+    <net code="45" name="/SENSE_L" class="Motor">
+      <node ref="R7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="AISEN_3" pintype="passive"/>
+    </net>
+    <net code="46" name="/SENSE_R" class="Motor">
+      <node ref="R8" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="BISEN_6" pintype="passive"/>
+    </net>
+    <net code="47" name="/SENSOR_TRIG" class="Default">
+      <node ref="J3" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R1" pin="2" pinfunction="2_2" pintype="passive"/>
     </net>
-    <net code="19" name="/US_ECHO_3V" class="Default">
-      <node ref="J2" pin="9" pinfunction="9_9" pintype="passive"/>
+    <net code="48" name="/US_ECHO_3V" class="Default">
+      <node ref="J2" pin="10" pinfunction="10_10" pintype="passive"/>
       <node ref="U2" pin="4" pinfunction="Y_4" pintype="output"/>
     </net>
-    <net code="20" name="/US_ECHO_5V" class="Default">
-      <node ref="J3" pin="4" pinfunction="4_4" pintype="passive"/>
+    <net code="49" name="/US_ECHO_5V" class="Default">
+      <node ref="J3" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="R2" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="21" name="/US_TRIG" class="Default">
-      <node ref="J2" pin="8" pinfunction="8_8" pintype="passive"/>
+    <net code="50" name="/US_TRIG" class="Default">
+      <node ref="J2" pin="9" pinfunction="9_9" pintype="passive"/>
       <node ref="R1" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="22" name="unconnected-(J2-Pad15)" class="Default">
+    <net code="51" name="unconnected-(J1-Pad2)" class="Default">
+      <node ref="J1" pin="2" pinfunction="2_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(J1-Pad3)" class="Default">
+      <node ref="J1" pin="3" pinfunction="3_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(J1-Pad4)" class="Default">
+      <node ref="J1" pin="4" pinfunction="4_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(J1-Pad5)" class="Default">
+      <node ref="J1" pin="5" pinfunction="5_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(J1-Pad7)" class="Default">
+      <node ref="J1" pin="7" pinfunction="7_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(J1-Pad11)" class="Default">
+      <node ref="J1" pin="11" pinfunction="11_11" pintype="passive+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(J1-Pad12)" class="Default">
+      <node ref="J1" pin="12" pinfunction="12_12" pintype="passive+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(J1-Pad13)" class="Default">
+      <node ref="J1" pin="13" pinfunction="13_13" pintype="passive+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(J1-Pad15)" class="Default">
+      <node ref="J1" pin="15" pinfunction="15_15" pintype="passive+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(J1-Pad16)" class="Default">
+      <node ref="J1" pin="16" pinfunction="16_16" pintype="passive+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(J1-Pad18)" class="Default">
+      <node ref="J1" pin="18" pinfunction="18_18" pintype="passive+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(J1-Pad19)" class="Default">
+      <node ref="J1" pin="19" pinfunction="19_19" pintype="passive+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(J1-Pad21)" class="Default">
+      <node ref="J1" pin="21" pinfunction="21_21" pintype="passive+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(J1-Pad22)" class="Default">
+      <node ref="J1" pin="22" pinfunction="22_22" pintype="passive+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(J1-Pad23)" class="Default">
+      <node ref="J1" pin="23" pinfunction="23_23" pintype="passive+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(J1-Pad24)" class="Default">
+      <node ref="J1" pin="24" pinfunction="24_24" pintype="passive+no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(J1-Pad26)" class="Default">
+      <node ref="J1" pin="26" pinfunction="26_26" pintype="passive+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(J1-Pad27)" class="Default">
+      <node ref="J1" pin="27" pinfunction="27_27" pintype="passive+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(J1-Pad28)" class="Default">
+      <node ref="J1" pin="28" pinfunction="28_28" pintype="passive+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(J1-Pad29)" class="Default">
+      <node ref="J1" pin="29" pinfunction="29_29" pintype="passive+no_connect"/>
+    </net>
+    <net code="71" name="unconnected-(J1-Pad31)" class="Default">
+      <node ref="J1" pin="31" pinfunction="31_31" pintype="passive+no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(J1-Pad32)" class="Default">
+      <node ref="J1" pin="32" pinfunction="32_32" pintype="passive+no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(J1-Pad33)" class="Default">
+      <node ref="J1" pin="33" pinfunction="33_33" pintype="passive+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(J1-Pad35)" class="Default">
+      <node ref="J1" pin="35" pinfunction="35_35" pintype="passive+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(J1-Pad36)" class="Default">
+      <node ref="J1" pin="36" pinfunction="36_36" pintype="passive+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(J1-Pad37)" class="Default">
+      <node ref="J1" pin="37" pinfunction="37_37" pintype="passive+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(J1-Pad38)" class="Default">
+      <node ref="J1" pin="38" pinfunction="38_38" pintype="passive+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(J1-Pad40)" class="Default">
+      <node ref="J1" pin="40" pinfunction="40_40" pintype="passive+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(J2-Pad1)" class="Default">
+      <node ref="J2" pin="1" pinfunction="1_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(J2-Pad11)" class="Default">
+      <node ref="J2" pin="11" pinfunction="11_11" pintype="passive+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(J2-Pad12)" class="Default">
+      <node ref="J2" pin="12" pinfunction="12_12" pintype="passive+no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(J2-Pad14)" class="Default">
+      <node ref="J2" pin="14" pinfunction="14_14" pintype="passive+no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(J2-Pad15)" class="Default">
       <node ref="J2" pin="15" pinfunction="15_15" pintype="passive+no_connect"/>
     </net>
-    <net code="23" name="unconnected-(J2-Pad16)" class="Default">
-      <node ref="J2" pin="16" pinfunction="16_16" pintype="passive+no_connect"/>
+    <net code="84" name="unconnected-(J4-Pad1)" class="Default">
+      <node ref="J4" pin="1" pinfunction="1_1" pintype="passive+no_connect"/>
     </net>
-    <net code="24" name="unconnected-(U2-NC-Pad1)" class="Default">
+    <net code="85" name="unconnected-(J4-Pad8)" class="Default">
+      <node ref="J4" pin="8" pinfunction="8_8" pintype="passive+no_connect"/>
+    </net>
+    <net code="86" name="unconnected-(J4-Pad9)" class="Default">
+      <node ref="J4" pin="9" pinfunction="9_9" pintype="passive+no_connect"/>
+    </net>
+    <net code="87" name="unconnected-(J4-Pad15)" class="Default">
+      <node ref="J4" pin="15" pinfunction="15_15" pintype="passive+no_connect"/>
+    </net>
+    <net code="88" name="unconnected-(J4-Pad16)" class="Default">
+      <node ref="J4" pin="16" pinfunction="16_16" pintype="passive+no_connect"/>
+    </net>
+    <net code="89" name="unconnected-(U2-NC-Pad1)" class="Default">
       <node ref="U2" pin="1" pinfunction="NC_1" pintype="no_connect"/>
     </net>
   </nets>

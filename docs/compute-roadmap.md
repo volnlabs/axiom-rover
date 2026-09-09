@@ -5,14 +5,14 @@ The July 2026 AxiomOS direction is Linux/CUDA for NVIDIA compute and AxiomOS for
 | Stage | Compute arrangement | Boundary to prove | Hardware change |
 |---|---|---|---|
 | A: first release rover | Raspberry Pi 5 running the qualified AxiomOS host/control build → Shrike | Command expiry, safe start, e-stop, watchdog, recovery | Pi tray on the common mounts |
-| B: NVIDIA two-box | Linux/Jetson performs perception/CUDA; Pi/AxiomOS validates bounded intents and retains actuator authority | Linux stalls, crashes and stale/reordered traffic cannot extend actuator authority | Adapter tray/pod and separate host power; base/J1 unchanged |
-| C: same-SoC research | Linux and AxiomOS on separately owned cores/devices of a supported NVIDIA platform | Memory/DMA/interrupt/timer isolation, resource starvation, reset and boot ownership | Qualified compute pod; base/J1 unchanged |
+| B: NVIDIA two-box | Linux/Jetson performs perception/CUDA; Pi/AxiomOS validates bounded intents and retains actuator authority | Linux stalls, crashes and stale/reordered traffic cannot extend actuator authority | Adapter tray/pod and separate host power; base carrier unchanged |
+| C: same-SoC research | Linux and AxiomOS on separately owned cores/devices of a supported NVIDIA platform | Memory/DMA/interrupt/timer isolation, resource starvation, reset and boot ownership | Qualified compute pod; base carrier unchanged |
 
 Stage B is the working architecture to qualify before C. A Linux-only direct-to-actuator run is a transport test, not evidence that AxiomOS mediated the command. Stage C depends on the actual NVIDIA SoC, firmware and supported partitioning mechanism; CUDA remains with Linux. Do not infer isolation from successful dual boot or ordinary Linux processes.
 
 All trays share four M3 clearance holes at `(±85, ±65)` mm on a 200 × 160 mm tray. The first Pi mounting grid is 58 × 49 mm. Jetson hardware, cooling, mass distribution and connector envelopes require their own measured adapter; no unspecified Jetson board is declared to fit.
 
-The base controller, sensor, motor driver, gate, e-stop and actuator wiring stay fixed. Swaps are **power-off**, mechanically fastened and strain-relieved. One host owns J1 at a time. Use separately qualified host power; J1's 3.3 V feeds only its side of U1, not the other processor or motors.
+The base controller, sensor, motor driver, gate, e-stop and actuator wiring stay fixed. Swaps are **power-off**, mechanically fastened and strain-relieved. One host owns the isolator at a time: use J1 for Pi or J12 for an alternate host, with the Pi electrically removed before using J12. Use separately qualified host power; J1's 3.3 V feeds only its side of U1, not the other processor or motors.
 
 ## Release comparisons
 

@@ -1,9 +1,122 @@
 {
   "J1": {
     "1": "HOST_3V3",
-    "2": "H_GND",
-    "3": "H_TX",
-    "4": "H_RX"
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": "H_GND",
+    "7": null,
+    "8": "H_TX",
+    "9": "H_GND",
+    "10": "H_RX",
+    "11": null,
+    "12": null,
+    "13": null,
+    "14": "H_GND",
+    "15": null,
+    "16": null,
+    "17": "HOST_3V3",
+    "18": null,
+    "19": null,
+    "20": "H_GND",
+    "21": null,
+    "22": null,
+    "23": null,
+    "24": null,
+    "25": "H_GND",
+    "26": null,
+    "27": null,
+    "28": null,
+    "29": null,
+    "30": "H_GND",
+    "31": null,
+    "32": null,
+    "33": null,
+    "34": "H_GND",
+    "35": null,
+    "36": null,
+    "37": null,
+    "38": null,
+    "39": "H_GND",
+    "40": null
+  },
+  "J2": {
+    "1": null,
+    "2": "BASE_3V3",
+    "3": "ESTOP_RP",
+    "4": "L_IN1",
+    "5": "L_IN2",
+    "6": "R_IN3",
+    "7": "R_IN4",
+    "8": "BASE_GND",
+    "9": "US_TRIG",
+    "10": "US_ECHO_3V",
+    "11": null,
+    "12": null,
+    "13": "BASE_GND",
+    "14": null,
+    "15": null,
+    "16": "ESTOP_FPGA",
+    "17": "FPGA_PWM_L",
+    "18": "FPGA_PWM_R",
+    "19": "FAULT_FPGA_N"
+  },
+  "J4": {
+    "1": null,
+    "2": "BASE_3V3",
+    "3": "IMU_INT",
+    "4": "FAULT_RP_N",
+    "5": "IMU_SCL",
+    "6": "IMU_SDA",
+    "7": "BASE_GND",
+    "8": null,
+    "9": null,
+    "10": "ENC_R_B",
+    "11": "ENC_R_A",
+    "12": "ENC_L_B",
+    "13": "BASE_GND",
+    "14": "ENC_L_A",
+    "15": null,
+    "16": null,
+    "17": "RP_UART_RX",
+    "18": "RP_UART_TX",
+    "19": "BASE_GND"
+  },
+  "U3": {
+    "1": "ESTOP_N",
+    "2": "MOTOR_L_P",
+    "3": "SENSE_L",
+    "4": "MOTOR_L_N",
+    "5": "MOTOR_R_N",
+    "6": "SENSE_R",
+    "7": "MOTOR_R_P",
+    "8": "DRV_FAULT_N",
+    "9": "DRV_BIN1",
+    "10": "DRV_BIN2",
+    "11": "DRV_VCP",
+    "12": "MOTOR_6V",
+    "13": "BASE_GND",
+    "14": "DRV_VINT",
+    "15": "DRV_AIN2",
+    "16": "DRV_AIN1",
+    "17": "BASE_GND"
+  },
+  "U4": {
+    "1": "L_IN1",
+    "2": "FPGA_PWM_L",
+    "3": "DRV_AIN1",
+    "4": "L_IN2",
+    "5": "FPGA_PWM_L",
+    "6": "DRV_AIN2",
+    "7": "BASE_GND",
+    "8": "DRV_BIN1",
+    "9": "R_IN3",
+    "10": "FPGA_PWM_R",
+    "11": "DRV_BIN2",
+    "12": "R_IN4",
+    "13": "FPGA_PWM_R",
+    "14": "BASE_3V3"
   },
   "U1": {
     "1": "HOST_3V3",
@@ -23,29 +136,11 @@
     "1": "BASE_3V3",
     "2": "BASE_GND"
   },
-  "J2": {
-    "1": "BASE_3V3",
-    "2": "BASE_GND",
-    "3": "ESTOP_N",
-    "4": "L_IN1",
-    "5": "L_IN2",
-    "6": "R_IN3",
-    "7": "R_IN4",
-    "8": "US_TRIG",
-    "9": "US_ECHO_3V",
-    "10": "RP_UART_TX",
-    "11": "RP_UART_RX",
-    "12": "ESTOP_N",
-    "13": "FPGA_PWM_L",
-    "14": "FPGA_PWM_R",
-    "15": null,
-    "16": null
-  },
   "J3": {
     "1": "BASE_5V",
-    "2": "BASE_GND",
-    "3": "SENSOR_TRIG",
-    "4": "US_ECHO_5V"
+    "2": "SENSOR_TRIG",
+    "3": "US_ECHO_5V",
+    "4": "BASE_GND"
   },
   "R1": {
     "1": "US_TRIG",
@@ -70,15 +165,6 @@
     "1": "BASE_3V3",
     "2": "BASE_GND"
   },
-  "J4": {
-    "1": "BASE_GND",
-    "2": "L_IN1",
-    "3": "L_IN2",
-    "4": "R_IN3",
-    "5": "R_IN4",
-    "6": "FPGA_PWM_L",
-    "7": "FPGA_PWM_R"
-  },
   "R4": {
     "1": "ESTOP_N",
     "2": "BASE_GND"
@@ -91,6 +177,58 @@
     "1": "FPGA_PWM_R",
     "2": "BASE_GND"
   },
+  "R7": {
+    "1": "SENSE_L",
+    "2": "BASE_GND"
+  },
+  "R8": {
+    "1": "SENSE_R",
+    "2": "BASE_GND"
+  },
+  "R9": {
+    "1": "DRV_FAULT_N",
+    "2": "BASE_3V3"
+  },
+  "R10": {
+    "1": "L_IN1",
+    "2": "BASE_GND"
+  },
+  "R11": {
+    "1": "L_IN2",
+    "2": "BASE_GND"
+  },
+  "R12": {
+    "1": "R_IN3",
+    "2": "BASE_GND"
+  },
+  "R13": {
+    "1": "R_IN4",
+    "2": "BASE_GND"
+  },
+  "C4": {
+    "1": "BASE_3V3",
+    "2": "BASE_GND"
+  },
+  "C5": {
+    "1": "MOTOR_6V",
+    "2": "BASE_GND"
+  },
+  "C6": {
+    "1": "DRV_VCP",
+    "2": "MOTOR_6V"
+  },
+  "C7": {
+    "1": "DRV_VINT",
+    "2": "BASE_GND"
+  },
+  "C8": {
+    "1": "MOTOR_6V",
+    "2": "BASE_GND"
+  },
+  "D1": {
+    "1": "MOTOR_6V",
+    "2": "BASE_GND"
+  },
   "J5": {
     "1": "BASE_3V3",
     "2": "ESTOP_N"
@@ -98,5 +236,86 @@
   "J6": {
     "1": "BASE_5V",
     "2": "BASE_GND"
+  },
+  "J7": {
+    "1": "MOTOR_6V",
+    "2": "BASE_GND"
+  },
+  "J8": {
+    "1": "MOTOR_L_P",
+    "2": "MOTOR_L_N"
+  },
+  "J9": {
+    "1": "MOTOR_R_P",
+    "2": "MOTOR_R_N"
+  },
+  "J10": {
+    "1": "BASE_GND",
+    "2": "BASE_3V3",
+    "3": "ENC_L_A",
+    "4": "ENC_L_B"
+  },
+  "J11": {
+    "1": "BASE_GND",
+    "2": "BASE_3V3",
+    "3": "ENC_R_A",
+    "4": "ENC_R_B"
+  },
+  "J12": {
+    "1": "HOST_3V3",
+    "2": "H_GND",
+    "3": "H_TX",
+    "4": "H_RX"
+  },
+  "J13": {
+    "1": "BASE_GND",
+    "2": "BASE_3V3",
+    "3": "IMU_SDA",
+    "4": "IMU_SCL",
+    "5": "IMU_INT"
+  },
+  "R14": {
+    "1": "IMU_SDA",
+    "2": "BASE_3V3"
+  },
+  "R15": {
+    "1": "IMU_SCL",
+    "2": "BASE_3V3"
+  },
+  "U5": {
+    "1": "BASE_GND",
+    "2": "ESTOP_N",
+    "3": "ESTOP_RP_DRIVE",
+    "4": "BASE_GND",
+    "5": "ESTOP_N",
+    "6": "ESTOP_FPGA_DRIVE",
+    "7": "BASE_GND",
+    "8": "FAULT_RP_DRIVE",
+    "9": "DRV_FAULT_N",
+    "10": "BASE_GND",
+    "11": "FAULT_FPGA_DRIVE",
+    "12": "DRV_FAULT_N",
+    "13": "BASE_GND",
+    "14": "BASE_3V3"
+  },
+  "C9": {
+    "1": "BASE_3V3",
+    "2": "BASE_GND"
+  },
+  "R16": {
+    "1": "ESTOP_RP_DRIVE",
+    "2": "ESTOP_RP"
+  },
+  "R17": {
+    "1": "ESTOP_FPGA_DRIVE",
+    "2": "ESTOP_FPGA"
+  },
+  "R18": {
+    "1": "FAULT_RP_DRIVE",
+    "2": "FAULT_RP_N"
+  },
+  "R19": {
+    "1": "FAULT_FPGA_DRIVE",
+    "2": "FAULT_FPGA_N"
   }
 }

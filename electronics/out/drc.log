@@ -1,7 +1,7 @@
 Found 0 violations
 Found 0 unconnected items
 Found 0 schematic parity issues
-Saved DRC Report to /tmp/axiom-rover-build/electronics/out/drc.json
+Saved DRC Report to /home/utkarsh/Work/volnlabs/axiom-rover/electronics/out/drc.json
 Fontconfig warning: "/etc/fonts/conf.d/48-guessfamily.conf", line 19: invalid attribute 'xsi:nil'
 Fontconfig warning: "/etc/fonts/conf.d/48-guessfamily.conf", line 20: invalid constant used : 
 Fontconfig warning: "/etc/fonts/conf.d/48-guessfamily.conf", line 23: invalid constant used : monospace
@@ -92,8 +92,3 @@ Fontconfig warning: "/usr/share/fontconfig/conf.avail/49-sansserif.conf", line 1
 Fontconfig warning: "/usr/share/fontconfig/conf.avail/49-sansserif.conf", line 26: invalid constant used : monospace
 Fontconfig warning: "/usr/share/fontconfig/conf.avail/49-sansserif.conf", line 34: invalid constant used : emoji
 Fontconfig warning: "/usr/share/fontconfig/conf.avail/49-sansserif.conf", line 42: invalid constant used : math
-Fontconfig error: No writable cache directories
-Fontconfig error: No writable cache directories
-Fontconfig error: No writable cache directories
-Fontconfig error: No writable cache directories
-Fontconfig error: No writable cache directories

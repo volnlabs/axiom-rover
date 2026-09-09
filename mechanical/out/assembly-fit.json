@@ -1,0 +1,45 @@
+{
+  "status": "CAD INTERSECTION CHECK \u2014 not physical-fit validation",
+  "carrier_source": "viewer/carrier-populated.step",
+  "carrier_source_sha256": "605dc4381e22a788e9f7ac4f310a6d07fda4ebb91a941de8d673052df7b5608a",
+  "mechanical_source_sha256": "ed12f960368b159e27e1a81b6e5c9ef1937f90fb2f12b5d48c7517785f9dd6c8",
+  "world_transform_mm": [
+    -80.0,
+    50.0,
+    107.1
+  ],
+  "carrier_world_bbox_mm": [
+    -80.0,
+    -50.0,
+    93.425,
+    80.0,
+    50.0,
+    121.31916
+  ],
+  "checks": [
+    {
+      "part": "carrier_frame",
+      "candidate_solids": 443,
+      "intended_pcb_support_contact_volume_mm3": 0,
+      "unexpected_intersection_volume_mm3": 0,
+      "intersecting_solids": 0
+    },
+    {
+      "part": "carrier_posts",
+      "candidate_solids": 1,
+      "intended_pcb_support_contact_volume_mm3": 0,
+      "unexpected_intersection_volume_mm3": 0,
+      "intersecting_solids": 0
+    },
+    {
+      "part": "vented_shell",
+      "candidate_solids": 1228,
+      "intended_pcb_support_contact_volume_mm3": 0,
+      "unexpected_intersection_volume_mm3": 0,
+      "intersecting_solids": 0
+    }
+  ],
+  "unexpected_intersections": [],
+  "checker_sha256": "9df892d9690c37f7a5cbcec3a1f53d76d7579a656112dd701676f2f5a6f15f02",
+  "passed": true
+}

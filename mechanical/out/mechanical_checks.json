@@ -1,152 +1,360 @@
 {
-  "design": "Axiom modular 2WD rover",
+  "design": "Axiom Rover Rev B",
   "units": "mm",
-  "measured": false,
-  "source_sha256": "fa08279d837c31d5f3ba0bd1b5d9e800514c5b2f04c01f00a29ded663667e583",
-  "status": "CONCEPT \u2014 envelopes require purchase verification",
+  "revision": "hardware/shrike-pi5-revb",
+  "source_sha256": "ed12f960368b159e27e1a81b6e5c9ef1937f90fb2f12b5d48c7517785f9dd6c8",
+  "status": "CAD VALIDATED \u2014 vendor dimensions and explicit unqualified reserves are not physical-fit validation",
   "parameters": {
     "base_w": 200.0,
     "base_l": 260.0,
     "base_t": 4.0,
-    "ground_z": -15.0,
+    "ground_z": -17.5,
     "axle_y": -50.0,
-    "axle_z": 17.5,
-    "wheel_x": 110.0,
-    "wheel_d": 65.0,
-    "caster_nominal_h": 15.0,
-    "pcb_w": 120.0,
-    "pcb_l": 80.0,
-    "pcb_z": 18.0,
-    "pcb_t": 1.6,
-    "pcb_component_h": 18.0,
-    "idc_bend_h": 22.0,
+    "axle_z": 22.5,
+    "wheel_x": 120.0,
+    "wheel_d": 80.0,
+    "wheel_w": 10.0,
+    "caster_nominal_h": 17.5,
     "tray_w": 200.0,
     "tray_l": 160.0,
     "tray_z": 80.0,
-    "pi_x": -50.0,
-    "pi_z": 89.0,
-    "pi_standoff_h": 6.0,
-    "mount_x": 85.0,
-    "mount_y": 65.0
+    "tray_t": 3.0,
+    "pi_bottom_z": 89.0,
+    "pi_t": 1.6,
+    "pi_cooler_max_h": 13.7,
+    "carrier_service_lift": 7.0,
+    "pcb_w": 160.0,
+    "pcb_l": 100.0,
+    "pcb_t": 1.6,
+    "pcb_bottom_z": 107.1,
+    "carrier_frame_t": 3.0,
+    "carrier_post_od": 8.0,
+    "motor_gearbox_d": 25.0,
+    "motor_gearbox_l": 23.0,
+    "motor_body_d": 24.4,
+    "motor_body_l": 31.0,
+    "motor_encoder_l": 9.0,
+    "motor_shaft_d": 4.0,
+    "motor_shaft_l": 12.0
+  },
+  "classification": {
+    "printable": [
+      "base_chassis",
+      "left_motor_bracket",
+      "right_motor_bracket",
+      "left_motor_clamp_cap",
+      "right_motor_clamp_cap",
+      "tray",
+      "tray_posts",
+      "carrier_frame",
+      "carrier_posts",
+      "vented_shell",
+      "sensor_bracket",
+      "caster_fixture",
+      "test_stand"
+    ],
+    "vendor_reference_unmeasured": [
+      "left_wheel_VENDOR_REFERENCE",
+      "right_wheel_VENDOR_REFERENCE",
+      "left_motor_VENDOR_REFERENCE",
+      "right_motor_VENDOR_REFERENCE"
+    ],
+    "contract_reference": [
+      "carrier_pcb_CONTRACT_REFERENCE",
+      "pi5_DRAWING_REFERENCE",
+      "pi5_actualCAD_REFERENCE",
+      "pi_socket_ESQ_REFERENCE",
+      "shrike_pcbCAD_REFERENCE",
+      "shrike_left_socket_REFERENCE",
+      "shrike_right_socket_REFERENCE",
+      "carrier_tails_CLEARANCE_REFERENCE"
+    ],
+    "unmeasured_shrike_header": [
+      "shrike_male_plastic_UNMEASURED",
+      "shrike_male_pins_UNMEASURED"
+    ],
+    "unmeasured_shrike_component_reserves": [
+      "shrike_component_UNMEASURED_ENVELOPE",
+      "shrike_usb_wire_UNMEASURED_ENVELOPE"
+    ],
+    "vendor_step_mismatch_reference": "Shrike-lite.step (reported only; excluded from assembly)",
+    "unqualified_envelopes": [
+      "motor_pack_UNQUALIFIED_ENVELOPE",
+      "base5v_pack_UNQUALIFIED_ENVELOPE",
+      "host_pack_UNQUALIFIED_ENVELOPE",
+      "caster_UNQUALIFIED_ENVELOPE"
+    ],
+    "datums_and_service": [
+      "pi5_after_carrier_removal_service_SWEEP",
+      "shrike_socket_pin1_local_mm"
+    ]
   },
   "checks": {
     "base_outer_width_mm": 200.0,
     "base_outer_length_mm": 260.0,
-    "tray_width_mm": 200.0,
-    "tray_length_mm": 160.0,
-    "ground_z_mm": -15.0,
+    "ground_z_mm": -17.5,
     "wheel_centres_x_mm": [
-      -110,
-      110
+      -120.0,
+      120.0
     ],
     "wheel_lowest_z_mm": [
-      -15.0,
-      -15.0
+      -17.5,
+      -17.5
     ],
-    "caster_lowest_z_mm": -15.0000001,
-    "pcb_hole_centres": [
+    "caster_lowest_z_mm": -17.5000001,
+    "pcb_origin_world_mm": [
+      -80.0,
+      50.0,
+      107.1
+    ],
+    "pcb_support_centres_world_mm": [
       [
-        -55,
-        -35
+        -75.0,
+        45.0
       ],
       [
-        55,
-        -35
+        75.0,
+        45.0
       ],
       [
-        55,
-        35
+        75.0,
+        -45.0
       ],
       [
-        -55,
-        35
+        -75.0,
+        -45.0
       ]
     ],
-    "pcb_m3_hole_residual_mm3": [
-      0.0,
-      0.0,
-      0.0,
-      0.0
-    ],
-    "pcb_support_top_z_mm": 18.005593954514854,
-    "common_mount_centres": [
+    "pi5_drawing_hole_centres_world_mm": [
       [
-        -85,
-        -65
+        -76.5,
+        26.5
       ],
       [
-        -85,
-        65
+        -18.5,
+        26.5
       ],
       [
-        85,
-        -65
+        -76.5,
+        -22.5
       ],
       [
-        85,
-        65
+        -18.5,
+        -22.5
       ]
     ],
-    "intended_intersections": [],
+    "pi5_centre_world_mm": [
+      -37.5,
+      2.0
+    ],
+    "pi5_to_carrier_pcb_bottom_gap_mm": 16.5,
+    "carrier_service_lift_mm": 7.0,
+    "pi_socket_esq_body_mm": [
+      51.31,
+      4.95,
+      13.59
+    ],
+    "cooler_window_local_mm": [
+      8.0,
+      32.0,
+      68.0,
+      66.0
+    ],
+    "cooler_projection_mm": [
+      60,
+      34,
+      13.7,
+      "airflow_window_only"
+    ],
+    "shrike_bay_local_mm": [
+      99.0,
+      10.0,
+      124.4,
+      68.5
+    ],
+    "shrike_socket_pin1_local_mm": {
+      "left": [
+        100.27,
+        21.0958
+      ],
+      "right": [
+        123.13,
+        21.121
+      ]
+    },
+    "shrike_native_pcb_transform": {
+      "native_bbox_mm": [
+        135.801104999998,
+        -134.2536,
+        -0.04,
+        161.201095,
+        -75.75359999999101,
+        1.53416
+      ],
+      "j2_native_mm": [
+        137.071095,
+        -86.8494
+      ],
+      "module_board_bottom_z_mm": 0.0,
+      "companion_bbox_mm": [
+        -1.27,
+        -47.4042,
+        -8.54,
+        24.13,
+        11.09580000000899,
+        1.57416
+      ],
+      "companion_pin_solid_count": 38,
+      "header_holes_verified": true
+    },
+    "shrike_vendor_step_transform": {
+      "source_full_bbox_mm": [
+        -12.725000000000003,
+        -30.168480100000004,
+        -1.3050000000000366,
+        12.725000000000003,
+        37.59584,
+        6.675000000000002
+      ],
+      "source_board_bbox_mm": [
+        -12.725000000000003,
+        -29.27504,
+        0.0,
+        12.725000000000003,
+        29.27504,
+        1.51
+      ],
+      "translate_mm": [
+        31.725,
+        10.77504,
+        119.75
+      ],
+      "socket_top_z_mm": 117.21,
+      "shrike_board_bottom_z_mm": 119.75,
+      "header_hole_alignment": {
+        "J2": {
+          "pin1_usb_end_model_mm": [
+            0.025000000000005684,
+            9.461840000000002
+          ],
+          "pin19_model_mm": [
+            0.025000000000005684,
+            -36.258160000000004
+          ],
+          "expected_pin1_model_mm": [
+            0.0,
+            0.0
+          ],
+          "pin1_delta_mm": [
+            0.025,
+            9.4618
+          ],
+          "pitch_span_mm": 45.72
+        },
+        "J4": {
+          "pin1_usb_end_model_mm": [
+            22.885000000000005,
+            9.43664
+          ],
+          "pin19_model_mm": [
+            22.885000000000005,
+            -36.28336
+          ],
+          "expected_pin1_model_mm": [
+            22.86,
+            -0.025199999999998113
+          ],
+          "pin1_delta_mm": [
+            0.025,
+            9.4618
+          ],
+          "pitch_span_mm": 45.72
+        }
+      }
+    },
+    "pi_step_transform": {
+      "source_full_bbox_mm": [
+        -0.45000000000000007,
+        -1.6303501000002756,
+        -1.4499999656680005,
+        88.05000009999999,
+        56.0,
+        17.526000092034003
+      ],
+      "source_board_bbox_mm": [
+        0.0,
+        0.0,
+        0.03,
+        85.0,
+        56.0,
+        1.306
+      ],
+      "translate_mm": [
+        -80.0,
+        -26.0,
+        88.97
+      ]
+    },
+    "shrike_vendor_bbox_world_mm": [
+      18.999999999999996,
+      -19.393440100000003,
+      118.44499999999996,
+      44.45,
+      48.370880000000014,
+      126.425
+    ],
+    "source_shrike_component_y_overhang_mm": 9.2643,
+    "collisions": [
+      {
+        "pair": [
+          "shrike_male_pins_UNMEASURED",
+          "shrike_left_socket_REFERENCE"
+        ],
+        "volume_mm3": 46.6944,
+        "classification": "INTENDED_INTERFACE"
+      },
+      {
+        "pair": [
+          "shrike_male_pins_UNMEASURED",
+          "shrike_right_socket_REFERENCE"
+        ],
+        "volume_mm3": 46.6944,
+        "classification": "INTENDED_INTERFACE"
+      }
+    ],
     "unexpected_intersections": [],
     "printable_solid_counts": {
       "base_chassis": 1,
       "left_motor_bracket": 1,
       "right_motor_bracket": 1,
+      "left_motor_clamp_cap": 1,
+      "right_motor_clamp_cap": 1,
       "tray": 1,
       "tray_posts": 4,
+      "carrier_frame": 1,
+      "carrier_posts": 4,
       "vented_shell": 1,
       "sensor_bracket": 1,
       "caster_fixture": 1,
-      "shrike_module_plate": 1,
       "test_stand": 1
     },
-    "pi5_drawing_hole_centres": [
-      [
-        -89.0,
-        -24.5
-      ],
-      [
-        -89.0,
-        24.5
-      ],
-      [
-        -31.0,
-        -24.5
-      ],
-      [
-        -31.0,
-        24.5
-      ]
+    "carrier_tail_drill_count": 109,
+    "shrike_component_reserve_world_bbox_mm": [
+      18.9999999,
+      -18.5000001,
+      119.7499999,
+      44.40000010000001,
+      40.0000001,
+      127.7500001
+    ],
+    "shrike_usb_wire_reserve_world_bbox_mm": [
+      16.99999989999999,
+      39.99999989999999,
+      119.74999989999999,
+      47.00000010000001,
+      75.00000010000001,
+      131.7500001
     ],
     "passed": true
-  },
-  "parts_printable": [
-    "base_chassis",
-    "left_motor_bracket",
-    "right_motor_bracket",
-    "tray",
-    "tray_posts",
-    "vented_shell",
-    "sensor_bracket",
-    "caster_fixture",
-    "shrike_module_plate",
-    "test_stand"
-  ],
-  "parts_envelope_only": [
-    "left_wheel_ENVELOPE",
-    "right_wheel_ENVELOPE",
-    "left_tt_motor_ENVELOPE",
-    "right_tt_motor_ENVELOPE",
-    "pcb_ENVELOPE",
-    "pcb_component_ENVELOPE",
-    "idc_harness_ENVELOPE",
-    "idc_tray_corridor_ENVELOPE",
-    "motor_pack_ENVELOPE",
-    "base5v_pack_ENVELOPE",
-    "host_pack_ENVELOPE",
-    "pi5_ENVELOPE",
-    "shrike_l298_ENVELOPE",
-    "caster_ENVELOPE"
-  ]
+  }
 }

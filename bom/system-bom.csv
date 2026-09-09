@@ -1,20 +1,16 @@
 line,item,manufacturer_part_or_requirement,quantity,unit_cost_inr_low,unit_cost_inr_high,extended_inr_low,extended_inr_high,source_or_basis,status
-1,Carrier UART isolator,TI ISO7721DR narrow SOIC-8 non-F default-high,1,227.36,274.88,227.36,274.88,https://www.mouser.in/en/ProductDetail/Texas-Instruments/ISO7721DR?qs=0C8XhJW8e4pvzxoLtrI8OQ%3D%3D,priced
-2,Echo buffer,TI SN74LVC1G17DBVR SOT-23-5 Ioff,1,35,80,35,80,allowance; https://www.ti.com/product/SN74LVC1G17,quote required
-3,Carrier passives,R1 1k R2 2.2k R3 3.3k R4-R6 10k 1% plus 3x100nF X7R,1,80,220,80,220,small-quantity allowance,quote required
-4,L298N-end harness pulldowns,R5H and R6H 10k 1% physically at ENA and ENB to DRIVER_GND,1,20,100,20,100,required even if carrier R5/R6 are fitted; small-quantity allowance,quote required
-5,Carrier connectors and keyed harnesses,J1 1x4 J2 2x8 J3 1x4 J4 1x7 J5 1x2 J6 1x2 plus crimp housings strain relief and Shrike removable interposer,1,900,1800,900,1800,allowance; final connector family after physical header check,quote required
-6,120x80 carrier bare PCB,2-layer 120x80 1.6mm 5pcs minimum,1,1500,2500,1500,2500,https://www.whypcb.com/services/pcb-fabrication,price anchor only
-7,Carrier SMT assembly and stencil,assembled first article including sourcing and shipping,1,3000,5000,3000,5000,service allowance; obtain vendor quote from Gerber BOM PnP,quote required
-8,Dual-NC latching emergency stop,guarded two independent NC contacts with documented DC contact rating,1,500,1200,500,1200,https://www.electronicscomp.com/metal-push-button-switch,exact SKU/rating required
-9,Motor power relay or contactor,K1 6V coil; continuous DC inductive rating above measured combined motor stall current,1,600,2500,600,2500,relay selection intentionally deferred until stall current is known; https://www.electronicscomp.com/6v-10a-spdt-relay,not authorized until rated
-10,Fuse holder fuse and high-current harness,F1 and keyed wiring/connectors sized from measured stall current and K1 rating,1,700,1800,700,1800,selection intentionally deferred until current is known,not authorized until sized
-11,Base commercial 5V pack,externally charged commercial 5V source with separate Shrike USB lead and sensor output,1,1200,2500,1200,2500,allowance; verify sustained Shrike plus sensor current,quote required
-12,Motor commercial 6V pack,externally charged pack with BMS and current capability; full charged-to-discharge voltage and transients must remain within motor and L298N limits,1,2000,4500,2000,4500,allowance; 6V nominal does not prove maximum voltage compliance,quote required
-13,Host commercial power package,externally charged 5V/5A-capable USB-C PD pack or regulated host supply for Pi5 at the plug,1,2500,4500,2500,4500,allowance; https://www.raspberrypi.com/documentation/computers/getting-started.html,quote required
-14,Mechanical chassis wheels caster and mounts,2-motor TT-compatible chassis hardware,1,1600,3000,1600,3000,https://robu.in/product-category/learning-and-robotic-kits/robot-kits/,price allowance
-15,Printed enclosure and swappable compute tray,PETG/ABS print service plus M3 hardware and inserts,1,2500,4500,2500,4500,service allowance based on final CAD volume,quote required
-16,Existing Shrike-lite V1.0/R0.4,existing board,1,0,0,0,0,https://github.com/vicharak-in/shrike/tree/763d0a7dd9ebdfc3f61de148457d5c34f112f61e,existing
-17,Existing L298N module two TT motors and HC-SR04,existing items,1,0,0,0,0,existing; inspect continuity and jumper state before use,existing
-18,Contingency and shipping,tax shipping spare relay/fuse/connectors one replacement PCB allowance,1,2500,4000,2500,4000,prototype allowance,quote required
-TOTAL,Prototype excluding compute board and instruments,,,,,19862.36,38474.88,present allowance; exceeds INR30k upper budget; quote gate needs first-order total <=INR24000 plus INR6000 reserve,estimate
+1,RevB carrier bare PCB,160x100mm 2-layer FR-4 1.6mm first article,1,1800,3500,1800,3500,estimate only; vendor quote required,estimate
+2,Carrier assembly and electronics,DRV8833PWPR U4 U5 ISO7721DR protection passives and assembly/stencil,1,2500,5000,2500,5000,estimate only; final BOM/PnP quote required,estimate
+3,Pi carrier socket,Samtec ESQ-120-24-G-D 2x20 THT,1,800,2000,800,2000,estimate only; https://www.samtec.com/products/esq-120-24-g-d,estimate
+4,Shrike sockets,Samtec SSW-119-01-G-S 1x19 THT,2,250,800,500,1600,estimate only; https://www.samtec.com/products/ssw-119-01-g-s,estimate
+5,Carrier harnesses and contacts,JST XH sensor/encoder/IMU and JST VH motor/6V connectors plus wire strain relief,1,800,2000,800,2000,estimate only; selected families from electronics/generate.py,estimate
+6,Encoder gearmotor,ThinkRobotics MOT3001-6V60RPM 6V 60RPM encoder motor 25mm,2,1179.99,1179.99,2359.98,2359.98,user-selected price INR1179.99 each; order/receipt not recorded,price datum only
+7,Wheels,Pololu 3690 80x10mm wheel pair with 4mm D-bore collets,1,862,2000,862,2000,explicit estimate envelope; quote required,estimate
+8,HC-SR04 and external I2C IMU,HC-SR04 plus 3.3V I2C IMU with interrupt harness,1,1000,4500,1000,4500,estimate only; exact IMU SKU not selected,estimate
+9,Emergency stop relay fuse and high-current wiring,two-pole NC stop plus normally-open relay contact and fuse holder/fuse and 6V wiring rated from measured stall current,1,1500,5000,1500,5000,estimate only; no relay/fuse/wire rating selected,estimate
+10,Motor 6V power source,externally charged regulated 6V source compatible with final current and transients,1,2000,4500,2000,4500,estimate only; quote and electrical qualification required,estimate
+11,Shrike USB 5V source,external 5V source and USB-C lead for Shrike only,1,1200,2500,1200,2500,estimate only; do not backfeed through Pi 5V,estimate
+12,Pi5 power source,5V/5A-capable source at Pi USB-C plug,1,2500,4500,2500,4500,estimate only; Pi and base power are separate,estimate
+13,Chassis mounts enclosure and hardware,RevB motor mounts wheel hardware carrier supports and M3 hardware,1,3000,6000,3000,6000,estimate only; mechanical fit still required,estimate
+14,Revision reserve,retained for rework/shipping/spares,1,6000,6000,6000,6000,budget reserve not a vendor quote,reserve
+TOTAL,Prototype excluding Pi5/Shrike boards and instruments,,,,,26821.98,51459.98,non-reserve subtotal INR20821.98-INR45459.98; low is within INR24000 first-order target before INR6000 reserve; high exceeds INR30000 cap; obtain quotes before order,estimate

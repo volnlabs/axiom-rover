@@ -88,8 +88,3 @@ Fontconfig warning: "/usr/share/fontconfig/conf.avail/49-sansserif.conf", line 1
 Fontconfig warning: "/usr/share/fontconfig/conf.avail/49-sansserif.conf", line 26: invalid constant used : monospace
 Fontconfig warning: "/usr/share/fontconfig/conf.avail/49-sansserif.conf", line 34: invalid constant used : emoji
 Fontconfig warning: "/usr/share/fontconfig/conf.avail/49-sansserif.conf", line 42: invalid constant used : math
-Fontconfig error: No writable cache directories
-Fontconfig error: No writable cache directories
-Fontconfig error: No writable cache directories
-Fontconfig error: No writable cache directories
-Fontconfig error: No writable cache directories

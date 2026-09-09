@@ -1,49 +1,100 @@
-# First article, assembly and release evidence
+# RevB first article and commissioning
 
-## Procurement release
+All entries are **NOT RUN**. This procedure creates evidence; it does not
+authorize fabrication, energizing a motor, or a release until the recorded
+acceptance limits pass.
 
-Revision A outputs in `electronics/out/fabrication-review/` are review Gerbers and separate plated/non-plated drill files, not an order authorization. Request PCBA and PETG printing quotes from the editable sources plus BOM, assembly positions and STEP/STL package. No automatic ordering workflow exists.
+## Before power
 
-Before a production order, resolve actual Shrike, TT motor, caster, L298N, switch/contact-block, pack and compute dimensions against the CAD. Select exact connector housings, contacts and wire sizes. Match PCB library dimensions to the chosen manufacturer drawing, particularly the 16-pin keyed IDC and JST XH vertical headers. The Shrike uses a measured, removable harness adapter; no invented board socket is included. Dry-fit a cheap template or partial print before paying for the full enclosure.
+1. Inspect the 160 x 100 mm carrier, bottom-side `ESQ-120-24-G-D`, and both
+   `SSW-119-01-G-S` Shrike sockets against the current schematic and
+   `reference/raspberry-pi-5/connector-sources.md`.
+2. Dry-fit Pi 5, carrier, and Shrike. Confirm the nominal 16.5 mm carrier
+   underside gap, socket engagement, no cooler collision, and J1/J2/J4 pin-1
+   orientation. To remove Pi, power off, lift the unscrewed carrier at least
+   7 mm to disengage J1, remove the carrier and perimeter frame, unbolt the Pi,
+   lift it 2 mm, then slide it left through the service opening. Do not slide a
+   mated header sideways or force sockets.
+3. Meter every J2/J4 connection in `electrical-contract.md` against the
+   delivered Shrike. Confirm buffered `FAULT_FPGA_N` reaches J2-19/F_GPIO7 and
+   `FAULT_RP_N` reaches J4-4/RP GPIO28. Confirm Pi pins 2 and 4 are NC.
+4. Confirm continuity and polarity for motor, encoder, HC-SR04, IMU, fuse,
+   stop contact, and relay coil. Motor lead order, encoder phase, and encoder
+   CPR are unknown until measured.
+5. With no power attached, verify no short between `H_GND` and `BASE_GND`, no
+   6 V-to-logic short, and correct NC stop behavior at J5/U3 `nSLEEP`.
 
-PCB quote basis: 120 × 80 mm, 2-layer FR-4, 1.6 mm nominal, 1 oz copper, 0.25 mm minimum signal width/clearance, 0.7/0.3 mm vias, four 3.2 mm NPTH mounting holes, solder mask both sides, top legend. All parts are on top; 0805 passives, SOIC-8 U1 and SOT-23-5 U2 are SMT, connectors are through-hole. Use exact ISO7721DR **non-F**, not default-low or wide-body substitutions. Review SMT rotation conventions and pin 1 against the assembly drawing before loading an assembler's machine. The included footprint copies are pinned for portability; see `THIRD_PARTY.md`.
+## Power and safety sequence
 
-Motor current is excluded from the PCB design. Measure or obtain each motor's stall current under a current-limited supply; avoid prolonged stalls. Select a commercial externally charged pack whose full charged-to-empty voltage range is compatible with the motor/driver, then qualify relay DC inductive ratings, fuse, connector and wire ampacity. A nominal 6 V label or an AC relay contact rating does not establish those limits. Independently qualify the base 5 V source and the Pi/Jetson host supply under peak load.
+1. Power Shrike only through USB-C. Keep Pi 5 V pins 2/4 disconnected.
+2. Power Pi and base logic separately. Check isolated UART, HC-SR04 echo
+   buffer, encoder 3.3 V, and IMU I2C pull-ups before attaching 6 V.
+3. Test open stop-loop, broken stop-loop, and reset with motor 6 V disabled.
+   U3 `nSLEEP` must be a stop level; it must not carry PWM.
+4. Verify the independent fuse/relay stop path removes `MOTOR_6V` at J7 while
+   logic remains powered. Record relay drop-out and rail decay.
+5. On a wheels-raised stand, use a current-limited 6 V source and low duty.
+   Establish motor polarity and encoder phase. Do not run a prolonged stall.
 
-Target the first vendor order at ≤₹24,000 to preserve ₹6,000 (20% of the ₹30,000 cap) for revisions. Current allowances are not quotes and do not guarantee this target; resolve the BOM before ordering.
+## Evidence matrix
 
-## Assembly sequence
-
-1. Inspect unpowered PCBA against the schematic and position file: pin 1, component markings, NC pads, echo resistor values and connector order. Check for shorts within each power domain and confirm no host/base ground connection. Do not megger the populated logic board.
-2. Fit the board and measured controller/driver fixtures to the base. Keep screws/washers away from the host/base isolation strip and copper. Install motor brackets, sensor bracket, caster and the guarded dual-NC latching stop. Check harness bend radius and access with the tray installed.
-3. Build J1–J6 according to the electrical contract, checking numbered pads rather than apparent left/right on a mating plug. Tag both ends. J1 and J3 both have four pins but different meanings: use distinct cable colours/labels and physically segregated routing. Never interchange them.
-4. Feed Shrike through its USB power lead from the base 5 V source. J6 supplies only the sensor branch. Supply L298N logic in its documented external-5-V mode, if required. Remove ENA/ENB force-high jumpers and install R5H/R6H directly at the driver's enable inputs so an unplugged carrier harness leaves both low.
-5. Wire S1A through J5 to the FPGA and RP2040 observe input. Wire the electrically separate S1B, F1 and K1 to interrupt motor power. Test contact action and wire-break behavior before connecting motors. Route the motor loop separately; its return meets base ground at the L298N, never at host ground.
-6. Complete logic-only checks below before fitting the wheels-raised stand and enabling any motor supply. Install and remove battery packs with power off; use commercial external chargers away from the robot. Fasten packs so they cannot contact circuitry or shift into wheels.
-
-## Bench evidence matrix
-
-All rows start **NOT RUN**. Record an explicit acceptance limit before a powered test; unresolved limits are release blockers, not automatic passes. Logic-low/high limits come from the selected receiver datasheet and FPGA timing limits from the versioned firmware/bitstream contract. No timing maximum is inferred from this CAD.
-
-| Case | Injection and measurement | Required observation |
+| Case | Record | Required result |
 |---|---|---|
-| Unpowered continuity | Meter all harness pins, NC pins, rails and ground domains | Exact pin map; no short or cross-domain ground tie |
-| Partial power | Host-only, base-only, sensor-5-V-only and both powered | No unacceptable backfeed; U1 idle state correct; U2 output does not power the unpowered 3.3 V domain |
-| Safe start | FPGA blank/reset, RP reset, host reboot, stop pressed | ENA/ENB remain low; no motor motion |
-| UART transport | ≥1,000 qualified protocol frames plus malformed/truncated/replayed/stale frames | Valid frames accepted as defined; rejected traffic never renews authority |
-| Physical logic stop | Open S1A or break its wire with commands active | Both gated outputs low within the declared FPGA contract |
-| Independent power stop | Open S1B with logic still commanding motion | K1 removes VS; record coil/VS/current drop-out and wheel coast-down |
-| Watchdog/lease | Stop host traffic, stall Linux work and reset RP | Enable-low occurs within the declared expiry bound without renewed motion on reconnection |
-| Driver unplug | Remove J4 with logic power present, motor supply disabled | Driver-end resistors hold both enables low |
-| Sensor | Known distances, no echo, stuck echo and sensor power cycling | Calibrated error recorded; invalid/stale measurements cause the policy's bounded fallback |
-| Wheels raised | Start/stop/reverse at initially limited duty/current | Correct direction; acceptable current, voltage sag and driver temperature |
-| Compute swap | Power down, replace tray, rerun preceding cases | Same actuator wiring and safety behavior; new compute identity recorded |
-| Floor run | Only after prior rows pass, supervised clear test area | Stable caster/traction, stop access, secured packs and measured stopping distance |
+| Socket fit | gap, engagement, photos | no interference or forced seating |
+| Unpowered continuity | full connector pin map | exact net map; no host/base ground tie |
+| Partial power | Pi-only, Shrike-only, sensor-5-V-only | no unacceptable backfeed |
+| Fault observation | force/observe DRV fault | both F_GPIO7 and RP GPIO28 see their buffered active-low fault |
+| Logic stop | open/break J5 loop | `nSLEEP` stop level and gated inputs low |
+| Independent stop | open external stop path | J7 motor 6 V removed without software participation |
+| Sensors | distance, no/stuck echo; IMU/INT | measured behavior and stated limit |
+| Encoder | low-energy rotation both directions | measured phase/order; CPR recorded if derived |
+| Wheels raised | low-duty start/stop/reverse | direction, current, sag, temperature, fault state |
+| Floor run | supervised run after prior passes | stop distance and stable wiring |
 
-Use a logic analyzer on J2 breakout pins 3/12 (stop), 13/14 (gated enables), 10/11 (UART), and base ground. The internal RP GPIO14/15 raw-PWM-to-FPGA link is **not** brought onto this carrier: observe only at a qualified Shrike test pad/fixture and do not reroute it to the driver. Avoid clipping an earth-referenced instrument across the isolation domains. Capture motor VS/current separately with appropriately rated instrumentation.
+For each run retain time, carrier/harness revision, available Pi/Shrike/FPGA
+software identifiers, source voltage, current limit, instrument, acceptance
+limit, raw captures, measurement, and verdict. A CAD check or software build
+cannot substitute for physical records.
 
-For each run save: UTC time; board, harness and mechanical revisions; AxiomOS commit; RP firmware and FPGA bitstream SHA-256; timing manifest; host/SoC/Linux/driver versions; pack voltage/state; current limit; sensor calibration; instrument/sample rate; case, bound, measured maximum and verdict; raw UART/analyzer/scope files. Store real evidence under `evidence/<run-id>/`. No synthetic readings or emulator results count as physical passes.
+## Release state
 
-## Software gate
+Fabrication, physical test, and motion release remain **false** until real
+evidence is attached. No Pi, RP2040, or FPGA firmware is claimed implemented
+or flashed by this hardware repository.
 
-The existing AxiomOS Shrike code explicitly remains safe-low pending the validated FPGA and runtime integration. Keep it that way until those gates pass. This standalone repository supplies hardware and test procedures; it does not claim to implement or flash that missing software. Update `release-gates.json` only with links to real review or measurement evidence, never because a CAD checker returned zero errors.
+## Controller and measurement acceptance
+
+Motion remains blocked until the existing AxiomOS host, RP2040 adapter and FPGA
+bitstream have a validated timing manifest, atomic command/watchdog/e-stop
+handling, explicit rearm after stop or driver fault, and real Pi RP1-UART support.
+Record expiry/watchdog/stop bounds before testing; use the tighter specified
+bound as the limit, not the best observed trace. After `nSLEEP` rises, allow
+at least the DRV8833 datasheet wake-up time (1 ms) before permitting PWM.
+
+Exercise expired, malformed, repeated and out-of-order commands, UART unplug,
+host reset/stall, RP reset, FPGA unconfigured/reset, and stop release without
+rearm. Each must preserve or enter the specified coast/off state. Capture all
+four DRV inputs, nSLEEP, motor current and the independent relay response.
+With motor power absent, deliberately drive each observation GPIO incorrectly
+through its 1 kΩ resistor and confirm it cannot raise hardware nSLEEP or mask
+the other controller's stop/fault signal. Restore inputs before motion tests.
+
+Calibrate left/right wheel circumference and quadrature counts per output
+revolution; do not infer x4 counts from the seller's “11 pulses” wording. Record
+IMU axis orientation/bias and HC-SR04 timeout/no-echo behavior. Start below
+0.2 m/s on an indoor level floor and keep total rover mass at or below 2 kg;
+these are design targets to qualify, not measured capabilities.
+
+Use a current-limited bench supply first. Measure nominal 1 A current chopping,
+start current, both-channel driver/sense-resistor temperatures, VM ripple and
+stop/reverse overshoot before choosing a commercial motor pack/regulator.
+C5's effective ceramic capacitance at bias, C8's energy/rail-decay behavior,
+and D1's pulse temperature need qualification. Keep every rail within its part's
+recommended limits, not merely absolute maximum ratings. A nominally 6 V
+battery label does not establish a regulated 6 V output.
+
+For partial-power cases, compare measured leakage, rail rise and receiver
+levels to the selected parts' datasheet limits and record the actual limits in
+the test log. For Pi, also capture USB-C voltage/current under sustained compute
+load. Check the stop button, fuse, coil clamp and K1 normally-open contact with
+host and controller absent: software must not be necessary to remove motor power.

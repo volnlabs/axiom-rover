@@ -1,26 +1,71 @@
 {
-  "retrieved_date": "2026-09-09",
-  "evidence_type": "vendor CAD and reference drawings; no physical measurements",
+  "retrieved_date": "2026-09-10",
+  "evidence_type": "manufacturer/vendor CAD, drawings, and datasheets; no physical measurements",
   "files": {
     "shrike-r04/Shrike-lite.kicad_pcb": {
       "url": "https://raw.githubusercontent.com/vicharak-in/shrike/763d0a7dd9ebdfc3f61de148457d5c34f112f61e/hardware/shrike-lite/kicad/v1_r0.4/Shrike-lite.kicad_pcb",
-      "sha256": "ed6a5c873cef5623c90e21ee20b25b12ae7db468950a47b008707ca345c208d4"
+      "sha256": "ed6a5c873cef5623c90e21ee20b25b12ae7db468950a47b008707ca345c208d4",
+      "evidence_label": "vendor source PCB layout"
     },
     "shrike-r04/Shrike-lite.step": {
       "url": "https://raw.githubusercontent.com/vicharak-in/shrike/763d0a7dd9ebdfc3f61de148457d5c34f112f61e/hardware/shrike-lite/kicad/v1_r0.4/Shrike-lite.step",
-      "sha256": "d7c610343be2684008c11964c14d6b37af834b02bc2d6dbc152c123f817c4ac3"
+      "sha256": "d7c610343be2684008c11964c14d6b37af834b02bc2d6dbc152c123f817c4ac3",
+      "evidence_label": "vendor CAD; geometrically discrepant from the delivered-board fit assumption, so not a sole mechanical datum"
     },
     "shrike-r04/LICENSE_HW.md": {
       "url": "https://raw.githubusercontent.com/vicharak-in/shrike/763d0a7dd9ebdfc3f61de148457d5c34f112f61e/LICENSE_HW.md",
-      "sha256": "7dfa5666118c20aefdc6b5c66b2a8e26b84fd5eba1ba6a2edc97b1f1b1cb482b"
+      "sha256": "7dfa5666118c20aefdc6b5c66b2a8e26b84fd5eba1ba6a2edc97b1f1b1cb482b",
+      "evidence_label": "vendor hardware license"
     },
     "raspberry-pi-5/mechanical-drawing.pdf": {
       "url": "https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-mechanical-drawing.pdf",
-      "sha256": "5dd680d6c1f5e7aa9c7b020695e315d04aac862df82ff01d4e9041cd0668d7f2"
+      "sha256": "5dd680d6c1f5e7aa9c7b020695e315d04aac862df82ff01d4e9041cd0668d7f2",
+      "evidence_label": "official Pi 5 reference mechanical drawing"
     },
     "raspberry-pi-5/active-cooler-drawing.pdf": {
       "url": "https://datasheets.raspberrypi.com/cooling/raspberry-pi-active-cooler-mechanical-drawing.pdf",
-      "sha256": "3cc3bccc4b58d0690c2b18251cffc3863091305c32fd5d198f152722ba2bd09f"
+      "sha256": "3cc3bccc4b58d0690c2b18251cffc3863091305c32fd5d198f152722ba2bd09f",
+      "evidence_label": "official active-cooler reference drawing"
+    },
+    "raspberry-pi-5/RP-010083-CA-1-rpi-5-3D-STEP-no-graphics.zip": {
+      "url": "https://pip-assets.raspberrypi.com/categories/892-raspberry-pi-5/documents/RP-010083-CA-1-rpi-5%203D%20STEP%20-%20No%20Graphics%20small%20file.zip",
+      "sha256": "6841637b4cfa97637bf34b529bfe896f24d9634b2c40b57a156781f55d88f06f",
+      "evidence_label": "official RP-010083-CA Pi 5 no-graphics STEP archive; nominal CAD geometry"
+    },
+    "raspberry-pi-5/rpi-5b_no_graphics.step": {
+      "url": "https://pip-assets.raspberrypi.com/categories/892-raspberry-pi-5/documents/RP-010083-CA-1-rpi-5%203D%20STEP%20-%20No%20Graphics%20small%20file.zip",
+      "sha256": "78164070c1cc7ab854382950d2e85926c6e35432f1e5a146b733397a7c6afb44",
+      "evidence_label": "unmodified member of the official RP-010083-CA archive"
+    },
+    "raspberry-pi-5/LICENSE.txt": {
+      "url": "https://pip-assets.raspberrypi.com/categories/892-raspberry-pi-5/documents/RP-010083-CA-1-rpi-5%203D%20STEP%20-%20No%20Graphics%20small%20file.zip",
+      "sha256": "4ca2d350552b24137e55587e13fb09a249b757c6af49652ff02ea524d154c7fc",
+      "evidence_label": "unmodified MIT license member of the official RP-010083-CA archive"
+    },
+    "connectors/samtec-ssw-th.pdf": {
+      "url": "https://suddendocs.samtec.com/catalog_english/ssw_th.pdf",
+      "sha256": "6d89f5c186a49e0f52f37d7bf7b5095081aff8f98e5ba18a85b0811caaf6f509",
+      "evidence_label": "manufacturer SSW through-hole catalogue: body, tail, and mating geometry"
+    },
+    "connectors/samtec-ssw-svs.pdf": {
+      "url": "https://suddendocs.samtec.com/prints/ssw-svs.pdf",
+      "sha256": "228c070b1800c1c4553cd38e6422ae8d08042b66533ff30042818157c84b4682",
+      "evidence_label": "manufacturer SSW single-vertical recommended PTH layout"
+    },
+    "connectors/samtec-esq-th.pdf": {
+      "url": "https://suddendocs.samtec.com/catalog_english/esq_th.pdf",
+      "sha256": "a2145f4fcc571903cbcda85e4009a787f5a04f0f141c1e158b55e96267ad55b8",
+      "evidence_label": "manufacturer ESQ through-hole catalogue: B height and insertion geometry"
+    },
+    "semiconductors/ti-drv8833-slvsar1e.pdf": {
+      "url": "https://www.ti.com/lit/ds/symlink/drv8833.pdf",
+      "sha256": "3e400e333f08f1b93ec99a2d52a6af2a864e88462cc892282208548d9e9f0de4",
+      "evidence_label": "manufacturer DRV8833 Rev. E datasheet (SLVSAR1E)"
+    },
+    "motors/thinkrobotics25-dimensions.jpg": {
+      "url": "https://thinkrobotics.com/products/25mm-encoder-dc-metal-gearmotors",
+      "sha256": "3be824dc0529b0a431bce18587f4d2c8ca51dcd4e6b569a745c5febe66c35d71",
+      "evidence": "Seller product-page dimension image; vendor reference, not physical measurements"
     }
   }
 }

@@ -1,4 +1,6 @@
-# Hardware audit — 9 September 2026
+> Historical findings for Rev A at commit 57851dc. Rev B replaces the harness-only PCB with physical Pi/Shrike sockets and onboard motor drive; see [the implementation ledger](revb-plan.md) and current CAD. This document preserves the earlier audit, not the current interface.
+
+# Historical Rev A hardware audit — 9 September 2026
 
 **Revision A does not implement the requested plug-in Shrike carrier. Do not order it as the complete robot PCB.** It is a routed, low-current harness adapter. Fabrication, physical fit and powered-motion release gates remain false. No hardware was connected or tested in this audit.
 

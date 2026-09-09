@@ -23,8 +23,10 @@ run('gerbers','pcb','export','gerbers','--layers','F.Cu,B.Cu,F.Mask,B.Mask,F.Sil
 run('drill','pcb','export','drill','--excellon-separate-th','--generate-map','--map-format','svg','-o',out/'fabrication-review',e/'carrier.kicad_pcb')
 run('positions','pcb','export','pos','--format','csv','--units','mm','--smd-only','-o',out/'smt-positions.csv',e/'carrier.kicad_pcb')
 run('board-step','pcb','export','step','--board-only','--force','-o',out/'carrier-bare-board.step',e/'carrier.kicad_pcb')
-sources=[e/'carrier.kicad_sch',e/'carrier.kicad_pcb',e/'carrier.kicad_pro',e/'Rover.kicad_sym',e/'sym-lib-table',e/'fp-lib-table',*sorted((e/'Rover.pretty').glob('*.kicad_mod'))]
+run('populated-step','pcb','export','step','--force','--include-pads','--include-tracks','-o',root/'viewer/carrier-populated.step',e/'carrier.kicad_pcb')
+sources=[root/'tools/export-electronics.py',root/'mechanical/out/shrike-module.step',e/'generate.py',root/'tools/prepare-pcb-models.py',e/'carrier.kicad_sch',e/'carrier.kicad_pcb',e/'carrier.kicad_pro',e/'Rover.kicad_sym',e/'sym-lib-table',e/'fp-lib-table',e/'out/net-contract.json',e/'out/pad-geometry.json',*sorted((e/'Rover.pretty').glob('*.kicad_mod')),*sorted((e/'models').rglob('*.step'))]
 manifest={"kicad_version":subprocess.check_output(cmd+['version'],text=True).strip(),"sources_sha256":{str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},"erc_violations":0,"drc_violations":0,"unconnected":0,"schematic_parity_issues":0,"fabrication_released":False}
+manifest['artifacts_sha256']={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [root/'viewer/carrier-populated.step',out/'carrier-bare-board.step',out/'erc.json',out/'drc.json']}
 (out/'verification.json').write_text(json.dumps(manifest,indent=2)+'\n')
 notice='DESIGN REVIEW ONLY — not released for fabrication. Read docs/commissioning.md and release-gates.json. Exact vendor order codes, power ratings and physical fit remain unqualified.\n'
 (out/'fabrication-review/README.txt').write_text(notice)

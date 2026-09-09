@@ -9,7 +9,11 @@ Unmodified official Shrike R0.4 PCB/STEP files and their CERN OHL v1.2 license, 
 KiCad, Freerouting and CadQuery are external tools, not project dependencies vendored into Git. The ignored `.cache/` directory may contain locally downloaded tooling. No repository-wide public license is chosen on the user's behalf; retain third-party attribution if the project is later published.
 
 `electronics/models/` includes KiCad library package STEP references, attributed
-in `viewer/model-sources.json`, under the same KiCad Libraries license. Samtec
+in `viewer/model-sources.json`. Most carry CC BY-SA 4.0 with the KiCad design
+exception. `D_SMB.step` and `CP_Radial_D8.0mm_P3.50mm.step` instead carry
+GPLv3-or-later with the design exception embedded in their headers. Original
+model notices and GPLv3 are retained in [viewer/model-licenses.txt](viewer/model-licenses.txt).
+Samtec
 socket bodies and the simplified JST VH body are original nominal geometry
 created by `viewer/export_meshes.py` from cited manufacturer dimensions; they
 are not manufacturer-certified STEP assemblies. The DRV8833 uses KiCad's

@@ -38,8 +38,8 @@
     "schematic"
   ],
   "sources_sha256": {
-    "viewer/app.js": "95121a78506ce6e11c7202753548815189258dc7839dc93f100ec845fca5949e",
-    "viewer/index.html": "0dc6d6e9cd2e818590ca1c657f05ae0533de1405890b3d9d095ba7628894c7ad",
+    "viewer/app.js": "ebd36c52ecb75fbf23d872eefcdf2cea574b94df90e883b5da4d0f0be013b213",
+    "viewer/index.html": "fa987112fb90797a47c5b15f8974b2e3118e072160471cf5cbe3d5d002141344",
     "viewer/meshes.json": "6ccbc25317f1a4b5037f825ba7875e08cdb3ca7a1e17b8cb263518530248c597"
   }
 }

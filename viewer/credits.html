@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Axiom Rover · CAD sources</title>
+<style>body{max-width:780px;margin:40px auto;padding:0 20px;font:16px/1.6 system-ui;color:#202c35;background:#f9fafb}a{color:#285976}</style></head><body>
+<p><a href="./">Back to the 3D viewer</a></p><h1>CAD sources and attribution</h1>
+<p>Axiom Rover is an independent Rev B review prototype. Physical fit, power, thermal behavior and powered motion remain unqualified. Downloading the CAD does not release it for fabrication.</p>
+<ul>
+<li>Three.js and OrbitControls 0.180.0: <a href="vendor/LICENSE">MIT license and attribution</a>.</li>
+<li>KiCad package models: kicad StepUp and Rene Poeschl. Most carry CC BY-SA 4.0 with the KiCad design exception; D_SMB and CP_Radial_D8.0mm_P3.50mm carry GPLv3-or-later with their embedded design exception. See the <a href="model-licenses.txt">original model notices and GPLv3 license</a>, <a href="../electronics/Rover.pretty/LICENSE.md">KiCad library license</a>, and <a href="model-sources.json">exact upstream model URLs and hashes</a>.</li>
+<li>Vicharak Shrike Lite R0.4: <a href="../reference/shrike-r04/LICENSE_HW.md">CERN OHL v1.2</a>; <a href="../reference/shrike-r04/Shrike-lite.kicad_pcb">pinned original PCB source</a>; <a href="https://github.com/vicharak-in/shrike">upstream hardware</a>. Our viewer derives the board outline and holes from this PCB and adds nominal male headers. Shrike chips and USB body are omitted. The discrepant vendor STEP header placement is not used.</li>
+<li>Raspberry Pi Ltd: <a href="../reference/raspberry-pi-5/LICENSE.txt">reference CAD notices</a> and <a href="https://pip.raspberrypi.com/documents/RP-010083-CA">official Pi 5 mechanical source</a>.</li>
+<li>Samtec socket and JST VH bodies use nominal drawing dimensions; motors and wheels use supplier dimensions. These are reference envelopes rather than certified mating or fit results.</li>
+</ul>
+<p>Geometry is compressed losslessly for hosting. The CAD coordinates and existing review limitations are retained.</p>
+</body></html>

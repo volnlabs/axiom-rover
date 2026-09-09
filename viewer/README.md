@@ -1,5 +1,9 @@
 # Interactive Rev B CAD inspection
 
+Hosted on Vercel: [rover and enclosure](https://axiom-rover.vercel.app/),
+[PCB](https://axiom-rover.vercel.app/?mode=pcb),
+[schematic](https://axiom-rover.vercel.app/?mode=schematic).
+
 Start `python3 -m http.server 8765 --bind 127.0.0.1` in the repository root.
 Open [the rover](http://127.0.0.1:8765/viewer/) or
 [the PCB](http://127.0.0.1:8765/viewer/?mode=pcb).
@@ -7,7 +11,7 @@ Open [the rover](http://127.0.0.1:8765/viewer/) or
 Drag to rotate, wheel/pinch to zoom, right-drag to pan, or select any of six
 sides. Double-click a component to focus it. Hide or fade the enclosure,
 separate the assembly, or hide individual components. Copper and schematic
-views support zoom and pan. The viewer and its geometry are local.
+views support zoom and pan. The same viewer works locally and as a static Vercel deployment.
 
 The 160×100 mm PCB includes a bottom Pi socket, two top Shrike sockets,
 onboard DRV8833 and the sensor/encoder/IMU connectors. Geometry comes from
@@ -34,3 +38,39 @@ WebGL2 is required.
 
 Three.js 0.180.0 / OrbitControls are vendored under MIT (`vendor/LICENSE`).
 KiCad models retain their library license; see [THIRD_PARTY.md](../THIRD_PARTY.md).
+
+## Vercel hosting
+
+From the repository root, build and check the upload bundle:
+
+```sh
+python3 tools/build-viewer-site.py
+python3 tools/check-viewer.py --site-root .vercel/output/static --report-dir .cache/viewer-site-check
+npx --yes vercel@59.15.0 link --yes --project axiom-rover --scope utkarshs-projects-88519d03
+npx --yes vercel@59.15.0 deploy --prebuilt --prod --yes
+```
+
+The builder emits Vercel's [static Build Output API](https://vercel.com/docs/build-output-api)
+under ignored `.vercel/output/`. The allowlist contains the viewer, three circuit
+drawings, populated PCB STEP download, provenance and license files. It does not
+upload the full repository or local tooling. `.vercel/project.json` is local
+account/project configuration and stays ignored. Deploy the prebuilt output;
+running a source deployment from the repository root would upload unrelated CAD.
+
+The geometry is compressed losslessly from about 100 MB to 17 MB; the complete
+bundle is about 40 MB. The hosted entry point uses the browser's native
+[DecompressionStream](https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream).
+A current browser with WebGL2 is required. Local viewing still loads the original
+`meshes.json`. Both `/` and `/viewer/` support the existing `?mode=pcb`,
+`?mode=schematic`, `?view=bottom`, and `?shell=0` links.
+
+After deploying, check the public URL with the same browser test:
+
+```sh
+python3 tools/check-viewer.py --site-root .vercel/output/static \
+  --report-dir .cache/vercel-live-check --url 'https://axiom-rover.vercel.app/'
+```
+
+The source hashes in that report describe the local bundle; verify downloaded
+asset hashes separately when tying a remote deployment to this checkout. Hosting
+does not change fabrication or physical-test release status.

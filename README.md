@@ -1,6 +1,6 @@
 # Axiom Rover
 
-**Interactive 3D inspection:** [open the local viewer](http://127.0.0.1:8765/viewer/) — rotate, zoom, inspect all sides, hide the shell, or separate parts. [Start/restart instructions](viewer/README.md).
+**Interactive 3D inspection:** [open the hosted viewer](https://axiom-rover.vercel.app/) or [inspect the PCB](https://axiom-rover.vercel.app/?mode=pcb) — rotate, zoom, inspect all sides, hide the shell, or separate parts. [Local viewing and deployment instructions](viewer/README.md).
 
 A reusable 2WD release-test robot: one fixed Shrike/RP2040 + ForgeFPGA actuator base, a removable compute tray, an independent motor-power stop, and a wheels-raised stand. This is an **independent hardware repository**, not part of the AxiomOS source tree.
 

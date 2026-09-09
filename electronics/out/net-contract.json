@@ -1,0 +1,102 @@
+{
+  "J1": {
+    "1": "HOST_3V3",
+    "2": "H_GND",
+    "3": "H_TX",
+    "4": "H_RX"
+  },
+  "U1": {
+    "1": "HOST_3V3",
+    "2": "H_RX",
+    "3": "H_TX",
+    "4": "H_GND",
+    "5": "BASE_GND",
+    "6": "RP_UART_RX",
+    "7": "RP_UART_TX",
+    "8": "BASE_3V3"
+  },
+  "C1": {
+    "1": "HOST_3V3",
+    "2": "H_GND"
+  },
+  "C2": {
+    "1": "BASE_3V3",
+    "2": "BASE_GND"
+  },
+  "J2": {
+    "1": "BASE_3V3",
+    "2": "BASE_GND",
+    "3": "ESTOP_N",
+    "4": "L_IN1",
+    "5": "L_IN2",
+    "6": "R_IN3",
+    "7": "R_IN4",
+    "8": "US_TRIG",
+    "9": "US_ECHO_3V",
+    "10": "RP_UART_TX",
+    "11": "RP_UART_RX",
+    "12": "ESTOP_N",
+    "13": "FPGA_PWM_L",
+    "14": "FPGA_PWM_R",
+    "15": null,
+    "16": null
+  },
+  "J3": {
+    "1": "BASE_5V",
+    "2": "BASE_GND",
+    "3": "SENSOR_TRIG",
+    "4": "US_ECHO_5V"
+  },
+  "R1": {
+    "1": "US_TRIG",
+    "2": "SENSOR_TRIG"
+  },
+  "R2": {
+    "1": "US_ECHO_5V",
+    "2": "ECHO_DIV"
+  },
+  "R3": {
+    "1": "ECHO_DIV",
+    "2": "BASE_GND"
+  },
+  "U2": {
+    "1": null,
+    "2": "ECHO_DIV",
+    "3": "BASE_GND",
+    "4": "US_ECHO_3V",
+    "5": "BASE_3V3"
+  },
+  "C3": {
+    "1": "BASE_3V3",
+    "2": "BASE_GND"
+  },
+  "J4": {
+    "1": "BASE_GND",
+    "2": "L_IN1",
+    "3": "L_IN2",
+    "4": "R_IN3",
+    "5": "R_IN4",
+    "6": "FPGA_PWM_L",
+    "7": "FPGA_PWM_R"
+  },
+  "R4": {
+    "1": "ESTOP_N",
+    "2": "BASE_GND"
+  },
+  "R5": {
+    "1": "FPGA_PWM_L",
+    "2": "BASE_GND"
+  },
+  "R6": {
+    "1": "FPGA_PWM_R",
+    "2": "BASE_GND"
+  },
+  "J5": {
+    "1": "BASE_3V3",
+    "2": "ESTOP_N"
+  },
+  "J6": {
+    "1": "BASE_5V",
+    "2": "BASE_GND"
+  }
+}

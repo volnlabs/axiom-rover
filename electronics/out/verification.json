@@ -1,0 +1,25 @@
+{
+  "kicad_version": "10.0.6",
+  "sources_sha256": {
+    "electronics/carrier.kicad_sch": "db106fdff5bb5f5adeb8e88cf4ec27a5c89a651fdbb3f691acfdf482670c870d",
+    "electronics/carrier.kicad_pcb": "887207cb23690def3cfa1d938909ab7a0c37f768dfd8915de6ab8cdaba3753ff",
+    "electronics/carrier.kicad_pro": "ebe018ec3f67c73b3f86130b441381ddf7f2cbf756aab648868f4c04ee1814c3",
+    "electronics/Rover.kicad_sym": "bcd25c9384bf9d53c7c5edc27191a3250db0293aaedf931e65e6bee4e7b9a99b",
+    "electronics/sym-lib-table": "b7861effc994ad395146d7ad7a80044bf32f765d4d1868f21f75b90f546debad",
+    "electronics/fp-lib-table": "4127bead2b636e92ce0b9d5425265f46ca6cdbe9a64d01ccc2657372bcb57595",
+    "electronics/Rover.pretty/C_0805_2012Metric.kicad_mod": "62775a51fe74ba7f1b572de327bdbd3fc92582721b2abcaa47787865590d89cb",
+    "electronics/Rover.pretty/IDC-Header_2x08_P2.54mm_Vertical.kicad_mod": "0c00fadc79e443c032fb621251557a751dfc0f5d8e62995b12a7fe30de7da12a",
+    "electronics/Rover.pretty/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.kicad_mod": "712477fd339c81789760f7b5b8649a986a9336f5fc8c2916fcfedc140b052d6c",
+    "electronics/Rover.pretty/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.kicad_mod": "fa93a9f49b03c4caad76b643da2473903ee645833aa1d0ae65afd97740431d86",
+    "electronics/Rover.pretty/JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical.kicad_mod": "3e2aac5662931436208b114b95111784390210938170337acd97b9c0f3e43a41",
+    "electronics/Rover.pretty/MountingHole_3.2mm_M3.kicad_mod": "b83ec84428449465df3b459f1bc24b285045c812102a2052b1b7ce0f67e018f2",
+    "electronics/Rover.pretty/R_0805_2012Metric.kicad_mod": "f050b6a50cc7e6f86291fb7aa8f87b0d02255e21cfbddf291cdccc87e5889794",
+    "electronics/Rover.pretty/SOIC-8_3.9x4.9mm_P1.27mm.kicad_mod": "074ecb2092b24fa4b4b9cdd7c926fc587b0d7d6d21e7341e57935fd42d36894f",
+    "electronics/Rover.pretty/SOT-23-5.kicad_mod": "455a3f7c3e5eb5b8847eaa5df23e18651e78ab9f75afd09a0883758a0d901761"
+  },
+  "erc_violations": 0,
+  "drc_violations": 0,
+  "unconnected": 0,
+  "schematic_parity_issues": 0,
+  "fabrication_released": false
+}

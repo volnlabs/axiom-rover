@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "Rover") (type "KiCad") (uri "${KIPRJMOD}/Rover.pretty") (options "") (descr "Pinned KiCad 10 footprints")))

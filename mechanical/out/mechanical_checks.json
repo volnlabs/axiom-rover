@@ -1,0 +1,134 @@
+{
+  "design": "Axiom modular 2WD rover",
+  "units": "mm",
+  "measured": false,
+  "source_sha256": "20e66c7bbbc4bceb8e7ac00cbce2e9a3da905887a261d553d938cba758e094f4",
+  "status": "CONCEPT \u2014 envelopes require purchase verification",
+  "parameters": {
+    "base_w": 200.0,
+    "base_l": 260.0,
+    "base_t": 4.0,
+    "ground_z": -15.0,
+    "axle_y": -50.0,
+    "axle_z": 17.5,
+    "wheel_x": 110.0,
+    "wheel_d": 65.0,
+    "caster_nominal_h": 15.0,
+    "pcb_w": 120.0,
+    "pcb_l": 80.0,
+    "pcb_z": 18.0,
+    "pcb_t": 1.6,
+    "pcb_component_h": 18.0,
+    "idc_bend_h": 22.0,
+    "tray_w": 200.0,
+    "tray_l": 160.0,
+    "tray_z": 80.0,
+    "pi_x": -50.0,
+    "pi_z": 89.0,
+    "pi_standoff_h": 6.0,
+    "mount_x": 85.0,
+    "mount_y": 65.0
+  },
+  "checks": {
+    "base_outer_width_mm": 200.0,
+    "base_outer_length_mm": 260.0,
+    "tray_width_mm": 200.0,
+    "tray_length_mm": 160.0,
+    "ground_z_mm": -15.0,
+    "wheel_centres_x_mm": [
+      -110,
+      110
+    ],
+    "wheel_lowest_z_mm": [
+      -15.0,
+      -15.0
+    ],
+    "caster_lowest_z_mm": -15.0000001,
+    "pcb_hole_centres": [
+      [
+        -55,
+        -35
+      ],
+      [
+        55,
+        -35
+      ],
+      [
+        55,
+        35
+      ],
+      [
+        -55,
+        35
+      ]
+    ],
+    "pcb_m3_hole_residual_mm3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pcb_support_top_z_mm": 18.005593954514854,
+    "common_mount_centres": [
+      [
+        -85,
+        -65
+      ],
+      [
+        -85,
+        65
+      ],
+      [
+        85,
+        -65
+      ],
+      [
+        85,
+        65
+      ]
+    ],
+    "intended_intersections": [],
+    "unexpected_intersections": [],
+    "printable_solid_counts": {
+      "base_chassis": 1,
+      "left_motor_bracket": 1,
+      "right_motor_bracket": 1,
+      "tray": 1,
+      "tray_posts": 4,
+      "vented_shell": 1,
+      "sensor_bracket": 1,
+      "caster_fixture": 1,
+      "shrike_module_plate": 1,
+      "test_stand": 1
+    },
+    "passed": true
+  },
+  "parts_printable": [
+    "base_chassis",
+    "left_motor_bracket",
+    "right_motor_bracket",
+    "tray",
+    "tray_posts",
+    "vented_shell",
+    "sensor_bracket",
+    "caster_fixture",
+    "shrike_module_plate",
+    "test_stand"
+  ],
+  "parts_envelope_only": [
+    "left_wheel_ENVELOPE",
+    "right_wheel_ENVELOPE",
+    "left_tt_motor_ENVELOPE",
+    "right_tt_motor_ENVELOPE",
+    "pcb_ENVELOPE",
+    "pcb_component_ENVELOPE",
+    "idc_harness_ENVELOPE",
+    "idc_tray_corridor_ENVELOPE",
+    "motor_pack_ENVELOPE",
+    "base5v_pack_ENVELOPE",
+    "host_pack_ENVELOPE",
+    "pi5_ENVELOPE",
+    "shrike_l298_ENVELOPE",
+    "caster_ENVELOPE"
+  ]
+}

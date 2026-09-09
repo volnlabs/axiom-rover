@@ -1,0 +1,19 @@
+{
+  "revision": "A-review",
+  "fabrication_released": false,
+  "powered_motion_released": false,
+  "physical_tests_run": false,
+  "required_evidence": {
+    "purchased_part_dimensions_and_dry_fit": null,
+    "exact_connector_and_component_order_codes": null,
+    "motor_stall_current_power_range_and_rated_harness": null,
+    "commercial_host_base_motor_supply_qualification": null,
+    "vendor_quotes_with_revision_reserve": null,
+    "independent_electrical_and_mechanical_review": null,
+    "validated_fpga_bitstream_and_timing_manifest": null,
+    "atomic_uart_watchdog_estop_runtime": null,
+    "partial_power_and_backfeed_measurements": null,
+    "estop_watchdog_and_recovery_captures": null,
+    "raised_wheel_and_thermal_tests": null
+  }
+}

@@ -1,0 +1,24 @@
+2026-09-09 21:00:01.559 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+WARNING: Final field userProfileSettings in class app.freerouting.settings.GlobalSettings has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @78186a70 (file:/tmp/axiom-cad-tools/freerouting.jar)
+WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
+WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
+2026-09-09 21:00:03.113 INFO   [9506DC\CA6D53] Loading board file 'carrier.dsn'...
+2026-09-09 21:00:03.170 INFO   [9506DC\CA6D53] Job '9506DC\CA6D53' started at 2026-09-09T15:30:03.169703293Z.
+2026-09-09 21:00:03.239 INFO   [9506DC\CA6D53] Fanout stage started on board '2fc7602e32c4d7c93f1fdd109b98c40d' with 30 of 31 SMD pins needing fanout (1 already connected, 0 netless).
+2026-09-09 21:00:03.887 INFO   [9506DC\CA6D53] Fanout pass #1 on board '513076805b850cfd11b0342e77e32c27' completed in 0.63 seconds with 30 SMD pins fanouted, 0 not routed, 0 insert errors, +16 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-09-09 21:00:04.144 INFO   [9506DC\CA6D53] Fanout pass #2 on board '407d0e4eae68d5124fccdc8c30ad2fc5' completed in 0.25 seconds with 5 SMD pins fanouted, 0 not routed, 0 insert errors, +2 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-09-09 21:00:04.271 INFO   [9506DC\CA6D53] Fanout pass #3 on board '994382726d720db9f1953a5bcfc6ffba' completed in 0.12 seconds with 4 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-09-09 21:00:04.385 INFO   [9506DC\CA6D53] Fanout pass #4 on board 'b9ee637d134646a87f99ea920c151569' completed in 0.11 seconds with 4 SMD pins fanouted, 0 not routed, 0 insert errors, +3 extra vias (0 SMD pins still to check in pass, ripup costs=400).
+2026-09-09 21:00:04.423 INFO   [9506DC\CA6D53] Fanout pass #5 on board 'b9ee637d134646a87f99ea920c151569' completed in 0.03 seconds with 0 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=500).
+2026-09-09 21:00:04.431 INFO   [9506DC\CA6D53] Fanout stage completed: started with 31 total SMD pins, completed in 1.19 seconds, escaped pins: 30/31 (96.8%), using 1.16 total CPU seconds, 1.67 GB total allocated, and 403.9 MB peak heap usage.
+2026-09-09 21:00:04.435 INFO   [9506DC\CA6D53] Auto-routing stage started on board 'b9ee637d134646a87f99ea920c151569' for 31 unrouted items.
+2026-09-09 21:00:05.596 INFO   [9506DC\CA6D53] Auto-routing pass #1 on board 'b9ee637d134646a87f99ea920c151569' was completed in 1.13 seconds with score 904.75 (4 unrouted and 0 violations), using 1.95 CPU seconds and the job allocated 3.75 GB of memory so far.
+2026-09-09 21:00:05.929 INFO   [9506DC\CA6D53] Auto-routing pass #2 on board 'fe92815d36702d5122fd141518604fc9' was completed in 0.30 seconds with score 999.99 (0 unrouted and 0 violations), using 1.95 CPU seconds and the job allocated 3.75 GB of memory so far.
+2026-09-09 21:00:05.974 INFO   [9506DC\CA6D53] Auto-routing pass #3 on board '7062cc352a2b1dfaa5a7bbd53eb0ffcd' was completed in 0.01 seconds with score 999.99 (0 unrouted and 0 violations), using 1.95 CPU seconds and the job allocated 3.75 GB of memory so far.
+2026-09-09 21:00:06.011 INFO   [9506DC\CA6D53] Auto-routing stage completed: started with 42 unrouted nets, completed in 2.79 seconds, final score: 999.99 (0 unrouted and 0 violations), using 1.95 total CPU seconds, 3.75 GB total allocated, and 385.9 MB peak heap usage.
+2026-09-09 21:00:06.025 INFO   [9506DC\CA6D53] Optimization stage started on board 'dfca8e961d4a528782d8df7f0dec3513' with score 999.99 (0 unrouted and 0 violations).
+2026-09-09 21:00:06.038 INFO   [9506DC\CA6D53] Stopping optimizer because the current board score (999.99) is already close to the maximum score (1000). Remaining potential improvement is less than the threshold (1.00%).
+2026-09-09 21:00:06.050 INFO   [9506DC\CA6D53] Optimization stage completed: started with score 999.99 (0 unrouted and 0 violations), completed in 0.02 seconds, final score: 999.99 (0 unrouted and 0 violations), using 0.01 total CPU seconds, 0.06 GB total allocated, and 186.6 MB peak heap usage.
+2026-09-09 21:00:06.055 INFO   [9506DC\CA6D53] Job '9506DC\CA6D53' finished with state: COMPLETED (elapsed: 2.88 seconds, finished at UTC: 2026-09-09T15:30:06.054988576Z).
+2026-09-09 21:00:06.370 INFO   Saving output file '/tmp/axiom-rover-build/electronics/out/carrier.ses' (SES)...
+2026-09-09 21:00:06.378 INFO   Successfully saved output file '/tmp/axiom-rover-build/electronics/out/carrier.ses' (12772 bytes).

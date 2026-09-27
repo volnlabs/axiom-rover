@@ -14,6 +14,8 @@ const fill = new T.DirectionalLight(0xd3e7ff, 1.3);
 fill.position.set(-150, -250, -150);
 scene.add(ambient, key, fill);
 const grid = new T.GridHelper(700, 28, 0xb7c3cb, 0xd2dae0);
+grid.material.transparent = true;
+grid.material.opacity = .45;
 grid.rotation.x = Math.PI / 2;
 grid.position.z = -50;
 scene.add(grid);
@@ -43,7 +45,7 @@ function initRenderer() {
   try { renderer = new T.WebGLRenderer({antialias:true}); }
   catch { throw Error('This browser cannot start WebGL2. Enable hardware acceleration or try another browser. The schematic and downloads are still available.'); }
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-  renderer.setClearColor(0xe9edf0);
+  renderer.setClearColor(0xedf2f6);
   renderer.domElement.setAttribute('aria-label', 'Interactive reference CAD. Use the view controls or keyboard to inspect each side.');
   renderer.domElement.setAttribute('role', 'img');
   stage.prepend(renderer.domElement);
@@ -198,7 +200,10 @@ document.querySelectorAll('[data-view]').forEach(b => b.onclick = () => { closeD
 function mesh(data){const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(data.positions,3));g.setIndex(data.indices);g.computeVertexNormals();const color=Array.isArray(data.color)?new T.Color(...data.color):new T.Color(data.color);const mat=new T.MeshStandardMaterial({color,roughness:.58,metalness:.08,side:T.DoubleSide});const m=new T.Mesh(g,mat);m.name=data.name;m.userData.enabled=true;return m;}
 function reserve(n){return /SWEEP|cooler|shrike_.*UNMEASURED_ENVELOPE|socket.*REFERENCE|DRAWING_REFERENCE|CONTRACT_REFERENCE/.test(n);}
 function replaced(n){return /carrier_tails_CLEARANCE_REFERENCE|carrier_pcb_CONTRACT|shrike_actualCAD|shrike_pcbCAD|shrike_male_|shrike_.*socket_REFERENCE|pi_socket_ESQ_REFERENCE|pi5_DRAWING_REFERENCE/.test(n);}
-function apply(){grid.position.z=$('#stand').checked?-48:-15;const e=Number($('#explode').value);for(const m of parts){const n=m.name;m.visible=!replaced(n)&&m.userData.enabled&&(!n.includes('ENVELOPE')||$('#envelopes').checked)&&(!reserve(n)||$('#reserves').checked)&&(n!=='vented_shell'||$('#shell').checked)&&(n!=='test_stand'||$('#stand').checked);m.position.set(0,0,0);if(n==='vented_shell')m.position.z=e*170;else if(n==='tray'||n.startsWith('pi5_')||n==='pi_cooler_max_ENVELOPE')m.position.z=e*60;else if(n==='carrier_frame')m.position.z=e*95;else if(n==='carrier_posts')m.position.z=e*60;else if(n==='tray_posts')m.position.z=e*30;else if(n.includes('wheel'))m.position.x=(n.includes('left')?-1:1)*e*80;else if(n.includes('shrike'))m.position.z=e*95;else if(n.includes('pack'))m.position.z=e*20;
+function apply(){
+$('#opacity-value').value = Math.round(Number($('#opacity').value) * 100) + '%';
+$('#explode-value').value = Math.round(Number($('#explode').value) * 100) + '%';
+grid.position.z=$('#stand').checked?-48:-15;const e=Number($('#explode').value);for(const m of parts){const n=m.name;m.visible=!replaced(n)&&m.userData.enabled&&(!n.includes('ENVELOPE')||$('#envelopes').checked)&&(!reserve(n)||$('#reserves').checked)&&(n!=='vented_shell'||$('#shell').checked)&&(n!=='test_stand'||$('#stand').checked);m.position.set(0,0,0);if(n==='vented_shell')m.position.z=e*170;else if(n==='tray'||n.startsWith('pi5_')||n==='pi_cooler_max_ENVELOPE')m.position.z=e*60;else if(n==='carrier_frame')m.position.z=e*95;else if(n==='carrier_posts')m.position.z=e*60;else if(n==='tray_posts')m.position.z=e*30;else if(n.includes('wheel'))m.position.x=(n.includes('left')?-1:1)*e*80;else if(n.includes('shrike'))m.position.z=e*95;else if(n.includes('pack'))m.position.z=e*20;
 const opacity=n==='vented_shell'?Number($('#opacity').value):reserve(n)?.2:1;m.material.opacity=opacity;m.material.transparent=opacity<1;m.material.depthWrite=opacity===1;
 }
 assemblyPCB.position.z=107.1+e*95;

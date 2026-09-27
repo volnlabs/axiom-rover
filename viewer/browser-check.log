@@ -1,7 +1,5 @@
-[345976:345982:0927/220037.240378:ERROR:base/nix/mime_util_xdg.cc:139] Invalid mime.cache file does not contain null prior to ALIAS_LIST_OFFSET=44
-[345897:345923:0927/220039.508975:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
-[345897:345923:0927/220039.513974:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
-[345897:345923:0927/220039.517549:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
-[345897:345923:0927/220039.606513:ERROR:google_apis/gcm/engine/mcs_client.cc:702]   Error code: 401  Error message: Authentication Failed: wrong_secret
-[345897:345923:0927/220039.606542:ERROR:google_apis/gcm/engine/mcs_client.cc:704] Failed to log in to GCM, resetting connection.
-166569 bytes written to file /home/utkarsh/Work/volnlabs/axiom-rover/viewer/inspection.png
+[436383:436387:0927/222438.670944:ERROR:base/nix/mime_util_xdg.cc:139] Invalid mime.cache file does not contain null prior to ALIAS_LIST_OFFSET=44
+[436321:436338:0927/222441.078045:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+[436321:436338:0927/222441.079551:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+[436321:436338:0927/222441.081533:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+162592 bytes written to file /home/utkarsh/Work/volnlabs/axiom-rover/viewer/inspection.png

@@ -317,5 +317,35 @@
   "R19": {
     "1": "FAULT_FPGA_DRIVE",
     "2": "FAULT_FPGA_N"
+  },
+  "TP1": {
+    "1": "HOST_3V3"
+  },
+  "TP2": {
+    "1": "H_GND"
+  },
+  "TP3": {
+    "1": "BASE_3V3"
+  },
+  "TP4": {
+    "1": "BASE_5V"
+  },
+  "TP5": {
+    "1": "MOTOR_6V"
+  },
+  "TP6": {
+    "1": "BASE_GND"
+  },
+  "TP7": {
+    "1": "ESTOP_N"
+  },
+  "TP8": {
+    "1": "DRV_FAULT_N"
+  },
+  "TP9": {
+    "1": "SENSE_L"
+  },
+  "TP10": {
+    "1": "SENSE_R"
   }
 }

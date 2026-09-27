@@ -1,45 +1,9 @@
 [
   {
-    "path": "electronics/models/Connector_JST.3dshapes/JST_VH_B2P-VH_1x02_P3.96mm_Vertical.step",
-    "url": "https://www.jst-mfg.com/product/pdf/eng/eVH.pdf",
-    "geometry": "nominal drawing envelope",
-    "sha256": "a00229dfaa48921b2d047de5142bc4eacdfe7ab9979e06964a78a3c7168836d2"
-  },
-  {
-    "path": "electronics/models/Resistor_SMD.3dshapes/R_0805_2012Metric.step",
-    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Resistor_SMD.3dshapes/R_0805_2012Metric.step",
-    "geometry": "KiCad library package reference",
-    "sha256": "ded342cdb394fb45395227beaaa75cc390613cf2581b29cd6d22c12abd6103b2"
-  },
-  {
-    "path": "electronics/models/Package_SO.3dshapes/SOIC-14_3.9x8.7mm_P1.27mm.step",
-    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Package_SO.3dshapes/SOIC-14_3.9x8.7mm_P1.27mm.step",
-    "geometry": "KiCad library package reference",
-    "sha256": "8294d4531cded9c47ead7815690b9a9c1c084d404c3689406c807f7d1b45b600"
-  },
-  {
-    "path": "electronics/models/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
-    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
-    "geometry": "KiCad library package reference",
-    "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
-  },
-  {
-    "path": "electronics/models/Resistor_SMD.3dshapes/R_1206_3216Metric.step",
-    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Resistor_SMD.3dshapes/R_1206_3216Metric.step",
-    "geometry": "KiCad library package reference",
-    "sha256": "f5d1ea5c47935091292bd1c6c698e0df88d3d4bbf92bf66b4c97e49df5be9ebc"
-  },
-  {
     "path": "electronics/models/Connector_JST.3dshapes/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.step",
     "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Connector_JST.3dshapes/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.step",
     "geometry": "KiCad library package reference",
     "sha256": "7eb17ded8ec4a3216753a234254e22a2d8e07826f0816045bfb803a19cac75ea"
-  },
-  {
-    "path": "electronics/models/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
-    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
-    "geometry": "KiCad library package reference",
-    "sha256": "d9b46f6dd6cf8c5e2028838eed38e2a6a7f26235856078511e5a71a594ca809e"
   },
   {
     "path": "electronics/models/Capacitor_THT.3dshapes/CP_Radial_D8.0mm_P3.50mm.step",
@@ -48,22 +12,28 @@
     "sha256": "abedfe603cd28231e16fb158d7b3f8875be74514f602e356364f48f073d0ef8e"
   },
   {
-    "path": "electronics/models/Connector_JST.3dshapes/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.step",
-    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Connector_JST.3dshapes/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.step",
+    "path": "electronics/models/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
     "geometry": "KiCad library package reference",
-    "sha256": "7287616fdad677e9b54cf5494f17efc4b3fb77be002659d73e215772393f20c6"
+    "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
   },
   {
-    "path": "electronics/models/Diode_SMD.3dshapes/D_SMB.step",
-    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Diode_SMD.3dshapes/D_SMB.step",
+    "path": "electronics/models/Package_SO.3dshapes/SOIC-14_3.9x8.7mm_P1.27mm.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Package_SO.3dshapes/SOIC-14_3.9x8.7mm_P1.27mm.step",
     "geometry": "KiCad library package reference",
-    "sha256": "029466277d91e9f5492556be93e46611049e07115c7913880c547afa96058ed4"
+    "sha256": "8294d4531cded9c47ead7815690b9a9c1c084d404c3689406c807f7d1b45b600"
   },
   {
-    "path": "electronics/models/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
-    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+    "path": "electronics/models/Resistor_SMD.3dshapes/R_0805_2012Metric.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Resistor_SMD.3dshapes/R_0805_2012Metric.step",
     "geometry": "KiCad library package reference",
-    "sha256": "3b70f1b6dd947543fda90b947f91f2e2804766c39b78e56c87f1448dfd575ed8"
+    "sha256": "ded342cdb394fb45395227beaaa75cc390613cf2581b29cd6d22c12abd6103b2"
+  },
+  {
+    "path": "electronics/models/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+    "geometry": "KiCad library package reference",
+    "sha256": "d9b46f6dd6cf8c5e2028838eed38e2a6a7f26235856078511e5a71a594ca809e"
   },
   {
     "path": "electronics/models/Package_SO.3dshapes/TSSOP-16-1EP_4.4x5mm_Pitch0.65mm_EP3.4x5mm.step",
@@ -72,15 +42,45 @@
     "sha256": "a1a7cf5d45d952e3c21e9f981355a0a77e854f4090bc09e98fdb79068a8770c5"
   },
   {
-    "path": "electronics/models/Connector_JST.3dshapes/JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical.step",
-    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Connector_JST.3dshapes/JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical.step",
+    "path": "electronics/models/Resistor_SMD.3dshapes/R_1206_3216Metric.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Resistor_SMD.3dshapes/R_1206_3216Metric.step",
     "geometry": "KiCad library package reference",
-    "sha256": "8af7ded5ecaefc019081b2092b15a5a7a5b727e110fed3328bc806903f5d1a63"
+    "sha256": "f5d1ea5c47935091292bd1c6c698e0df88d3d4bbf92bf66b4c97e49df5be9ebc"
+  },
+  {
+    "path": "electronics/models/Connector_JST.3dshapes/JST_VH_B2P-VH_1x02_P3.96mm_Vertical.step",
+    "url": "https://www.jst-mfg.com/product/pdf/eng/eVH.pdf",
+    "geometry": "nominal drawing envelope",
+    "sha256": "a00229dfaa48921b2d047de5142bc4eacdfe7ab9979e06964a78a3c7168836d2"
+  },
+  {
+    "path": "electronics/models/Connector_JST.3dshapes/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Connector_JST.3dshapes/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.step",
+    "geometry": "KiCad library package reference",
+    "sha256": "7287616fdad677e9b54cf5494f17efc4b3fb77be002659d73e215772393f20c6"
   },
   {
     "path": "electronics/models/Capacitor_SMD.3dshapes/C_1206_3216Metric.step",
     "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Capacitor_SMD.3dshapes/C_1206_3216Metric.step",
     "geometry": "KiCad library package reference",
     "sha256": "11e948c72c90e2b6322436b72745f40ff4e8ba0da64fb2a0df943dfa61e89c1a"
+  },
+  {
+    "path": "electronics/models/Diode_SMD.3dshapes/D_SMB.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Diode_SMD.3dshapes/D_SMB.step",
+    "geometry": "KiCad library package reference",
+    "sha256": "029466277d91e9f5492556be93e46611049e07115c7913880c547afa96058ed4"
+  },
+  {
+    "path": "electronics/models/Connector_JST.3dshapes/JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Connector_JST.3dshapes/JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical.step",
+    "geometry": "KiCad library package reference",
+    "sha256": "8af7ded5ecaefc019081b2092b15a5a7a5b727e110fed3328bc806903f5d1a63"
+  },
+  {
+    "path": "electronics/models/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+    "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+    "geometry": "KiCad library package reference",
+    "sha256": "3b70f1b6dd947543fda90b947f91f2e2804766c39b78e56c87f1448dfd575ed8"
   }
 ]

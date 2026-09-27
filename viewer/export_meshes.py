@@ -54,7 +54,8 @@ for kind,path in [('rover',args.repo/'mechanical/out/axiom_rover_assembly.step')
    else:name='Copper';col='#bca469'
   groups.setdefault(name,{'color':col,'shapes':[]})['shapes'].append(shape)
  if kind=='pcb':
-  expected={f['ref'] for f in layout if not f['ref'].startswith('H')}
+  # Mounting holes, probe pads and fiducials are board geometry, not fitted parts.
+  expected={f['ref'] for f in layout if not f['ref'].startswith(('H','TP','FID'))}
   assert expected<=seen, ('Missing 3D component models',expected-seen)
  for name,g in groups.items():
   shape=cq.Compound.makeCompound(g['shapes']);vs,ts=shape.tessellate(.18,.25)

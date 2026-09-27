@@ -316,19 +316,11 @@
     "netclass_patterns": [
       {
         "netclass": "Motor",
-        "pattern": "/MOTOR_L_N"
-      },
-      {
-        "netclass": "Motor",
-        "pattern": "/MOTOR_R_N"
-      },
-      {
-        "netclass": "Motor",
-        "pattern": "/SENSE_R"
-      },
-      {
-        "netclass": "Motor",
         "pattern": "/MOTOR_6V"
+      },
+      {
+        "netclass": "Motor",
+        "pattern": "/MOTOR_L_N"
       },
       {
         "netclass": "Motor",
@@ -336,11 +328,19 @@
       },
       {
         "netclass": "Motor",
-        "pattern": "/SENSE_L"
+        "pattern": "/MOTOR_R_N"
       },
       {
         "netclass": "Motor",
         "pattern": "/MOTOR_R_P"
+      },
+      {
+        "netclass": "Motor",
+        "pattern": "/SENSE_L"
+      },
+      {
+        "netclass": "Motor",
+        "pattern": "/SENSE_R"
       }
     ]
   },

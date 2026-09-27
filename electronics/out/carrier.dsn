@@ -47,6 +47,11 @@
     )
   )
   (placement
+    (component Rover:Fiducial_1mm_Mask3mm
+      (place FID3 78500 -95500 front 0 (PN Fiducial))
+      (place FID2 151000 -72000 front 0 (PN Fiducial))
+      (place FID1 12000 -6000 front 0 (PN Fiducial))
+    )
     (component Rover:MountingHole_2.7mm_M2.5
       (place H8 61500 -72500 front 0 (PN "M2.5 NPTH"))
       (place H7 3500 -72500 front 0 (PN "M2.5 NPTH"))
@@ -58,6 +63,18 @@
       (place H3 155000 -95000 front 0 (PN "M3 NPTH"))
       (place H2 155000 -5000 front 0 (PN "M3 NPTH"))
       (place H1 5000 -5000 front 0 (PN "M3 NPTH"))
+    )
+    (component Rover:TestPoint_Pad_D1.5mm
+      (place TP10 116962.5 -86500 front 0 (PN SENSE_R))
+      (place TP9 116962.5 -71500 front 0 (PN SENSE_L))
+      (place TP8 109000 -86000 front 0 (PN DRV_FAULT_N))
+      (place TP7 82000 -28000 front 0 (PN ESTOP_N))
+      (place TP6 109000 -81000 front 0 (PN BASE_GND))
+      (place TP5 144000 -76000 front 0 (PN MOTOR_6V))
+      (place TP4 101000 -91000 front 0 (PN BASE_5V))
+      (place TP3 82000 -22000 front 0 (PN BASE_3V3))
+      (place TP2 63000 -16000 front 0 (PN H_GND))
+      (place TP1 63000 -11000 front 0 (PN HOST_3V3))
     )
     (component Rover:R_0805_2012Metric
       (place R19 94000 -65000 front 0 (PN "1k 1%"))
@@ -79,8 +96,7 @@
     )
     (component Rover:C_0805_2012Metric
       (place C9 94000 -56000 front 0 (PN "100nF 16V X7R"))
-      (place C7 129000 -74000 front 0 (PN "2.2uF 16V X7R"))
-      (place C6 131000 -80000 front 0 (PN "10nF 25V X7R"))
+      (place C7 128850 -76100 front 0 (PN "2.2uF 16V X7R"))
       (place C4 141000 -38000 front 0 (PN "100nF 16V X7R"))
     )
     (component "Rover:SOIC-14_3.9x8.7mm_P1.27mm"
@@ -113,25 +129,26 @@
     (component Rover:CP_Radial_D8.0mm_P3.50mm
       (place C8 126000 -89000 front 0 (PN "470uF 16V"))
     )
+    (component Rover:C_0805_2012Metric::1
+      (place C6 128000 -82400 front -90 (PN "10nF 25V X7R"))
+      (place C2 81000 -15000 front -90 (PN "100nF 16V X7R"))
+      (place C1 69000 -15000 front -90 (PN "100nF 16V X7R"))
+    )
     (component Rover:C_1206_3216Metric
-      (place C5 131000 -77000 front 0 (PN "10uF 16V X7R"))
+      (place C5 129800 -79325 front 0 (PN "10uF 16V X7R"))
     )
     (component Rover:R_1206_3216Metric
-      (place R8 110000 -85000 front 0 (PN "0.20R 1% 1W"))
-      (place R7 110000 -73000 front 0 (PN "0.20R 1% 1W"))
+      (place R8 115500 -82500 front 180 (PN "0.20R 1W CSRT1206FTR200"))
+      (place R7 115500 -75500 front 180 (PN "0.20R 1W CSRT1206FTR200"))
     )
     (component Rover:R_0805_2012Metric::1
       (place R4 95000 -14000 front 90 (PN "10k 1%"))
     )
-    (component Rover:C_0805_2012Metric::1
+    (component Rover:C_0805_2012Metric::2
       (place C3 95000 -75000 front 90 (PN "100nF 16V X7R"))
     )
     (component "Rover:SOT-23-5"
       (place U2 91000 -75000 front 0 (PN SN74LVC1G17DBVR))
-    )
-    (component Rover:C_0805_2012Metric::2
-      (place C2 81000 -15000 front -90 (PN "100nF 16V X7R"))
-      (place C1 69000 -15000 front -90 (PN "100nF 16V X7R"))
     )
     (component "Rover:SOIC-8_3.9x4.9mm_P1.27mm"
       (place U1 75000 -15000 front 0 (PN ISO7721DR))
@@ -148,6 +165,30 @@
     )
   )
   (library
+    (image Rover:Fiducial_1mm_Mask3mm
+      (outline (polygon signal 0  260.439 1727.92  515.071 1669.81  758.184 1574.39  984.369 1443.8
+            1188.56 1280.97  1366.2 1089.51  1513.33 873.72  1626.64 638.413
+            1703.63 388.84  1742.56 130.541  1745 0  1742.56 -130.54  1703.63 -388.839
+            1626.64 -638.412  1513.33 -873.719  1366.2 -1089.51  1188.56 -1280.96
+            984.369 -1443.8  758.184 -1574.39  515.071 -1669.8  260.439 -1727.92
+            0 -1747.44  -260.44 -1727.92  -515.072 -1669.8  -758.185 -1574.39
+            -984.37 -1443.8  -1188.56 -1280.96  -1366.2 -1089.51  -1513.33 -873.719
+            -1626.64 -638.412  -1703.63 -388.839  -1742.55 -130.587  -1742.55 130.588
+            -1703.63 388.84  -1626.64 638.413  -1513.33 873.72  -1366.2 1089.51
+            -1188.56 1280.97  -984.37 1443.8  -758.185 1574.39  -515.072 1669.81
+            -260.44 1727.92  0 1747.44))
+      (outline (path signal 100  1500 0  1480.58 -240.617  1422.81 -475.002  1328.18 -697.085
+            1199.16 -901.113  1039.09 -1081.8  852.097 -1234.48  643.039 -1355.18
+            417.326 -1440.78  180.805 -1489.06  -60.399 -1498.78  -300.039 -1469.69
+            -531.907 -1402.52  -750 -1299.04  -948.668 -1161.91  -1122.77 -994.684
+            -1267.79 -801.699  -1379.97 -587.95  -1456.41 -358.973  -1495.14 -120.7
+            -1495.14 120.7  -1456.41 358.973  -1379.97 587.95  -1267.79 801.699
+            -1122.77 994.684  -948.668 1161.91  -750 1299.04  -531.907 1402.52
+            -300.039 1469.69  -60.399 1498.78  180.805 1489.06  417.326 1440.78
+            643.039 1355.18  852.097 1234.48  1039.09 1081.8  1199.16 901.113
+            1328.18 697.085  1422.81 475.002  1480.58 240.617  1500 0))
+      (pin Round[T]Pad_1000.000000_um @1 0 0)
+    )
     (image Rover:MountingHole_2.7mm_M2.5
       (outline (polygon signal 0  342.187 2927.56  679.736 2868.04  1008.1 2769.74  1322.83 2633.97
             1619.67 2462.59  1894.61 2257.91  2143.93 2022.69  2364.25 1760.12
@@ -213,6 +254,26 @@
             3180.58 352.026  3200 0))
       (keepout "" (circle F.Cu 3700))
       (keepout "" (circle B.Cu 3700))
+    )
+    (image Rover:TestPoint_Pad_D1.5mm
+      (outline (polygon signal 0  277.598 1216.23  490.3 1147.12  687.248 1041.13  862.103 901.692
+            1009.25 733.266  1123.96 541.272  1202.55 331.886  1242.49 111.77
+            1245 0  1242.49 -111.769  1202.55 -331.885  1123.96 -541.271
+            1009.25 -733.265  862.103 -901.691  687.248 -1041.13  490.3 -1147.12
+            277.598 -1216.23  55.967 -1246.25  -167.455 -1236.21  -385.502 -1186.45
+            -591.157 -1098.55  -777.808 -975.339  -939.461 -820.782  -1070.92 -639.845
+            -1167.96 -438.342  -1227.46 -222.75  -1247.51 0  -1227.46 222.751
+            -1167.96 438.343  -1070.92 639.846  -939.461 820.783  -777.808 975.34
+            -591.157 1098.55  -385.502 1186.45  -167.455 1236.22  55.967 1246.25))
+      (outline (path signal 120  950 0  931.746 -185.336  877.686 -363.549  789.896 -527.792
+            671.751 -671.751  527.792 -789.896  363.549 -877.686  185.336 -931.746
+            0 -950  -185.336 -931.746  -363.549 -877.686  -527.792 -789.896
+            -671.751 -671.751  -789.896 -527.792  -877.686 -363.549  -931.746 -185.336
+            -950 0  -931.746 185.336  -877.686 363.549  -789.896 527.792
+            -671.751 671.751  -527.792 789.896  -363.549 877.686  -185.336 931.746
+            0 950  185.336 931.746  363.549 877.686  527.792 789.896  671.751 671.751
+            789.896 527.792  877.686 363.549  931.746 185.336  950 0))
+      (pin Round[T]Pad_1500.000000_um 1 0 0)
     )
     (image Rover:R_0805_2012Metric
       (outline (polygon signal 0  1675 -945  -1675 -945  -1675 945  1675 945))
@@ -596,6 +657,14 @@
       (pin RoundRect[A]Pad_1600.000000x1600.000000_250.951000_um_0.000000_0 1 0 0)
       (pin Round[A]Pad_1600.000000_um 2 3500 0)
     )
+    (image Rover:C_0805_2012Metric::1
+      (outline (polygon signal 0  1695 975  1695 -975  -1695 -975  -1695 975))
+      (outline (path signal 120  -261.252 735  261.252 735))
+      (outline (path signal 120  -261.252 -735  261.252 -735))
+      (outline (path signal 100  -1000 625  -1000 -625  1000 -625  1000 625  -1000 625))
+      (pin RoundRect[T]Pad_1000.000000x1450.000000_250.951000_um_0.000000_0 1 -950 0)
+      (pin RoundRect[T]Pad_1000.000000x1450.000000_250.951000_um_0.000000_0 2 950 0)
+    )
     (image Rover:C_1206_3216Metric
       (outline (polygon signal 0  2295 -1145  -2295 -1145  -2295 1145  2295 1145))
       (outline (path signal 120  -711.252 910  711.252 910))
@@ -605,7 +674,7 @@
       (pin RoundRect[T]Pad_1150.000000x1800.000000_250.951000_um_0.000000_0 2 1475 0)
     )
     (image Rover:R_1206_3216Metric
-      (outline (polygon signal 0  2275 -1125  -2275 -1125  -2275 1125  2275 1125))
+      (outline (polygon signal 0  -2275 1125  2275 1125  2275 -1125  -2275 -1125))
       (outline (path signal 120  -727.064 910  727.064 910))
       (outline (path signal 120  -727.064 -910  727.064 -910))
       (outline (path signal 100  -1600 800  1600 800  1600 -800  -1600 -800  -1600 800))
@@ -620,7 +689,7 @@
       (pin RoundRect[T]Pad_1025.000000x1400.000000_250.951000_um_0.000000_0 1 -912.5 0)
       (pin RoundRect[T]Pad_1025.000000x1400.000000_250.951000_um_0.000000_0 2 912.5 0)
     )
-    (image Rover:C_0805_2012Metric::1
+    (image Rover:C_0805_2012Metric::2
       (outline (polygon signal 0  -1695 -975  -1695 975  1695 975  1695 -975))
       (outline (path signal 120  -261.252 735  261.252 735))
       (outline (path signal 120  -261.252 -735  261.252 -735))
@@ -644,14 +713,6 @@
       (pin RoundRect[T]Pad_1325.000000x600.000000_150.571000_um_0.000000_0 3 -1137.5 -950)
       (pin RoundRect[T]Pad_1325.000000x600.000000_150.571000_um_0.000000_0 4 1137.5 -950)
       (pin RoundRect[T]Pad_1325.000000x600.000000_150.571000_um_0.000000_0 5 1137.5 950)
-    )
-    (image Rover:C_0805_2012Metric::2
-      (outline (polygon signal 0  1695 975  1695 -975  -1695 -975  -1695 975))
-      (outline (path signal 120  -261.252 735  261.252 735))
-      (outline (path signal 120  -261.252 -735  261.252 -735))
-      (outline (path signal 100  -1000 625  -1000 -625  1000 -625  1000 625  -1000 625))
-      (pin RoundRect[T]Pad_1000.000000x1450.000000_250.951000_um_0.000000_0 1 -950 0)
-      (pin RoundRect[T]Pad_1000.000000x1450.000000_250.951000_um_0.000000_0 2 950 0)
     )
     (image "Rover:SOIC-8_3.9x4.9mm_P1.27mm"
       (outline (polygon signal 0  2195 2455  3695 2455  3695 -2455  2195 -2455  2195 -2695
@@ -777,6 +838,14 @@
       (pin Round[A]Pad_1800.000000_um 38 54090 2230)
       (pin Round[A]Pad_1800.000000_um 39 56630 4770)
       (pin Round[A]Pad_1800.000000_um 40 56630 2230)
+    )
+    (padstack Round[T]Pad_1000.000000_um
+      (shape (circle F.Cu 1000))
+      (attach off)
+    )
+    (padstack Round[T]Pad_1500.000000_um
+      (shape (circle F.Cu 1500))
+      (attach off)
     )
     (padstack Round[A]Pad_1600.000000_um
       (shape (circle F.Cu 1600))
@@ -966,18 +1035,18 @@
   )
   (network
     (net /BASE_3V3
-      (pins C9-1 U5-14 R15-2 R14-2 J13-2 J11-2 J10-2 J5-1 C4-1 R9-2 C3-1 U2-5 C2-1
-        U1-8 U4-14 J4-2 J2-2)
+      (pins TP3-1 C9-1 U5-14 R15-2 R14-2 J13-2 J11-2 J10-2 J5-1 C4-1 R9-2 C3-1 U2-5
+        C2-1 U1-8 U4-14 J4-2 J2-2)
     )
     (net /BASE_5V
-      (pins J6-1 J3-1)
+      (pins TP4-1 J6-1 J3-1)
     )
     (net /BASE_GND
-      (pins C9-2 U5-1 U5-4 U5-7 U5-10 U5-13 J13-1 J11-1 J10-1 J7-2 J6-2 D1-2 C8-2
-        C7-2 C5-2 C4-2 R13-2 R12-2 R11-2 R10-2 R8-2 R7-2 R6-2 R5-2 R4-2 C3-2 U2-3
-        R3-2 J3-4 C2-2 U1-5 U4-7 U3-13 U3-17 U3-17@1 U3-17@2 U3-17@3 U3-17@4 U3-17@5
-        U3-17@6 U3-17@7 U3-17@8 U3-17@9 U3-17@10 U3-17@11 U3-17@12 U3-17@13 J4-7 J4-13
-        J4-19 J2-8 J2-13)
+      (pins TP6-1 C9-2 U5-1 U5-4 U5-7 U5-10 U5-13 J13-1 J11-1 J10-1 J7-2 J6-2 D1-2
+        C8-2 C7-2 C5-2 C4-2 R13-2 R12-2 R11-2 R10-2 R8-2 R7-2 R6-2 R5-2 R4-2 C3-2
+        U2-3 R3-2 J3-4 C2-2 U1-5 U4-7 U3-13 U3-17 U3-17@1 U3-17@2 U3-17@3 U3-17@4
+        U3-17@5 U3-17@6 U3-17@7 U3-17@8 U3-17@9 U3-17@10 U3-17@11 U3-17@12 U3-17@13
+        J4-7 J4-13 J4-19 J2-8 J2-13)
     )
     (net /DRV_AIN1
       (pins U4-3 U3-16)
@@ -992,7 +1061,7 @@
       (pins U4-11 U3-10)
     )
     (net /DRV_FAULT_N
-      (pins U5-9 U5-12 R9-1 U3-8)
+      (pins TP8-1 U5-9 U5-12 R9-1 U3-8)
     )
     (net /DRV_VCP
       (pins C6-1 U3-11)
@@ -1022,7 +1091,7 @@
       (pins R17-1 U5-6)
     )
     (net /ESTOP_N
-      (pins U5-2 U5-5 J5-2 R4-1 U3-1)
+      (pins TP7-1 U5-2 U5-5 J5-2 R4-1 U3-1)
     )
     (net /ESTOP_RP
       (pins R16-2 J2-3)
@@ -1049,10 +1118,10 @@
       (pins R6-1 U4-10 U4-13 J2-18)
     )
     (net /HOST_3V3
-      (pins J12-1 C1-1 U1-1 J1-1 J1-17)
+      (pins TP1-1 J12-1 C1-1 U1-1 J1-1 J1-17)
     )
     (net /H_GND
-      (pins J12-2 C1-2 U1-4 J1-6 J1-9 J1-14 J1-20 J1-25 J1-30 J1-34 J1-39)
+      (pins TP2-1 J12-2 C1-2 U1-4 J1-6 J1-9 J1-14 J1-20 J1-25 J1-30 J1-34 J1-39)
     )
     (net /H_RX
       (pins J12-4 U1-2 J1-10)
@@ -1076,7 +1145,7 @@
       (pins R11-1 U4-4 J2-5)
     )
     (net /MOTOR_6V
-      (pins J7-1 D1-1 C8-1 C6-2 C5-1 U3-12)
+      (pins TP5-1 J7-1 D1-1 C8-1 C6-2 C5-1 U3-12)
     )
     (net /MOTOR_L_N
       (pins J8-2 U3-4)
@@ -1103,10 +1172,10 @@
       (pins R13-1 U4-12 J2-7)
     )
     (net /SENSE_L
-      (pins R7-1 U3-3)
+      (pins TP9-1 R7-1 U3-3)
     )
     (net /SENSE_R
-      (pins R8-1 U3-6)
+      (pins TP10-1 R8-1 U3-6)
     )
     (net /SENSOR_TRIG
       (pins R1-2 J3-2)
@@ -1277,38 +1346,49 @@
     )
   )
   (wiring
-    (wire (path B.Cu 800  118000 -87900  118000 -91000)(net /MOTOR_R_N)(type fix))
-    (wire (path B.Cu 800  113600 -83500  118000 -87900)(net /MOTOR_R_N)(type fix))
-    (wire (path B.Cu 800  113600 -80325  113600 -83500)(net /MOTOR_R_N)(type fix))
-    (wire (path F.Cu 250  139475 -45000  141000 -45000)(net /DRV_BIN2)(type fix))
-    (wire (path F.Cu 250  127400 -80625  128000 -80750)(net /DRV_BIN2)(type fix))
-    (wire (path F.Cu 250  125862 -80625  127400 -80625)(net /DRV_BIN2)(type fix))
-    (wire (path F.Cu 250  128050 -77075  128050 -74000)(net /DRV_VINT)(type fix))
-    (wire (path F.Cu 250  127100 -78025  128050 -77075)(net /DRV_VINT)(type fix))
+    (wire (path F.Cu 250  140987 -45000  139475 -45000)(net /DRV_BIN2)(type fix))
+    (wire (path F.Cu 250  150900 -84250  140987 -45000)(net /DRV_BIN2)(type fix))
+    (wire (path F.Cu 250  150900 -88000  150900 -84250)(net /DRV_BIN2)(type fix))
+    (wire (path F.Cu 250  148500 -88000  150900 -88000)(net /DRV_BIN2)(type fix))
+    (wire (path F.Cu 250  126960 -85300  148500 -88000)(net /DRV_BIN2)(type fix))
+    (wire (path F.Cu 200  126960 -80625  126960 -85300)(net /DRV_BIN2)(type fix))
+    (wire (path F.Cu 200  125862 -80625  126960 -80625)(net /DRV_BIN2)(type fix))
+    (wire (path F.Cu 200  125862 -81275  125862 -84700)(net /DRV_BIN1)(type fix))
+    (wire (path B.Cu 800  128325 -83025  128325 -79325)(net /MOTOR_6V)(type fix))
+    (wire (path B.Cu 800  128000 -83350  128325 -83025)(net /MOTOR_6V)(type fix))
+    (wire (path F.Cu 250  127900 -77225  127900 -76100)(net /DRV_VINT)(type fix))
+    (wire (path F.Cu 250  127100 -78025  127900 -77225)(net /DRV_VINT)(type fix))
     (wire (path F.Cu 250  125862 -78025  127100 -78025)(net /DRV_VINT)(type fix))
-    (wire (path F.Cu 250  125862 -79975  130050 -80000)(net /DRV_VCP)(type fix))
-    (wire (path F.Cu 300  127400 -79325  129525 -77000)(net /MOTOR_6V)(type fix))
-    (wire (path F.Cu 300  125862 -79325  127400 -79325)(net /MOTOR_6V)(type fix))
-    (wire (path F.Cu 300  119000 -80625  118000 -81625)(net /MOTOR_R_P)(type fix))
-    (wire (path F.Cu 300  120138 -80625  119000 -80625)(net /MOTOR_R_P)(type fix))
-    (wire (path F.Cu 300  116800 -79975  115800 -80975)(net /SENSE_R)(type fix))
-    (wire (path F.Cu 300  120138 -79975  116800 -79975)(net /SENSE_R)(type fix))
-    (wire (path F.Cu 300  114600 -79325  113600 -80325)(net /MOTOR_R_N)(type fix))
-    (wire (path F.Cu 300  120138 -79325  114600 -79325)(net /MOTOR_R_N)(type fix))
-    (wire (path F.Cu 300  114600 -78675  113600 -77675)(net /MOTOR_L_N)(type fix))
-    (wire (path F.Cu 300  120138 -78675  114600 -78675)(net /MOTOR_L_N)(type fix))
-    (wire (path F.Cu 300  116800 -78025  115800 -77025)(net /SENSE_L)(type fix))
-    (wire (path F.Cu 300  120138 -78025  116800 -78025)(net /SENSE_L)(type fix))
-    (wire (path F.Cu 300  119000 -77375  118000 -76375)(net /MOTOR_L_P)(type fix))
-    (wire (path F.Cu 300  120138 -77375  119000 -77375)(net /MOTOR_L_P)(type fix))
-    (via "Via[0-1]_1200:600_um"  118000 -91000 (net /MOTOR_R_N)(type fix))
-    (via "Via[0-1]_700:300_um"  141000 -45000 (net /DRV_BIN2)(type fix))
-    (via "Via[0-1]_700:300_um"  128000 -80750 (net /DRV_BIN2)(type fix))
-    (via "Via[0-1]_1200:600_um"  118000 -81625 (net /MOTOR_R_P)(type fix))
-    (via "Via[0-1]_1200:600_um"  115800 -80975 (net /SENSE_R)(type fix))
-    (via "Via[0-1]_1200:600_um"  113600 -80325 (net /MOTOR_R_N)(type fix))
-    (via "Via[0-1]_1200:600_um"  113600 -77675 (net /MOTOR_L_N)(type fix))
-    (via "Via[0-1]_1200:600_um"  115800 -77025 (net /SENSE_L)(type fix))
-    (via "Via[0-1]_1200:600_um"  118000 -76375 (net /MOTOR_L_P)(type fix))
+    (wire (path F.Cu 250  128000 -81025  128000 -81450)(net /DRV_VCP)(type fix))
+    (wire (path F.Cu 250  126950 -79975  128000 -81025)(net /DRV_VCP)(type fix))
+    (wire (path F.Cu 250  125862 -79975  126950 -79975)(net /DRV_VCP)(type fix))
+    (wire (path F.Cu 300  125862 -79325  128325 -79325)(net /MOTOR_6V)(type fix))
+    (wire (path F.Cu 250  116962 -82500  116962 -86500)(net /SENSE_R)(type fix))
+    (wire (path F.Cu 800  116962 -80512.5  116962 -82500)(net /SENSE_R)(type fix))
+    (wire (path F.Cu 300  117500 -79975  116962 -80512.5)(net /SENSE_R)(type fix))
+    (wire (path F.Cu 300  120138 -79975  117500 -79975)(net /SENSE_R)(type fix))
+    (wire (path F.Cu 250  116962 -75500  116962 -71500)(net /SENSE_L)(type fix))
+    (wire (path F.Cu 800  116962 -77487.5  116962 -75500)(net /SENSE_L)(type fix))
+    (wire (path F.Cu 300  117500 -78025  116962 -77487.5)(net /SENSE_L)(type fix))
+    (wire (path F.Cu 300  120138 -78025  117500 -78025)(net /SENSE_L)(type fix))
+    (wire (path F.Cu 300  118700 -80625  118700 -82500)(net /MOTOR_R_P)(type fix))
+    (wire (path F.Cu 300  120138 -80625  118700 -80625)(net /MOTOR_R_P)(type fix))
+    (wire (path F.Cu 300  115800 -80025  114200 -80025)(net /MOTOR_R_N)(type fix))
+    (wire (path F.Cu 300  116500 -79325  115800 -80025)(net /MOTOR_R_N)(type fix))
+    (wire (path F.Cu 300  120138 -79325  116500 -79325)(net /MOTOR_R_N)(type fix))
+    (wire (path F.Cu 300  120138 -78675  115200 -78675)(net /MOTOR_L_N)(type fix))
+    (wire (path F.Cu 300  118700 -77375  118700 -75500)(net /MOTOR_L_P)(type fix))
+    (wire (path F.Cu 300  120138 -77375  118700 -77375)(net /MOTOR_L_P)(type fix))
+    (via "Via[0-1]_700:300_um"  113000 -82500 (net /BASE_GND)(type fix))
+    (via "Via[0-1]_700:300_um"  113000 -75500 (net /BASE_GND)(type fix))
+    (via "Via[0-1]_700:300_um"  131000 -76100 (net /BASE_GND)(type fix))
+    (via "Via[0-1]_700:300_um"  132800 -79325 (net /BASE_GND)(type fix))
+    (via "Via[0-1]_700:300_um"  125862 -84700 (net /DRV_BIN1)(type fix))
+    (via "Via[0-1]_1200:600_um"  128325 -79325 (net /MOTOR_6V)(type fix))
+    (via "Via[0-1]_1200:600_um"  128000 -83350 (net /MOTOR_6V)(type fix))
+    (via "Via[0-1]_1200:600_um"  118700 -82500 (net /MOTOR_R_P)(type fix))
+    (via "Via[0-1]_1200:600_um"  114200 -80025 (net /MOTOR_R_N)(type fix))
+    (via "Via[0-1]_1200:600_um"  115200 -78675 (net /MOTOR_L_N)(type fix))
+    (via "Via[0-1]_1200:600_um"  118700 -75500 (net /MOTOR_L_P)(type fix))
   )
 )

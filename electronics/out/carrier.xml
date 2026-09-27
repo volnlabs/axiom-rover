@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>/home/utkarsh/Work/volnlabs/axiom-rover/electronics/carrier.kicad_sch</source>
-    <date>2026-09-10T01:25:24</date>
+    <date>2026-09-27T23:27:39</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Axiom Rover — Pi 5 / Shrike socket carrier</title>
         <company/>
-        <rev>B REVIEW</rev>
-        <date>2026-09-09</date>
+        <rev>B.1 REVIEW</rev>
+        <date>2026-09-27</date>
         <source>carrier.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -1031,6 +1031,226 @@
         </unit>
       </units>
     </comp>
+    <comp ref="TP1">
+      <value>HOST_3V3</value>
+      <footprint>Rover:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="TP1" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ab47b7b-e429-5bb9-a95b-34acedae7138</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>H_GND</value>
+      <footprint>Rover:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="TP2" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d6d46a9-e56f-5114-b12b-a382432177cd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>BASE_3V3</value>
+      <footprint>Rover:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="TP3" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ec1ecf2e-0ea4-5646-b965-cda061532e47</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>BASE_5V</value>
+      <footprint>Rover:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="TP4" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0efc5649-8267-532a-ad19-821359b50af5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>MOTOR_6V</value>
+      <footprint>Rover:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="TP5" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>84e76f4e-e36f-5175-b6c5-480cbbd4704c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>BASE_GND</value>
+      <footprint>Rover:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="TP6" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>99393a0b-a6c8-510f-85a1-5ea7135f60d5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP7">
+      <value>ESTOP_N</value>
+      <footprint>Rover:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="TP7" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0bee788c-077c-54a0-b209-8be2ed9a7dbf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP8">
+      <value>DRV_FAULT_N</value>
+      <footprint>Rover:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="TP8" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7d630c48-f58b-5142-8e64-1eca6f9b46bb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP9">
+      <value>SENSE_L</value>
+      <footprint>Rover:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="TP9" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06b7cb6c-a424-5392-9cc0-3f1e6927ce5e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP10">
+      <value>SENSE_R</value>
+      <footprint>Rover:TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Rover" part="TP10" description=""/>
+      <property name="Sheetname" value="carrier"/>
+      <property name="Sheetfile" value="carrier.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>07411092-e819-5e48-9088-4676aba9f832</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U1">
       <value>ISO7721DR</value>
       <footprint>Rover:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
@@ -1820,6 +2040,126 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Rover" part="TP1">
+      <fields>
+        <field name="Reference">TP1</field>
+        <field name="Value">HOST_3V3</field>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="TP10">
+      <fields>
+        <field name="Reference">TP10</field>
+        <field name="Value">SENSE_R</field>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="TP2">
+      <fields>
+        <field name="Reference">TP2</field>
+        <field name="Value">H_GND</field>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="TP3">
+      <fields>
+        <field name="Reference">TP3</field>
+        <field name="Value">BASE_3V3</field>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="TP4">
+      <fields>
+        <field name="Reference">TP4</field>
+        <field name="Value">BASE_5V</field>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="TP5">
+      <fields>
+        <field name="Reference">TP5</field>
+        <field name="Value">MOTOR_6V</field>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="TP6">
+      <fields>
+        <field name="Reference">TP6</field>
+        <field name="Value">BASE_GND</field>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="TP7">
+      <fields>
+        <field name="Reference">TP7</field>
+        <field name="Value">ESTOP_N</field>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="TP8">
+      <fields>
+        <field name="Reference">TP8</field>
+        <field name="Value">DRV_FAULT_N</field>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rover" part="TP9">
+      <fields>
+        <field name="Reference">TP9</field>
+        <field name="Value">SENSE_L</field>
+        <field name="Footprint">Rover:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Rover" part="U1">
       <fields>
         <field name="Reference">U1</field>
@@ -1954,6 +2294,7 @@
       <node ref="R14" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R15" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R9" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="VCC2_8" pintype="power_in"/>
       <node ref="U2" pin="5" pinfunction="VCC_5" pintype="power_in"/>
       <node ref="U4" pin="14" pinfunction="VCC_14" pintype="power_in"/>
@@ -1962,6 +2303,7 @@
     <net code="2" name="/BASE_5V" class="Default">
       <node ref="J3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="J6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
     <net code="3" name="/BASE_GND" class="Default">
       <node ref="C2" pin="2" pinfunction="2_2" pintype="passive"/>
@@ -1993,6 +2335,7 @@
       <node ref="R6" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R7" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R8" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="5" pinfunction="GND2_5" pintype="power_in"/>
       <node ref="U2" pin="3" pinfunction="GND_3" pintype="power_in"/>
       <node ref="U3" pin="13" pinfunction="GND_13" pintype="power_in"/>
@@ -2022,6 +2365,7 @@
     </net>
     <net code="8" name="/DRV_FAULT_N" class="Default">
       <node ref="R9" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U3" pin="8" pinfunction="nFAULT_8" pintype="open_collector"/>
       <node ref="U5" pin="12" pinfunction="4A_12" pintype="input"/>
       <node ref="U5" pin="9" pinfunction="3A_9" pintype="input"/>
@@ -2066,6 +2410,7 @@
     <net code="18" name="/ESTOP_N" class="Default">
       <node ref="J5" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U3" pin="1" pinfunction="nSLEEP_1" pintype="input"/>
       <node ref="U5" pin="2" pinfunction="1A_2" pintype="input"/>
       <node ref="U5" pin="5" pinfunction="2A_5" pintype="input"/>
@@ -2111,6 +2456,7 @@
       <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="J1" pin="17" pinfunction="17_17" pintype="passive"/>
       <node ref="J12" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="VCC1_1" pintype="power_in"/>
     </net>
     <net code="28" name="/H_GND" class="Default">
@@ -2124,6 +2470,7 @@
       <node ref="J1" pin="6" pinfunction="6_6" pintype="passive"/>
       <node ref="J1" pin="9" pinfunction="9_9" pintype="passive"/>
       <node ref="J12" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="GND1_4" pintype="power_in"/>
     </net>
     <net code="29" name="/H_RX" class="Default">
@@ -2166,6 +2513,7 @@
       <node ref="C8" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U3" pin="12" pinfunction="VM_12" pintype="power_in"/>
     </net>
     <net code="37" name="/MOTOR_L_N" class="Motor">
@@ -2204,10 +2552,12 @@
     </net>
     <net code="45" name="/SENSE_L" class="Motor">
       <node ref="R7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP9" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U3" pin="3" pinfunction="AISEN_3" pintype="passive"/>
     </net>
     <net code="46" name="/SENSE_R" class="Motor">
       <node ref="R8" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP10" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U3" pin="6" pinfunction="BISEN_6" pintype="passive"/>
     </net>
     <net code="47" name="/SENSOR_TRIG" class="Default">

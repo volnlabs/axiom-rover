@@ -1,4 +1,4 @@
-# RevB first article and commissioning
+# Rev B.1 first article and commissioning
 
 All entries are **NOT RUN**. This procedure creates evidence; it does not
 authorize fabrication, energizing a motor, or a release until the recorded
@@ -8,7 +8,8 @@ acceptance limits pass.
 
 1. Inspect the 160 x 100 mm carrier, bottom-side `ESQ-120-24-G-D`, and both
    `SSW-119-01-G-S` Shrike sockets against the current schematic and
-   `reference/raspberry-pi-5/connector-sources.md`.
+   `reference/raspberry-pi-5/connector-sources.md`. Check connector pin labels,
+   three top fiducials and low-current through-hole ground thermal relief.
 2. Dry-fit Pi 5, carrier, and Shrike. Confirm the nominal 16.5 mm carrier
    underside gap, socket engagement, no cooler collision, and J1/J2/J4 pin-1
    orientation. To remove Pi, power off, lift the unscrewed carrier at least
@@ -23,6 +24,9 @@ acceptance limits pass.
    CPR are unknown until measured.
 5. With no power attached, verify no short between `H_GND` and `BASE_GND`, no
    6 V-to-logic short, and correct NC stop behavior at J5/U3 `nSLEEP`.
+6. Inspect top-accessible `H_GND`, `BASE_GND`, `HOST_3V3`, `BASE_3V3`,
+   `BASE_5V`, `MOTOR_6V`, `ESTOP_N`, `DRV_FAULT_N`, `SENSE_L` and `SENSE_R`
+   pads. Meter their net identity and check probe clearance before power.
 
 ## Power and safety sequence
 
@@ -42,6 +46,8 @@ acceptance limits pass.
 |---|---|---|
 | Socket fit | gap, engagement, photos | no interference or forced seating |
 | Unpowered continuity | full connector pin map | exact net map; no host/base ground tie |
+| Assembly | solder and inspection record | reflow SMD first, hand-solder through-hole parts afterward; inspect joints and labels |
+| Probe access | pad identities and photos | all ten top pads reachable without bridging adjacent nets |
 | Partial power | Pi-only, Shrike-only, sensor-5-V-only | no unacceptable backfeed |
 | Fault observation | force/observe DRV fault | both F_GPIO7 and RP GPIO28 see their buffered active-low fault |
 | Logic stop | open/break J5 loop | `nSLEEP` stop level and gated inputs low |
@@ -91,6 +97,9 @@ these are design targets to qualify, not measured capabilities.
 Use a current-limited bench supply first. Measure nominal 1 A current chopping,
 start current, both-channel driver/sense-resistor temperatures, VM ripple and
 stop/reverse overshoot before choosing a commercial motor pack/regulator.
+C8 470 µF, 16 V and D1 SMBJ6.0A still need exact manufacturer/order-code
+selection before fabrication. Verify the Rev B.1 sense and capacitor placement
+targets in CAD; bench captures are still required for electrical acceptance.
 C5's effective ceramic capacitance at bias, C8's energy/rail-decay behavior,
 and D1's pulse temperature need qualification. Keep every rail within its part's
 recommended limits, not merely absolute maximum ratings. A nominally 6 V

@@ -96,7 +96,7 @@ function showDrawing(url, label) {
   drawingImg.hidden = true;
   $('#load-error').hidden = true;
   status.textContent = 'Loading ' + label.toLowerCase() + '…';
-  drawingImg.alt = label + ' for the Rev B carrier';
+  drawingImg.alt = label + ' for the Rev B.1 carrier';
   drawingImg.onload = () => {
     if (!isDrawing()) return;
     drawingReady = true;
@@ -235,7 +235,7 @@ function readyMode() {
   $('#load-error').hidden = true;
   direction = 'iso';
   fit();
-  status.textContent = mode === 'rover' ? 'Rover assembly · 200 × 260 mm base' : 'Rev B PCB · 160 × 100 mm · Pi below / Shrike above';
+  status.textContent = mode === 'rover' ? 'Rover assembly · 200 × 260 mm base' : 'Rev B.1 PCB · 160 × 100 mm · Pi below / Shrike above';
   const q = new URLSearchParams(location.search);
   if (Object.hasOwn(directions, q.get('view'))) view(q.get('view'));
   updateControls();
@@ -311,7 +311,7 @@ function setMode(next, updateLocation=false) {
 }
 document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => setMode(b.dataset.mode, true));
 document.querySelectorAll('[data-drawing]').forEach(b => b.onclick = () => showDrawing(`../electronics/out/carrier-${b.dataset.drawing}.svg`, `${b.dataset.drawing === 'top' ? 'Top' : 'Bottom'} copper routing`));
-$('#board3d').onclick = () => { closeDrawing(); fit(); status.textContent = 'Rev B PCB · 160 × 100 mm'; };
+$('#board3d').onclick = () => { closeDrawing(); fit(); status.textContent = 'Rev B.1 PCB · 160 × 100 mm'; };
 for (const id of ['shell','opacity','explode','envelopes','reserves','stand','components']) {
   $('#'+id).addEventListener('input', () => {
     apply();

@@ -46,9 +46,9 @@
     "canvas accessible"
   ],
   "sources_sha256": {
-    "viewer/app.js": "37d759286e181fa1c1ce37a6a4862598c63fd900bac3bae5b3bd4caf8b307ed3",
-    "viewer/index.html": "765a9f8841a393956fad1b776ab7b4fa5497ffcd64fbd372bb64c6e5bc3b47e0",
+    "viewer/app.js": "c4d449e42aa46f53626ee883cb357493c1b06c7808c9a6fee2865022a759a7cb",
+    "viewer/index.html": "95ce6797872a7cb4bd0f64c7de5cfef7b6dc5c90f3ff0f6ff26f2b2d9e2df5d3",
     "viewer/styles.css": "bc5cdc10389abb2c8e2a900b708af7646dd05b224141fe4b539d8f73843cd5ee",
-    "viewer/meshes.json": "6ccbc25317f1a4b5037f825ba7875e08cdb3ca7a1e17b8cb263518530248c597"
+    "viewer/meshes.json": "eaf2f5615fcc203562118935f3dd47c57faf9a536116abfa46b7c1e867fad6fb"
   }
 }

@@ -1,4 +1,4 @@
-# Interactive Rev B CAD inspection
+# Interactive Rev B.1 CAD inspection
 
 Hosted on Vercel: [rover and enclosure](https://axiom-rover.vercel.app/),
 [PCB](https://axiom-rover.vercel.app/?mode=pcb),
@@ -13,7 +13,7 @@ sides. Double-click a component to focus it. Hide or fade the enclosure,
 separate the assembly, or hide individual components. Copper and schematic
 views support zoom and pan. The same viewer works locally and as a static Vercel deployment.
 
-The 160×100 mm PCB includes a bottom Pi socket, two top Shrike sockets,
+The 160×100 mm Rev B.1 PCB includes a bottom Pi socket, two top Shrike sockets,
 onboard DRV8833 and the sensor/encoder/IMU connectors. Geometry comes from
 the actual saved PCB and STEP assemblies. Component meshes are grouped by
 reference designator, including the individual socket contacts.

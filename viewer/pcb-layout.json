@@ -1,73 +1,73 @@
 [
   {
-    "ref": "J9",
-    "value": "RIGHT_MOTOR",
-    "package": "JST_VH_B2P-VH_1x02_P3.96mm_Vertical",
-    "x": 151.0,
-    "y": -43.0
-  },
-  {
-    "ref": "R2",
-    "value": "2.2k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 91.0,
-    "y": -81.0
-  },
-  {
-    "ref": "R16",
-    "value": "1k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 94.0,
-    "y": -47.0
-  },
-  {
-    "ref": "U5",
-    "value": "SN74LVC125ADR",
-    "package": "SOIC-14_3.9x8.7mm_P1.27mm",
-    "x": 87.0,
-    "y": -56.0
-  },
-  {
-    "ref": "C4",
-    "value": "100nF 16V X7R",
-    "package": "C_0805_2012Metric",
-    "x": 141.0,
-    "y": -38.0
-  },
-  {
-    "ref": "R8",
-    "value": "0.20R 1W CSRT1206FTR200",
-    "package": "R_1206_3216Metric",
-    "x": 110.0,
-    "y": -85.0
-  },
-  {
-    "ref": "R18",
-    "value": "1k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 94.0,
-    "y": -61.0
-  },
-  {
-    "ref": "R11",
-    "value": "10k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 88.0,
-    "y": -35.0
-  },
-  {
-    "ref": "J8",
-    "value": "LEFT_MOTOR",
-    "package": "JST_VH_B2P-VH_1x02_P3.96mm_Vertical",
-    "x": 151.0,
-    "y": -59.0
-  },
-  {
     "ref": "J12",
     "value": "ALTERNATE_HOST_UART",
     "package": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
     "x": 18.0,
     "y": -11.0
+  },
+  {
+    "ref": "C8",
+    "value": "470uF 16V",
+    "package": "CP_Radial_D8.0mm_P3.50mm",
+    "x": 126.0,
+    "y": -89.0
+  },
+  {
+    "ref": "C7",
+    "value": "2.2uF 16V X7R",
+    "package": "C_0805_2012Metric",
+    "x": 128.85,
+    "y": -76.1
+  },
+  {
+    "ref": "U4",
+    "value": "SN74LVC08ADR",
+    "package": "SOIC-14_3.9x8.7mm_P1.27mm",
+    "x": 137.0,
+    "y": -45.0
+  },
+  {
+    "ref": "H5",
+    "value": "M2.5 NPTH",
+    "package": "MountingHole_2.7mm_M2.5",
+    "x": 3.5,
+    "y": -23.5
+  },
+  {
+    "ref": "R10",
+    "value": "10k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 88.0,
+    "y": -32.0
+  },
+  {
+    "ref": "H3",
+    "value": "M3 NPTH",
+    "package": "MountingHole_3.2mm_M3",
+    "x": 155.0,
+    "y": -95.0
+  },
+  {
+    "ref": "C2",
+    "value": "100nF 16V X7R",
+    "package": "C_0805_2012Metric",
+    "x": 81.0,
+    "y": -15.0
+  },
+  {
+    "ref": "R9",
+    "value": "10k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 133.0,
+    "y": -64.0
+  },
+  {
+    "ref": "C3",
+    "value": "100nF 16V X7R",
+    "package": "C_0805_2012Metric",
+    "x": 95.0,
+    "y": -75.0
   },
   {
     "ref": "R17",
@@ -84,74 +84,32 @@
     "y": -15.0
   },
   {
-    "ref": "J7",
-    "value": "6V_AFTER_FUSE_AND_STOP_RELAY",
-    "package": "JST_VH_B2P-VH_1x02_P3.96mm_Vertical",
-    "x": 149.0,
-    "y": -86.0
+    "ref": "U3",
+    "value": "DRV8833PWPR",
+    "package": "TSSOP-16-1EP_4.4x5mm_Pitch0.65mm_EP3.4x5mm",
+    "x": 123.0,
+    "y": -79.0
   },
   {
-    "ref": "C9",
-    "value": "100nF 16V X7R",
-    "package": "C_0805_2012Metric",
-    "x": 94.0,
-    "y": -56.0
+    "ref": "R2",
+    "value": "2.2k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 91.0,
+    "y": -81.0
   },
   {
-    "ref": "R9",
+    "ref": "J4",
+    "value": "SHRIKE_J4_SSW-119-01-G-S",
+    "package": "SSW-119-01-G-S",
+    "x": 123.13,
+    "y": -21.121
+  },
+  {
+    "ref": "R13",
     "value": "10k 1%",
     "package": "R_0805_2012Metric",
-    "x": 133.0,
-    "y": -64.0
-  },
-  {
-    "ref": "R4",
-    "value": "10k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 95.0,
-    "y": -14.0
-  },
-  {
-    "ref": "H8",
-    "value": "M2.5 NPTH",
-    "package": "MountingHole_2.7mm_M2.5",
-    "x": 61.5,
-    "y": -72.5
-  },
-  {
-    "ref": "H2",
-    "value": "M3 NPTH",
-    "package": "MountingHole_3.2mm_M3",
-    "x": 155.0,
-    "y": -5.0
-  },
-  {
-    "ref": "R19",
-    "value": "1k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 94.0,
-    "y": -65.0
-  },
-  {
-    "ref": "C8",
-    "value": "470uF 16V",
-    "package": "CP_Radial_D8.0mm_P3.50mm",
-    "x": 126.0,
-    "y": -89.0
-  },
-  {
-    "ref": "J5",
-    "value": "ESTOP_LOGIC_NC",
-    "package": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
-    "x": 86.0,
-    "y": -8.0
-  },
-  {
-    "ref": "H4",
-    "value": "M3 NPTH",
-    "package": "MountingHole_3.2mm_M3",
-    "x": 5.0,
-    "y": -95.0
+    "x": 88.0,
+    "y": -41.0
   },
   {
     "ref": "J10",
@@ -161,32 +119,11 @@
     "y": -8.0
   },
   {
-    "ref": "D1",
-    "value": "SMBJ6.0A",
-    "package": "D_SMB",
-    "x": 138.0,
-    "y": -90.0
-  },
-  {
-    "ref": "R5",
-    "value": "10k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 136.0,
-    "y": -55.0
-  },
-  {
-    "ref": "R6",
-    "value": "10k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 136.0,
-    "y": -58.0
-  },
-  {
-    "ref": "H7",
-    "value": "M2.5 NPTH",
-    "package": "MountingHole_2.7mm_M2.5",
-    "x": 3.5,
-    "y": -72.5
+    "ref": "J11",
+    "value": "ENCODER_RIGHT_3V3",
+    "package": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+    "x": 143.0,
+    "y": -13.0
   },
   {
     "ref": "H6",
@@ -196,11 +133,32 @@
     "y": -23.5
   },
   {
-    "ref": "R14",
-    "value": "4.7k 1%",
+    "ref": "H4",
+    "value": "M3 NPTH",
+    "package": "MountingHole_3.2mm_M3",
+    "x": 5.0,
+    "y": -95.0
+  },
+  {
+    "ref": "TP10",
+    "value": "SENSE_R",
+    "package": "TestPoint_Pad_D1.5mm",
+    "x": 116.9625,
+    "y": -86.5
+  },
+  {
+    "ref": "R3",
+    "value": "3.3k 1%",
     "package": "R_0805_2012Metric",
-    "x": 133.0,
-    "y": -30.0
+    "x": 85.0,
+    "y": -81.0
+  },
+  {
+    "ref": "R1",
+    "value": "1k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 86.0,
+    "y": -76.0
   },
   {
     "ref": "C1",
@@ -210,25 +168,179 @@
     "y": -15.0
   },
   {
-    "ref": "U2",
-    "value": "SN74LVC1G17DBVR",
-    "package": "SOT-23-5",
-    "x": 91.0,
-    "y": -75.0
+    "ref": "TP6",
+    "value": "BASE_GND",
+    "package": "TestPoint_Pad_D1.5mm",
+    "x": 109.0,
+    "y": -81.0
   },
   {
-    "ref": "H5",
-    "value": "M2.5 NPTH",
-    "package": "MountingHole_2.7mm_M2.5",
-    "x": 3.5,
-    "y": -23.5
+    "ref": "FID2",
+    "value": "Fiducial",
+    "package": "Fiducial_1mm_Mask3mm",
+    "x": 151.0,
+    "y": -72.0
   },
   {
     "ref": "R7",
     "value": "0.20R 1W CSRT1206FTR200",
     "package": "R_1206_3216Metric",
+    "x": 115.5,
+    "y": -75.5
+  },
+  {
+    "ref": "R15",
+    "value": "4.7k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 140.0,
+    "y": -30.0
+  },
+  {
+    "ref": "H8",
+    "value": "M2.5 NPTH",
+    "package": "MountingHole_2.7mm_M2.5",
+    "x": 61.5,
+    "y": -72.5
+  },
+  {
+    "ref": "U5",
+    "value": "SN74LVC125ADR",
+    "package": "SOIC-14_3.9x8.7mm_P1.27mm",
+    "x": 87.0,
+    "y": -56.0
+  },
+  {
+    "ref": "R6",
+    "value": "10k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 136.0,
+    "y": -58.0
+  },
+  {
+    "ref": "J7",
+    "value": "6V_AFTER_FUSE_AND_STOP_RELAY",
+    "package": "JST_VH_B2P-VH_1x02_P3.96mm_Vertical",
+    "x": 149.0,
+    "y": -86.0
+  },
+  {
+    "ref": "TP3",
+    "value": "BASE_3V3",
+    "package": "TestPoint_Pad_D1.5mm",
+    "x": 82.0,
+    "y": -22.0
+  },
+  {
+    "ref": "R19",
+    "value": "1k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 94.0,
+    "y": -65.0
+  },
+  {
+    "ref": "TP5",
+    "value": "MOTOR_6V",
+    "package": "TestPoint_Pad_D1.5mm",
+    "x": 144.0,
+    "y": -76.0
+  },
+  {
+    "ref": "FID3",
+    "value": "Fiducial",
+    "package": "Fiducial_1mm_Mask3mm",
+    "x": 78.5,
+    "y": -95.5
+  },
+  {
+    "ref": "J6",
+    "value": "BASE_SENSOR_5V_IN",
+    "package": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
     "x": 110.0,
-    "y": -73.0
+    "y": -91.0
+  },
+  {
+    "ref": "C9",
+    "value": "100nF 16V X7R",
+    "package": "C_0805_2012Metric",
+    "x": 94.0,
+    "y": -56.0
+  },
+  {
+    "ref": "J3",
+    "value": "HC_SR04_VCC_TRIG_ECHO_GND",
+    "package": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+    "x": 84.0,
+    "y": -91.0
+  },
+  {
+    "ref": "TP2",
+    "value": "H_GND",
+    "package": "TestPoint_Pad_D1.5mm",
+    "x": 63.0,
+    "y": -16.0
+  },
+  {
+    "ref": "J5",
+    "value": "ESTOP_LOGIC_NC",
+    "package": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+    "x": 86.0,
+    "y": -8.0
+  },
+  {
+    "ref": "J8",
+    "value": "LEFT_MOTOR",
+    "package": "JST_VH_B2P-VH_1x02_P3.96mm_Vertical",
+    "x": 151.0,
+    "y": -59.0
+  },
+  {
+    "ref": "R4",
+    "value": "10k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 95.0,
+    "y": -14.0
+  },
+  {
+    "ref": "R8",
+    "value": "0.20R 1W CSRT1206FTR200",
+    "package": "R_1206_3216Metric",
+    "x": 115.5,
+    "y": -82.5
+  },
+  {
+    "ref": "C5",
+    "value": "10uF 16V X7R",
+    "package": "C_1206_3216Metric",
+    "x": 129.8,
+    "y": -79.325
+  },
+  {
+    "ref": "R18",
+    "value": "1k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 94.0,
+    "y": -61.0
+  },
+  {
+    "ref": "J2",
+    "value": "SHRIKE_J2_SSW-119-01-G-S",
+    "package": "SSW-119-01-G-S",
+    "x": 100.27,
+    "y": -21.0958
+  },
+  {
+    "ref": "R12",
+    "value": "10k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 88.0,
+    "y": -38.0
+  },
+  {
+    "ref": "D1",
+    "value": "SMBJ6.0A",
+    "package": "D_SMB",
+    "x": 138.0,
+    "y": -90.0
   },
   {
     "ref": "H1",
@@ -241,99 +353,85 @@
     "ref": "C6",
     "value": "10nF 25V X7R",
     "package": "C_0805_2012Metric",
-    "x": 131.0,
-    "y": -80.0
+    "x": 128.0,
+    "y": -82.4
   },
   {
-    "ref": "J2",
-    "value": "SHRIKE_J2_SSW-119-01-G-S",
-    "package": "SSW-119-01-G-S",
-    "x": 100.27,
-    "y": -21.0958
+    "ref": "TP8",
+    "value": "DRV_FAULT_N",
+    "package": "TestPoint_Pad_D1.5mm",
+    "x": 109.0,
+    "y": -86.0
   },
   {
-    "ref": "U3",
-    "value": "DRV8833PWPR",
-    "package": "TSSOP-16-1EP_4.4x5mm_Pitch0.65mm_EP3.4x5mm",
-    "x": 123.0,
-    "y": -79.0
-  },
-  {
-    "ref": "R12",
-    "value": "10k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 88.0,
-    "y": -38.0
-  },
-  {
-    "ref": "C7",
-    "value": "2.2uF 16V X7R",
-    "package": "C_0805_2012Metric",
-    "x": 129.0,
-    "y": -74.0
-  },
-  {
-    "ref": "J3",
-    "value": "HC_SR04_VCC_TRIG_ECHO_GND",
-    "package": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
-    "x": 84.0,
-    "y": -91.0
-  },
-  {
-    "ref": "R1",
-    "value": "1k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 86.0,
-    "y": -76.0
-  },
-  {
-    "ref": "J4",
-    "value": "SHRIKE_J4_SSW-119-01-G-S",
-    "package": "SSW-119-01-G-S",
-    "x": 123.13,
-    "y": -21.121
-  },
-  {
-    "ref": "H3",
-    "value": "M3 NPTH",
-    "package": "MountingHole_3.2mm_M3",
-    "x": 155.0,
-    "y": -95.0
-  },
-  {
-    "ref": "R15",
+    "ref": "R14",
     "value": "4.7k 1%",
     "package": "R_0805_2012Metric",
-    "x": 140.0,
+    "x": 133.0,
     "y": -30.0
   },
   {
-    "ref": "J6",
-    "value": "BASE_SENSOR_5V_IN",
-    "package": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
-    "x": 110.0,
+    "ref": "R5",
+    "value": "10k 1%",
+    "package": "R_0805_2012Metric",
+    "x": 136.0,
+    "y": -55.0
+  },
+  {
+    "ref": "TP9",
+    "value": "SENSE_L",
+    "package": "TestPoint_Pad_D1.5mm",
+    "x": 116.9625,
+    "y": -71.5
+  },
+  {
+    "ref": "FID1",
+    "value": "Fiducial",
+    "package": "Fiducial_1mm_Mask3mm",
+    "x": 12.0,
+    "y": -6.0
+  },
+  {
+    "ref": "TP1",
+    "value": "HOST_3V3",
+    "package": "TestPoint_Pad_D1.5mm",
+    "x": 63.0,
+    "y": -11.0
+  },
+  {
+    "ref": "C4",
+    "value": "100nF 16V X7R",
+    "package": "C_0805_2012Metric",
+    "x": 141.0,
+    "y": -38.0
+  },
+  {
+    "ref": "H2",
+    "value": "M3 NPTH",
+    "package": "MountingHole_3.2mm_M3",
+    "x": 155.0,
+    "y": -5.0
+  },
+  {
+    "ref": "TP4",
+    "value": "BASE_5V",
+    "package": "TestPoint_Pad_D1.5mm",
+    "x": 101.0,
     "y": -91.0
   },
   {
-    "ref": "C3",
-    "value": "100nF 16V X7R",
-    "package": "C_0805_2012Metric",
-    "x": 95.0,
-    "y": -75.0
+    "ref": "J9",
+    "value": "RIGHT_MOTOR",
+    "package": "JST_VH_B2P-VH_1x02_P3.96mm_Vertical",
+    "x": 151.0,
+    "y": -43.0
   },
   {
-    "ref": "U4",
-    "value": "SN74LVC08ADR",
-    "package": "SOIC-14_3.9x8.7mm_P1.27mm",
-    "x": 137.0,
-    "y": -45.0
-  },
-  {
-    "ref": "R3",
-    "value": "3.3k 1%",
-    "package": "R_0805_2012Metric",
-    "x": 85.0,
-    "y": -81.0
+    "ref": "H7",
+    "value": "M2.5 NPTH",
+    "package": "MountingHole_2.7mm_M2.5",
+    "x": 3.5,
+    "y": -72.5
   },
   {
     "ref": "J13",
@@ -343,39 +441,32 @@
     "y": -22.0
   },
   {
-    "ref": "R13",
+    "ref": "TP7",
+    "value": "ESTOP_N",
+    "package": "TestPoint_Pad_D1.5mm",
+    "x": 82.0,
+    "y": -28.0
+  },
+  {
+    "ref": "R11",
     "value": "10k 1%",
     "package": "R_0805_2012Metric",
     "x": 88.0,
-    "y": -41.0
+    "y": -35.0
   },
   {
-    "ref": "C5",
-    "value": "10uF 16V X7R",
-    "package": "C_1206_3216Metric",
-    "x": 131.0,
-    "y": -77.0
+    "ref": "U2",
+    "value": "SN74LVC1G17DBVR",
+    "package": "SOT-23-5",
+    "x": 91.0,
+    "y": -75.0
   },
   {
-    "ref": "C2",
-    "value": "100nF 16V X7R",
-    "package": "C_0805_2012Metric",
-    "x": 81.0,
-    "y": -15.0
-  },
-  {
-    "ref": "J11",
-    "value": "ENCODER_RIGHT_3V3",
-    "package": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
-    "x": 143.0,
-    "y": -13.0
-  },
-  {
-    "ref": "R10",
-    "value": "10k 1%",
+    "ref": "R16",
+    "value": "1k 1%",
     "package": "R_0805_2012Metric",
-    "x": 88.0,
-    "y": -32.0
+    "x": 94.0,
+    "y": -47.0
   },
   {
     "ref": "J1",

@@ -37,17 +37,17 @@ PARTS=[
 ('R4','10k 1%',R,['ESTOP_N','BASE_GND'],(95,14,90),(0,0)),
 ('R5','10k 1%',R,['FPGA_PWM_L','BASE_GND'],(136,55,0),(0,0)),
 ('R6','10k 1%',R,['FPGA_PWM_R','BASE_GND'],(136,58,0),(0,0)),
-('R7','0.20R 1W CSRT1206FTR200','Resistor_SMD:R_1206_3216Metric',['SENSE_L','BASE_GND'],(110,73,0),(0,0)),
-('R8','0.20R 1W CSRT1206FTR200','Resistor_SMD:R_1206_3216Metric',['SENSE_R','BASE_GND'],(110,85,0),(0,0)),
+('R7','0.20R 1W CSRT1206FTR200','Resistor_SMD:R_1206_3216Metric',['SENSE_L','BASE_GND'],(115.5,75.5,180),(0,0)),
+('R8','0.20R 1W CSRT1206FTR200','Resistor_SMD:R_1206_3216Metric',['SENSE_R','BASE_GND'],(115.5,82.5,180),(0,0)),
 ('R9','10k 1%',R,['DRV_FAULT_N','BASE_3V3'],(133,64,0),(0,0)),
 ('R10','10k 1%',R,['L_IN1','BASE_GND'],(88,32,0),(0,0)),
 ('R11','10k 1%',R,['L_IN2','BASE_GND'],(88,35,0),(0,0)),
 ('R12','10k 1%',R,['R_IN3','BASE_GND'],(88,38,0),(0,0)),
 ('R13','10k 1%',R,['R_IN4','BASE_GND'],(88,41,0),(0,0)),
 ('C4','100nF 16V X7R',C,['BASE_3V3','BASE_GND'],(141,38,0),(0,0)),
-('C5','10uF 16V X7R','Capacitor_SMD:C_1206_3216Metric',['MOTOR_6V','BASE_GND'],(131,77,0),(0,0)),
-('C6','10nF 25V X7R',C,['DRV_VCP','MOTOR_6V'],(131,80,0),(0,0)),
-('C7','2.2uF 16V X7R',C,['DRV_VINT','BASE_GND'],(129,74,0),(0,0)),
+('C5','10uF 16V X7R','Capacitor_SMD:C_1206_3216Metric',['MOTOR_6V','BASE_GND'],(129.8,79.325,0),(0,0)),
+('C6','10nF 25V X7R',C,['DRV_VCP','MOTOR_6V'],(128,82.4,-90),(0,0)),
+('C7','2.2uF 16V X7R',C,['DRV_VINT','BASE_GND'],(128.85,76.1,0),(0,0)),
 ('C8','470uF 16V','Capacitor_THT:CP_Radial_D8.0mm_P3.50mm',['MOTOR_6V','BASE_GND'],(126,89,0),(0,0)),
 ('D1','SMBJ6.0A','Diode_SMD:D_SMB',['MOTOR_6V','BASE_GND'],(138,90,0),(0,0)),
 ('J5','ESTOP_LOGIC_NC',xh(2),['BASE_3V3','ESTOP_N'],(86,8,0),(0,0)),
@@ -68,6 +68,15 @@ PARTS=[
 ('R18','1k 1%',R,['FAULT_RP_DRIVE','FAULT_RP_N'],(94,61,0),(0,0)),
 ('R19','1k 1%',R,['FAULT_FPGA_DRIVE','FAULT_FPGA_N'],(94,65,0),(0,0)),
 ]
+# Copper-only service pads: no fitted part, paste or added load on the signal.
+TEST_POINTS=[
+    ('TP1','HOST_3V3',63,11), ('TP2','H_GND',63,16),
+    ('TP3','BASE_3V3',82,22), ('TP4','BASE_5V',101,91),
+    ('TP5','MOTOR_6V',144,76), ('TP6','BASE_GND',109,81),
+    ('TP7','ESTOP_N',82,28), ('TP8','DRV_FAULT_N',109,86),
+    ('TP9','SENSE_L',116.9625,71.5), ('TP10','SENSE_R',116.9625,86.5),
+]
+PARTS += [(ref,net,'TestPoint:TestPoint_Pad_D1.5mm',[net],(x,y,0),(0,0)) for ref,net,x,y in TEST_POINTS]
 # Distribute the remaining small blocks on one legible A0 electrical sheet.
 PARTS=[p[:-1]+((70+(i-6)%6*175,225+(i-6)//6*75),) if i>=6 else p for i,p in enumerate(PARTS)]
 MOTOR_NETS={'MOTOR_6V','MOTOR_L_P','MOTOR_L_N','MOTOR_R_P','MOTOR_R_N','SENSE_L','SENSE_R'}
@@ -135,13 +144,14 @@ def schematic():
         if ref[0]=='R': graphic='(rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0.254) (type default)) (fill (type none)))'
         if ref[0]=='C': graphic=''.join(f'(polyline (pts (xy {a} -2.54) (xy {a} 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))' for a in (-1.27,1.27))
         if ref=='C8': graphic+='(text "+" (at -3 3.5 0) (effects (font (size 1.5 1.5))))'
-        libs.append(f'''(symbol "Rover:{name}" (pin_names (offset 0.8) {"hide" if ref[0] in "RC" else ""}) {"(pin_numbers hide)" if ref[0] in "RC" else ""} (in_bom yes) (on_board yes)
+        in_bom='no' if ref.startswith('TP') else 'yes'
+        libs.append(f'''(symbol "Rover:{name}" (pin_names (offset 0.8) {"hide" if ref[0] in "RC" else ""}) {"(pin_numbers hide)" if ref[0] in "RC" else ""} (in_bom {in_bom}) (on_board yes)
           (property "Reference" "{ref}" (at 0 {half+5.08} 0) (effects (font (size 1.27 1.27))))
           (property "Value" "{val}" (at 0 {half+2.54} 0) (effects (font (size 1.27 1.27))))
           (property "Footprint" "{fp}" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
           (symbol "{name}_0_1" {graphic})
           (symbol "{name}_1_1" {''.join(pins)}))''')
-        items.append(f'''(symbol (lib_id "Rover:{name}") (at {x} {y} 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "{UID(ref)}")
+        items.append(f'''(symbol (lib_id "Rover:{name}") (at {x} {y} 0) (unit 1) (in_bom {in_bom}) (on_board yes) (dnp no) (uuid "{UID(ref)}")
           (property "Reference" "{ref}" (at {x} {y-half-5.08} 0) (effects (font (size 1.27 1.27))))
           (property "Value" "{val}" (at {x} {y-half-2.54} 0) (effects (font (size 1.27 1.27))))
           (property "Footprint" "{fp}" (at {x} {y} 0) (effects (font (size 1.27 1.27)) hide))
@@ -160,7 +170,7 @@ def schematic():
       (symbol "PWR_FLAG_0_1" (polyline (pts (xy -1 2) (xy 0 3) (xy 1 2) (xy 0 1) (xy -1 2)) (stroke (width 0.2) (type default)) (fill (type none))))
       (symbol "PWR_FLAG_1_1" (pin power_out line (at 0 0 90) (length 1) (name "pwr" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))''')
     for i,net in enumerate(['HOST_3V3','H_GND','BASE_3V3','BASE_GND','BASE_5V','MOTOR_6V']):
-        x=round((70+i*175)/1.27)*1.27; y=round(740/1.27)*1.27; ref=f'#FLG0{i+1}'
+        x=round((70+i*175)/1.27)*1.27; y=round(880/1.27)*1.27; ref=f'#FLG0{i+1}'
         items.append(f'''(symbol (lib_id "Rover:PWR_FLAG") (at {x} {y} 0) (unit 1) (in_bom no) (on_board no) (uuid "{UID(ref)}")
           (property "Reference" "{ref}" (at {x} {y-3} 0) (effects (font (size 1 1)) hide))
           (property "Value" "OFFBOARD RAIL" (at {x} {y-5} 0) (effects (font (size 1 1))))
@@ -168,13 +178,13 @@ def schematic():
           (instances (project "carrier" (path "/{SHEET}" (reference "{ref}") (unit 1)))))
           (label "{net}" (at {x} {y} 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "{UID(ref+'label')}"))''')
     for i,(txt,x,y) in enumerate([
-        ('REV B: Pi 5 bottom socket + Shrike R0.4 top sockets; no host/base ground tie',550,20),
-        ('J7: REGULATED 6 V AFTER EXTERNAL FUSE + INDEPENDENT STOP RELAY. 1 A nominal per motor.',550,765),
-        ('FPGA PWM gates direction inputs through U4. nSLEEP is STOP level, never PWM.',550,775),
-        ('Shrike USB-C is sole 5 V power entry. J1 pins 2/4 and J2/J4 pin 1 stay disconnected.',550,785),
-        ('REVIEW ONLY: physical fit, current limit, cooling and firmware timing require bench evidence.',550,795)]):
+        ('REV B.1: Pi 5 bottom socket + Shrike R0.4 top sockets; no host/base ground tie',550,20),
+        ('J7: REGULATED 6 V AFTER EXTERNAL FUSE + INDEPENDENT STOP RELAY. 1 A nominal per motor.',550,910),
+        ('FPGA PWM gates direction inputs through U4. nSLEEP is STOP level, never PWM.',550,920),
+        ('Shrike USB-C is sole 5 V power entry. J1 pins 2/4 and J2/J4 pin 1 stay disconnected.',550,930),
+        ('REVIEW ONLY: physical fit, current limit, cooling and firmware timing require bench evidence.',550,940)]):
         items.append(f'(text "{txt}" (at {x} {y} 0) (effects (font (size 1.27 1.27))) (uuid "{UID("note"+str(i))}"))')
-    (ROOT/'carrier.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator "rover_generator") (uuid "{SHEET}") (paper "A0") (title_block (title "Axiom Rover — Pi 5 / Shrike socket carrier") (date "2026-09-09") (rev "B REVIEW")) (lib_symbols {"".join(libs)}) {"".join(items)} (sheet_instances (path "/" (page "1"))))\n')
+    (ROOT/'carrier.kicad_sch').write_text(f'(kicad_sch (version 20250114) (generator "rover_generator") (uuid "{SHEET}") (paper "User" 1189 1000) (title_block (title "Axiom Rover — Pi 5 / Shrike socket carrier") (date "2026-09-27") (rev "B.1 REVIEW")) (lib_symbols {"".join(libs)}) {"".join(items)} (sheet_instances (path "/" (page "1"))))\n')
     (ROOT/'Rover.kicad_sym').write_text('(kicad_symbol_lib (version 20241209) (generator "rover_generator") '+''.join(s.replace('"Rover:','"',1) for s in libs)+')\n')
     (ROOT/'sym-lib-table').write_text('(sym_lib_table (lib (name "Rover") (type "KiCad") (uri "${KIPRJMOD}/Rover.kicad_sym") (options "") (descr "Carrier review symbols")))\n')
 
@@ -191,7 +201,7 @@ def board():
     settings.m_ViasMinSize=k.FromMM(.45); settings.m_MinThroughDrill=k.FromMM(.2)
     motor=k.NETCLASS('Motor'); motor.SetClearance(k.FromMM(.2)); motor.SetTrackWidth(k.FromMM(.8)); motor.SetViaDiameter(k.FromMM(1.2)); motor.SetViaDrill(k.FromMM(.6))
     settings.m_NetSettings.SetNetclass('Motor',motor)
-    for name in MOTOR_NETS: settings.m_NetSettings.SetNetclassPatternAssignment('/'+name,'Motor')
+    for name in sorted(MOTOR_NETS): settings.m_NetSettings.SetNetclassPatternAssignment('/'+name,'Motor')
     nets={}
     for name in sorted({n for p in PARTS for n in p[3] if n}):
         net=k.NETINFO_ITEM(b,"/"+name); b.Add(net); nets[name]=net
@@ -207,7 +217,11 @@ def board():
         fp.Value().SetVisible(False); fp.Reference().SetTextSize(k.VECTOR2I(k.FromMM(1),k.FromMM(1))); fp.Reference().SetTextThickness(k.FromMM(.15))
         if ref.startswith('J'): fp.Reference().SetLayer(k.B_Fab if ref=='J1' else k.F_Fab)
         if ref=='J1': fp.Reference().SetMirrored(True)
-        if ref=='C8': fp.Reference().SetPosition(k.VECTOR2I(k.FromMM(121),k.FromMM(89)))
+        if ref.startswith('TP'):
+            fp.SetAttributes(k.FP_EXCLUDE_FROM_BOM|k.FP_EXCLUDE_FROM_POS_FILES)
+            fp.Reference().SetPosition(k.VECTOR2I(k.FromMM(x),k.FromMM(y-1.7)))
+        if ref in ('R7','R8'): fp.Reference().SetPosition(k.VECTOR2I(k.FromMM(x-4),k.FromMM(y)))
+        if ref=='C8': fp.Reference().SetPosition(k.VECTOR2I(k.FromMM(134),k.FromMM(85)))
         if ref=='U3': fp.Reference().SetPosition(k.VECTOR2I(k.FromMM(123),k.FromMM(74.5)))
         if ref in ('R10','R11','R12','R13','R5','R6','C3','C4','C5','C6','C7'):
             fp.Reference().SetPosition(k.VECTOR2I(k.FromMM(x+(3.5 if ref.startswith('C') else -4)),k.FromMM(y)))
@@ -219,34 +233,60 @@ def board():
         for pad in fp.Pads():
             if not pad.GetNumber(): continue # paste-only aperture pads
             n=int(pad.GetNumber()); net=pinnets[n-1]
-            if net: pad.SetNet(nets[net])
+            if net:
+                pad.SetNet(nets[net])
+                if ref.startswith('J') and ref!='J7' and net in ('H_GND','BASE_GND'):
+                    pad.SetLocalZoneConnection(k.ZONE_CONNECTION_THERMAL)
+                    pad.SetThermalGap(k.FromMM(.3))
             else:
                 ncname=f'unconnected-({ref}-'+('NC-' if ref=='U2' else '')+f'Pad{n})'
                 ncnet=k.NETINFO_ITEM(b,ncname); b.Add(ncnet); pad.SetNet(ncnet)
-    # Explicit 0.30 mm breakout necks clear the 0.65 mm driver pitch;
-    # 0.8 mm motor trunks begin at 1.2/0.6 mm through-vias.
+    # Lock local current loops before routing the remaining signals. Dimensions
+    # here are PCB pad centres; native DRC and the independent route check gate exports.
     def trace(net,a,z,width=.3,layer=k.F_Cu):
         t=k.PCB_TRACK(b); t.SetLocked(True); t.SetNet(nets[net]); t.SetLayer(layer); t.SetWidth(k.FromMM(width))
         t.SetStart(k.VECTOR2I(k.FromMM(a[0]),k.FromMM(a[1]))); t.SetEnd(k.VECTOR2I(k.FromMM(z[0]),k.FromMM(z[1]))); b.Add(t)
-    for net,y,vx,vy in [('MOTOR_L_P',77.375,118,76.375),('SENSE_L',78.025,115.8,77.025),('MOTOR_L_N',78.675,113.6,77.675),('MOTOR_R_N',79.325,113.6,80.325),('SENSE_R',79.975,115.8,80.975),('MOTOR_R_P',80.625,118,81.625)]:
-        trace(net,(120.1375,y),(vx+1,y)); trace(net,(vx+1,y),(vx,vy))
-        via=k.PCB_VIA(b); via.SetLocked(True); via.SetNet(nets[net]); via.SetPosition(k.VECTOR2I(k.FromMM(vx),k.FromMM(vy))); via.SetWidth(k.FromMM(1.2)); via.SetDrill(k.FromMM(.6)); via.SetLayerPair(k.F_Cu,k.B_Cu); b.Add(via)
-    trace('MOTOR_6V',(125.8625,79.325),(127.4,79.325))
-    trace('MOTOR_6V',(127.4,79.325),(129.525,77))
-    trace('DRV_VCP',(125.8625,79.975),(130.05,80),.25)
-    trace('DRV_VINT',(125.8625,78.025),(127.1,78.025),.25)
-    trace('DRV_VINT',(127.1,78.025),(128.05,77.075),.25)
-    trace('DRV_VINT',(128.05,77.075),(128.05,74),.25)
-    for net,points in [('DRV_BIN2',[(125.8625,80.625),(127.4,80.625),(128,80.75)]),('DRV_BIN2',[(139.475,45),(141,45)])]:
-        for a,z in zip(points,points[1:]): trace(net,a,z,.25)
-        vx,vy=points[-1]; via=k.PCB_VIA(b);via.SetLocked(True);via.SetNet(nets[net]);via.SetPosition(k.VECTOR2I(k.FromMM(vx),k.FromMM(vy)));via.SetWidth(k.FromMM(.7));via.SetDrill(k.FromMM(.3));via.SetLayerPair(k.F_Cu,k.B_Cu);b.Add(via)
-    trace('MOTOR_R_N',(113.6,80.325),(113.6,83.5),.8,k.B_Cu)
-    trace('MOTOR_R_N',(113.6,83.5),(118,87.9),.8,k.B_Cu)
-    trace('MOTOR_R_N',(118,87.9),(118,91),.8,k.B_Cu)
-    via=k.PCB_VIA(b);via.SetLocked(True);via.SetNet(nets['MOTOR_R_N']);via.SetPosition(k.VECTOR2I(k.FromMM(118),k.FromMM(91)));via.SetWidth(k.FromMM(1.2));via.SetDrill(k.FromMM(.6));via.SetLayerPair(k.F_Cu,k.B_Cu);b.Add(via)
+    def route(net,points,width=.3,layer=k.F_Cu):
+        for a,z in zip(points,points[1:]): trace(net,a,z,width,layer)
+    def via(net,x,y,power=False):
+        v=k.PCB_VIA(b); v.SetLocked(True); v.SetNet(nets[net]); v.SetPosition(k.VECTOR2I(k.FromMM(x),k.FromMM(y)))
+        v.SetWidth(k.FromMM(1.2 if power else .7)); v.SetDrill(k.FromMM(.6 if power else .3)); v.SetLayerPair(k.F_Cu,k.B_Cu); b.Add(v)
+    for net,points in [
+        ('MOTOR_L_P',[(120.1375,77.375),(118.7,77.375),(118.7,75.5)]),
+        ('MOTOR_L_N',[(120.1375,78.675),(115.2,78.675)]),
+        ('MOTOR_R_N',[(120.1375,79.325),(116.5,79.325),(115.8,80.025),(114.2,80.025)]),
+        ('MOTOR_R_P',[(120.1375,80.625),(118.7,80.625),(118.7,82.5)]),
+    ]:
+        route(net,points); via(net,*points[-1],power=True)
+    for net,y,ry in [('SENSE_L',78.025,75.5),('SENSE_R',79.975,82.5)]:
+        bend=(116.9625,y+(-.5375 if ry<y else .5375))
+        route(net,[(120.1375,y),(117.5,y),bend])
+        route(net,[bend,(116.9625,ry)],.8)
+        # Continue to the exposed probe pad; the pad-to-resistor path stays short.
+        route(net,[(116.9625,ry),(116.9625,71.5 if ry<y else 86.5)],.25)
+    route('MOTOR_6V',[(125.8625,79.325),(128.325,79.325)])
+    route('DRV_VCP',[(125.8625,79.975),(126.95,79.975),(128,81.025),(128,81.45)],.25)
+    route('DRV_VINT',[(125.8625,78.025),(127.1,78.025),(127.9,77.225),(127.9,76.1)],.25)
+    # VM returns from the charge-pump capacitor to the same local bypass node.
+    route('MOTOR_6V',[(128,83.35),(128.325,83.025),(128.325,79.325)],.8,k.B_Cu)
+    via('MOTOR_6V',128,83.35,power=True); via('MOTOR_6V',128.325,79.325,power=True)
+    for net,points in [
+        ('DRV_BIN1',[(125.8625,81.275),(125.8625,84.7)]),
+    ]:
+        route(net,points,.2); via(net,*points[-1])
+    # Keep BIN2's fine-pitch escape at 0.20 mm, then a continuous 0.25 mm
+    # control trace around the motor input. This avoids two stranded router vias.
+    route('DRV_BIN2',[(125.8625,80.625),(126.96,80.625),(126.96,85.3)],.2)
+    route('DRV_BIN2',[(126.96,85.3),(148.5,88),(150.9,88),(150.9,84.25),(140.9872,45),(139.475,45)],.25)
+    # Local ground stitching beside bypass returns and the current-sense returns.
+    for x,y in [(132.8,79.325),(131,76.1),(113,75.5),(113,82.5)]: via('BASE_GND',x,y)
     for i,(x,y) in enumerate([(5,5),(155,5),(155,95),(5,95)]+PI_HOLES,1):
         fp=footprint('MountingHole:MountingHole_3.2mm_M3' if i<=4 else 'MountingHole:MountingHole_2.7mm_M2.5',f'H{i}','M3 NPTH' if i<=4 else 'M2.5 NPTH',x,y,0)
         fp.SetAttributes(k.FP_BOARD_ONLY|k.FP_EXCLUDE_FROM_BOM|k.FP_EXCLUDE_FROM_POS_FILES)
+        fp.Reference().SetVisible(False)
+    for i,(x,y) in enumerate([(12,6),(151,72),(78.5,95.5)],1):
+        fp=footprint('Fiducial:Fiducial_1mm_Mask3mm',f'FID{i}','Fiducial',x,y,0)
+        fp.SetAttributes(fp.GetAttributes()|k.FP_BOARD_ONLY|k.FP_EXCLUDE_FROM_BOM|k.FP_EXCLUDE_FROM_POS_FILES)
         fp.Reference().SetVisible(False)
     def edge_line(a,z):
         edge=k.PCB_SHAPE(); edge.SetShape(k.SHAPE_T_SEGMENT); edge.SetStart(k.VECTOR2I(k.FromMM(a[0]),k.FromMM(a[1]))); edge.SetEnd(k.VECTOR2I(k.FromMM(z[0]),k.FromMM(z[1]))); edge.SetLayer(k.Edge_Cuts); edge.SetWidth(k.FromMM(.05)); b.Add(edge)
@@ -260,8 +300,25 @@ def board():
     poly=z.Outline(); poly.NewOutline()
     for x,y in [(74,0),(76,0),(76,100),(74,100)]: poly.Append(k.FromMM(x),k.FromMM(y))
     b.Add(z)
-    for txt,x,y,size in [('VOLNLABS / AXIOM ROVER',38,83,1.4),('REV B - REVIEW ONLY',38,87,1),('PI 5 BELOW / 16.5 mm GAP',37,29,1),('ISOLATED UART',57,10,1),('POWER OFF TO SWAP',38,91,1),('SHRIKE R0.4',111.5,37,1.3),('USB END',111.5,14,1),('1',97,20,1),('1',126,20,1),('STOP NC',85,3,1),('HC-SR04',87,86,1),('SENSOR 5V',110,98,1),('6V FUSED',147,98,1),('L MOTOR',149,65,1),('R MOTOR',149,33,1),('ENC L',132,3,1),('ENC R',146,3,1),('IMU 3V3',140,18,1),('1A NOMINAL / CH',111,79,1)]:
+    for txt,x,y,size in [('VOLNLABS / AXIOM ROVER',38,83,1.4),('REV B.1 - REVIEW ONLY',38,87,1),('PI 5 BELOW / 16.5 mm GAP',37,29,1),('ISOLATED UART',51,7,1),('POWER OFF TO SWAP',38,91,1),('SHRIKE R0.4',111.5,37,1.3),('USB END',111.5,14,1),('1',97,20,1),('1',126,20,1),('STOP NC',85,3,1),('HC-SR04',87,86,1),('SENSOR 5V',110,98,1),('6V FUSED',147,98,1),('L MOTOR',149,65,1),('R MOTOR',149,33,1),('ENC L',132,3,1),('ENC R',146,3,1),('IMU 3V3',140,18,1),('1A NOMINAL / CH',139,96,1)]:
         t=k.PCB_TEXT(b); t.SetText(txt); t.SetPosition(k.VECTOR2I(k.FromMM(x),k.FromMM(y))); t.SetTextSize(k.VECTOR2I(k.FromMM(size),k.FromMM(size))); t.SetTextThickness(k.FromMM(.15)); t.SetLayer(k.F_SilkS); b.Add(t)
+    # Pin order follows the marked pad 1, including the two rotated motor sockets.
+    for txt,x,y in [
+        ('J12 ALT HOST',22,3),('1:3V3 2:HG 3:TX 4:RX',24,6),
+        ('J5 1:3V3 2:STOP',86,17),('J3 1:5V 2:T 3:E 4:G',89,97.5),
+        ('J6 1:+5V 2:G',107,95.5),('J7 1:+6V 2:G',146,80),
+        ('J8 1:L+ 2:L-',144,68),('J9 1:R+ 2:R-',145,36),
+        ('J10 1:G 2:3V3 3:A 4:B',130,16),
+        ('J11 1:G 2:3V3 3:A 4:B',145,7),
+        ('J13 1:G 2:3V3 3:SDA',141,27),('4:SCL 5:INT',146,30),
+        ('J2',97,24),('J4',126,24),('J1 PI BELOW',38,18),
+    ]:
+        t=k.PCB_TEXT(b); t.SetText(txt); t.SetPosition(k.VECTOR2I(k.FromMM(x),k.FromMM(y))); t.SetTextSize(k.VECTOR2I(k.FromMM(.8),k.FromMM(.8))); t.SetTextThickness(k.FromMM(.12)); t.SetLayer(k.F_SilkS); b.Add(t)
+    for ref,net,x,y in TEST_POINTS:
+        tx,ty={'TP6':(104,81),'TP8':(103.5,86),'TP10':(120,86.5)}.get(ref,(x,y+1.7))
+        t=k.PCB_TEXT(b); t.SetText(net); t.SetPosition(k.VECTOR2I(k.FromMM(tx),k.FromMM(ty))); t.SetTextSize(k.VECTOR2I(k.FromMM(.8),k.FromMM(.8))); t.SetTextThickness(k.FromMM(.12)); t.SetLayer(k.F_SilkS)
+        if ref=='TP10': t.SetTextAngle(k.EDA_ANGLE(90,k.DEGREES_T))
+        b.Add(t)
     k.SaveBoard(str(ROOT/'carrier.kicad_pcb'),b)
     assert k.ExportSpecctraDSN(b,str(ROOT/'out/carrier.dsn'))
     (ROOT/'fp-lib-table').write_text('(fp_lib_table (lib (name "Rover") (type "KiCad") (uri "${KIPRJMOD}/Rover.pretty") (options "") (descr "Pinned KiCad 10 footprints")))\n')
@@ -269,7 +326,8 @@ def board():
 def write_contract():
     with (ROOT/'out/assembly-bom.csv').open('w',newline='') as f:
         w=csv.writer(f,lineterminator="\n"); w.writerow(['Reference','Value / MPN','Footprint','Quantity'])
-        for ref,val,fp,*rest in PARTS: w.writerow([ref,val,fp,1])
+        for ref,val,fp,*rest in PARTS:
+            if not ref.startswith('TP'): w.writerow([ref,val,fp,1])
     (ROOT/'out/net-contract.json').write_text(json.dumps({p[0]:{str(i):n for i,n in enumerate(p[3],1)} for p in PARTS},indent=2)+'\n')
 
 if __name__=='__main__':
@@ -299,17 +357,13 @@ if __name__=='__main__':
             if isinstance(track,k.PCB_VIA):
                 if track.GetDrillValue()==k.FromMM(.6): track.SetWidth(k.FromMM(1.2))
             elif track.GetWidth()<k.FromMM(.2): track.SetWidth(k.FromMM(.2))
-        # Complete the saved router session's local VM-to-decoupler connection.
-        points=[(129.525,77),(129.525,78.1),(131.95,78.8),(131.95,80)]
-        for a,z in zip(points,points[1:]):
-            t=k.PCB_TRACK(b); t.SetNet(b.FindNet('/MOTOR_6V')); t.SetLayer(k.F_Cu); t.SetWidth(k.FromMM(.8)); t.SetLocked(True)
-            t.SetStart(k.VECTOR2I(k.FromMM(a[0]),k.FromMM(a[1]))); t.SetEnd(k.VECTOR2I(k.FromMM(z[0]),k.FromMM(z[1]))); b.Add(t)
         # Ground copper also connects the exposed pad's thermal vias. Physical thermal
         # qualification remains required; an autorouter result is not a current rating.
         for name,x1,x2 in [('H_GND',.5,73.5),('BASE_GND',76.5,159.5)]:
             for layer in [k.F_Cu,k.B_Cu]:
                 z=k.ZONE(b); z.SetLayer(layer); z.SetNet(b.FindNet('/'+name)); z.SetLocalClearance(k.FromMM(.2))
                 z.SetPadConnection(k.ZONE_CONNECTION_FULL); z.SetMinThickness(k.FromMM(.2))
+                z.SetThermalReliefGap(k.FromMM(.3)); z.SetThermalReliefSpokeWidth(k.FromMM(.4))
                 poly=z.Outline(); poly.NewOutline()
                 for x,y in [(x1,.5),(x2,.5),(x2,99.5),(x1,99.5)]: poly.Append(k.FromMM(x),k.FromMM(y))
                 b.Add(z)

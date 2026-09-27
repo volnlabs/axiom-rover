@@ -1,4 +1,4 @@
-# Axiom rover electrical contract — RevB review
+# Axiom rover electrical contract — Rev B.1 review
 
 This is the accepted **160 x 100 mm Pi 5 carrier** contract. It records a design
 under review, not a fabricated board, qualified harness, motion release, or
@@ -15,6 +15,9 @@ firmware implementation.
 - The external 6 V motor rail reaches J7 only after an independent, rated stop
   relay and fuse. The PCB does not rate or replace either device.
 - U1 isolates `H_GND` and `BASE_GND`; no carrier copper intentionally joins them.
+- Rev B.1 retains the 160 x 100 mm outline, mounting holes, cooler aperture,
+  connector positions and pinouts. Check the generated board against these
+  fixed interfaces before fabrication.
 
 ## Pi socket and Shrike connector map
 
@@ -91,6 +94,12 @@ and a low-energy direction/phase test.
 U3 is `DRV8833PWPR`. R7/R8 are Stackpole `CSRT1206FTR200`, 0.20 Ω, 1 %, 1 W current-sense parts. The
 design intent is **1 A nominal per motor channel**, contingent on current,
 thermal, supply-sag, and driver-fault measurements.
+For Rev B.1, place R7/R8 beside U3 with each sense trace at most 7 mm;
+limit U3-to-capacitor pad-centre routed lengths to 4 mm for VM/VINT and
+3 mm for VCP.
+Retain 12 exposed-pad thermal vias, ground isolation and 0.8 mm motor trunks.
+These are layout targets to verify in the regenerated board, not measured
+electrical or thermal performance.
 
 | Direction source | PWM gate | DRV8833 input |
 |---|---|---|
@@ -130,6 +139,29 @@ Physical tests, fabrication, and motion release are **false / not run**. This
 repository does not claim implemented, flashed, or validated Pi, RP2040, or
 FPGA motor-control firmware.
 
+## Service points and assembly
+
+Rev B.1 has ten 1.5 mm top-side probe pads, three top fiducials,
+low-current through-hole ground thermal relief, and connector pin labels.
+Reflow surface-mount parts before fitting the through-hole connectors.
+
+| Pad | Net |
+|---|---|
+| TP1 | `HOST_3V3` |
+| TP2 | `H_GND` |
+| TP3 | `BASE_3V3` |
+| TP4 | `BASE_5V` |
+| TP5 | `MOTOR_6V` |
+| TP6 | `BASE_GND` |
+| TP7 | `ESTOP_N` |
+| TP8 | `DRV_FAULT_N` |
+| TP9 | `SENSE_L` |
+| TP10 | `SENSE_R` |
+
+Verify access and isolation on the actual assembly before probing. Instrument
+ground leads must not bridge `H_GND` and `BASE_GND`; use isolated or differential
+measurement for simultaneous observations across the UART isolation boundary.
+
 ## Host transport and electrical limits
 
 Pi pins 8/10 are GPIO14/15 and require the intended RP1 UART pin mux and driver.
@@ -151,6 +183,8 @@ D1 SMBJ6.0A is a transient clamp, not a regulator, regeneration sink or
 reverse-polarity controller. C8 is polarized. Use keyed, polarity-checked
 6 V input with a suitably rated external fuse. Test VM overshoot and rail decay
 at stop/reverse; TVS pulse ratings alone do not qualify motor regeneration.
+Exact manufacturer sourcing for generic D1 SMBJ6.0A and C8 470 µF, 16 V
+remains unresolved; confirm orderable parts and footprints before fabrication.
 U3 uses the PWP exposed-pad package, not the lower-current PW package.
 The 0.30 mm driver breakout necks feed 0.8 mm motor trunks and 1.2/0.6 mm
 vias; two-layer copper and thermal-via performance remain physical test gates.

@@ -26,10 +26,10 @@ with http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Handler,d
     match=re.search(r'data-tests="([^"]+)"',result.stdout)
     assert match, 'Viewer self-test did not finish: '+str(re.findall(r'Could not[^<]+',result.stdout))
     checks=json.loads(html.unescape(match.group(1)))
-    assert len(checks)>=34 and {'hide Shrike with components','exploded carrier above Pi'}<=set(checks)
+    assert len(checks)>=42 and {'hide Shrike with components','exploded carrier above Pi'}<=set(checks)
     mesh=site/'viewer/meshes.json'
     if not mesh.exists(): mesh=site/'viewer/meshes.json.gz'
-    report={'browser':subprocess.check_output(['chromium','--version'],text=True).strip(),'passed':True,'checks':checks,'sources_sha256':{str(p.relative_to(site)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [site/'viewer/app.js',site/'viewer/index.html',mesh]}}
+    report={'browser':subprocess.check_output(['chromium','--version'],text=True).strip(),'passed':True,'checks':checks,'sources_sha256':{str(p.relative_to(site)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [site/'viewer/app.js',site/'viewer/index.html',site/'viewer/styles.css',mesh]}}
     if args.url: report['url']=url
     (reports/'browser-check.json').write_text(json.dumps(report,indent=2)+'\n')
     print(f'Viewer: {len(checks)} checks passed, including all sides, zoom and component controls.')

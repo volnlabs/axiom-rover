@@ -15,7 +15,7 @@ A reusable 2WD release-test robot: one fixed Shrike/RP2040 + ForgeFPGA actuator 
 - [Electrical and harness contract](docs/electrical-contract.md), [wiring diagram](docs/harness.svg), [mechanical interfaces](docs/mechanical.md), [system BOM](bom/system-bom.csv).
 - [Assembly, procurement and commissioning](docs/commissioning.md), [post-v1.0 compute roadmap](docs/compute-roadmap.md), [reproduction instructions](docs/build.md).
 - [Controller bench fixture and motor-disconnected test procedure](docs/bench.md).
-- [Native electrical check results](electronics/out/drc.json), [mechanical checks](mechanical/out/mechanical_checks.json), [populated assembly checks](mechanical/out/assembly-fit.json), [34 browser checks](viewer/browser-check.json), and [release gates](release-gates.json).
+- [Native electrical check results](electronics/out/drc.json), [mechanical checks](mechanical/out/mechanical_checks.json), [populated assembly checks](mechanical/out/assembly-fit.json), [42 browser checks](viewer/browser-check.json), and [release gates](release-gates.json).
 
 The carrier is 160 × 100 × 1.6 mm, two layers, with a cooler aperture. The Pi sits below it at a 16.5 mm gap and Shrike plugs into two 19-position sockets above. Two 6 V ThinkRobotics MOT3001-6V60RPM encoder motors drive 80 mm Pololu 3690 wheels. DRV8833 current regulation targets 1 A per channel; actual current and thermal behavior require bench measurements. The external fuse, normally-open motor-power relay, regulated motor source and separate host/base supplies remain off-board. Power down before compute swaps; J1 and alternate-host J12 cannot be used together.
 

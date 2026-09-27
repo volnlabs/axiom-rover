@@ -1,5 +1,5 @@
 {
-  "browser": "Chromium 151.0.7922.173 Arch Linux",
+  "browser": "Chromium 152.0.7977.82 Arch Linux",
   "passed": true,
   "checks": [
     "rover geometry",
@@ -35,11 +35,20 @@
     "hide components",
     "retain board",
     "hide Shrike with components",
-    "schematic"
+    "schematic",
+    "schematic disables 3D views",
+    "schematic hides rover controls",
+    "schematic hides parts",
+    "rover restores view controls",
+    "view button state",
+    "isometric button state",
+    "invalid direction ignored",
+    "canvas accessible"
   ],
   "sources_sha256": {
-    "viewer/app.js": "ebd36c52ecb75fbf23d872eefcdf2cea574b94df90e883b5da4d0f0be013b213",
-    "viewer/index.html": "fa987112fb90797a47c5b15f8974b2e3118e072160471cf5cbe3d5d002141344",
+    "viewer/app.js": "fc1af13a07f572c02385b72dd94770bc1a312d1a45d5a6cd6dfedeb0e3c9ce68",
+    "viewer/index.html": "70855bf75a8ec272c7c87294077abc420b750ace3f82d3986fa6481353e2703d",
+    "viewer/styles.css": "a07196772ee160e9831ddbecf0fbd0ee799b0b2da8b871901e15fddec26c6af2",
     "viewer/meshes.json": "6ccbc25317f1a4b5037f825ba7875e08cdb3ca7a1e17b8cb263518530248c597"
   }
 }

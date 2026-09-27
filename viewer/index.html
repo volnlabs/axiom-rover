@@ -1,11 +1,51 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Axiom Rover · 3D inspection</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:#e9edf0;color:#202c35;font:14px system-ui,sans-serif}header{height:70px;background:#fff;border-bottom:1px solid #d6dce0;display:flex;align-items:center;gap:24px;padding:0 24px}h1{font-size:19px;margin:0}small{color:#65717b}nav{display:flex;gap:7px;margin-left:auto}button,select{font:inherit;border:1px solid #cbd3d9;background:white;color:#263440;border-radius:6px;padding:9px 12px;cursor:pointer}button:hover{background:#eaf0f5}button[aria-pressed=true]{background:#253e4d;color:white;border-color:#253e4d}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #eb7b2f;outline-offset:2px}main{display:grid;grid-template-columns:265px 1fr;height:calc(100dvh - 70px)}aside{background:#f9fafb;padding:20px;overflow:auto;border-right:1px solid #d6dce0}h2{font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:20px 0 10px}h2:first-child{margin-top:0}.views{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.views button{padding:8px 2px}.row{display:flex;gap:8px;margin:10px 0}.row button{flex:1}label{display:block;margin:12px 0}input[type=range]{width:100%;accent-color:#c35e21}input[type=checkbox]{accent-color:#253e4d}#stage{position:relative;min-width:0;overflow:hidden}canvas{display:block;touch-action:none;width:100%;height:100%}#hint{position:absolute;left:22px;bottom:18px;background:#fffffff0;padding:12px 16px;border-radius:8px;pointer-events:none;font-size:12px}#status{position:absolute;left:22px;top:18px;background:#fff;padding:10px 14px;border-radius:7px;max-width:80%}#parts label{margin:7px 0;font-size:12px;overflow-wrap:anywhere}#parts{border-top:1px solid #d5dce1;margin-top:18px}#drawing{display:none;position:absolute;inset:0;overflow:hidden;background:#f7f5ef;touch-action:none}#drawing img{position:absolute;left:50%;top:50%;max-width:none;user-select:none;pointer-events:none}a{color:#285976}.note{font-size:12px;line-height:1.5;color:#56656f}.download{display:block;margin-top:10px}@media(max-width:700px){header{padding:12px;height:auto;flex-wrap:wrap;gap:8px}nav{margin-left:0}main{grid-template-columns:190px 1fr;height:85dvh}aside{padding:10px}h1{font-size:16px}#hint{left:8px;bottom:8px;padding:8px;max-width:90%}}
-</style><script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head><body>
-<header><div><h1>AXIOM ROVER <span style="color:#d56927">/</span> 3D inspection</h1><small>Saved CAD · millimetres · revision B</small></div><nav aria-label="Inspect"><button data-mode="rover" aria-pressed="true">Rover & enclosure</button><button data-mode="pcb" aria-pressed="false">Populated PCB</button><button data-mode="schematic" aria-pressed="false">Schematic</button></nav></header>
-<main><aside><h2>View direction</h2><div class="views"><button data-view="top">Top</button><button data-view="front">Front</button><button data-view="right">Right</button><button data-view="bottom">Bottom</button><button data-view="back">Back</button><button data-view="left">Left</button></div><div class="row"><button id="iso">3D angle</button><button id="fit">Fit / reset</button></div><div class="row"><button id="in" aria-label="Zoom in">＋ Zoom</button><button id="out" aria-label="Zoom out">− Zoom</button></div>
-<section id="rover-options"><h2>Look inside</h2><label><input id="shell" type="checkbox" checked> Show enclosure shell</label><label>Shell opacity <input id="opacity" type="range" min="0.08" max="1" step=".02" value="1"></label><label>Separate parts <input id="explode" type="range" min="0" max="1" step=".02" value="0"></label><label><input id="envelopes" type="checkbox" checked> Unqualified hardware envelopes</label><label><input id="reserves" type="checkbox"> Cable / clearance reserves</label><label><input id="stand" type="checkbox"> Show test stand</label></section>
-<section id="pcb-options" hidden><h2>Board detail</h2><label><input id="components" type="checkbox" checked> Show components</label><div class="row"><button data-drawing="top">Top routing</button><button data-drawing="bottom">Bottom routing</button></div><button id="board3d">Return to 3D board</button></section>
-<p class="note" id="disclaimer">Rev B reference CAD. Physical socket engagement, purchased parts and printed fit remain unqualified.</p><a class="download" href="carrier-populated.step" download>Download populated PCB STEP</a><a class="download" href="credits.html">CAD sources &amp; licenses</a><div id="parts"><h2>Individual parts</h2><p>Loading CAD…</p></div></aside>
-<div id="stage"><div id="status" role="status">Loading CAD geometry…</div><div id="drawing"><img alt="Circuit drawing"></div><div id="hint">Drag to rotate · wheel / pinch to zoom · right-drag to pan<br>Double-click a part to focus. Front = sensor side (+Y).</div></div></main>
-<script type="module" src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203d4c">
+  <meta name="description" content="Inspect Axiom Rover's Rev B enclosure, populated PCB and schematic. Explore the reference CAD, design specifications and outstanding hardware release gates.">
+  <meta property="og:title" content="Axiom Rover · Interactive CAD inspection">
+  <meta property="og:description" content="Explore the 2WD test platform, Pi 5 carrier and Shrike controller. Rev B is a design-review prototype; physical qualification is pending.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://axiom-rover.vercel.app/">
+  <meta property="og:image" content="https://axiom-rover.vercel.app/viewer/rover-preview.png">
+  <meta property="og:image:alt" content="Reference CAD of the Axiom Rover enclosure and populated carrier">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://axiom-rover.vercel.app/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Axiom Rover · Interactive CAD inspection</title>
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body class="viewer-page">
+  <a class="skip-link" href="#inspection">Skip to inspection</a>
+  <header class="site-header">
+    <a class="brand" href="./"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path d="M6 23 16 5l10 18H6Zm5-5h10M6 27h20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Axiom Rover<small>2WD release-test platform</small></span></a>
+    <nav class="site-nav" aria-label="Site"><a href="./" aria-current="page">Inspect</a><a href="project.html">Project details</a><a href="credits.html">Sources</a></nav>
+  </header>
+  <div class="review-banner"><span class="revision">Rev B</span><span>Design-review prototype. Fabrication and powered motion are not released.</span><a href="project.html#release">View release status</a></div>
+  <div class="inspection-bar"><h1>CAD inspection</h1><nav class="mode-tabs" aria-label="Inspection mode"><button data-mode="rover" aria-pressed="true">Rover &amp; enclosure</button><button data-mode="pcb" aria-pressed="false">Populated PCB</button><button data-mode="schematic" aria-pressed="false">Schematic</button></nav><a class="mobile-controls" href="#controls">Controls ↓</a></div>
+  <main id="inspection" tabindex="-1">
+    <section id="stage" aria-label="CAD and drawing viewport" aria-describedby="hint" tabindex="0">
+      <div id="status" role="status" aria-live="polite">Loading CAD geometry…</div>
+      <div id="load-error" hidden><strong>3D inspection is unavailable</strong><p id="error-detail"></p><button id="retry">Retry 3D loading</button><a href="?mode=schematic">Open the schematic</a><a href="project.html">Read project details</a></div>
+      <div id="drawing" hidden><img alt="Circuit drawing" draggable="false"></div>
+      <div id="hint">Drag to rotate · pinch or scroll to zoom · right-drag to pan.<br>Keyboard: arrows rotate, + / − zoom, Home fits. Double-click a part to focus.</div>
+      <noscript><div class="no-script"><img src="rover-preview.png" alt="Reference CAD of the rover's enclosure and populated carrier"><p>Enable JavaScript for interactive inspection. <a href="project.html">Project details</a>, <a href="../electronics/out/schematic/carrier.svg">the schematic</a> and <a href="carrier-populated.step" download>CAD downloads</a> remain available.</p></div></noscript>
+    </section>
+    <aside id="controls" aria-label="Inspection controls" tabindex="-1">
+      <a class="mobile-controls" href="#stage">Back to model ↑</a>
+      <fieldset id="view-controls" disabled><legend>View direction</legend><div class="views"><button data-view="top">Top</button><button data-view="front">Front</button><button data-view="right">Right</button><button data-view="bottom">Bottom</button><button data-view="back">Back</button><button data-view="left">Left</button></div><button id="iso" class="full-width" aria-pressed="true">3D angle</button></fieldset>
+      <div class="row"><button id="fit" disabled>Fit view</button><button id="in" aria-label="Zoom in" disabled>＋</button><button id="out" aria-label="Zoom out" disabled>−</button></div>
+      <fieldset id="rover-options" disabled><legend>Look inside</legend><label><input id="shell" type="checkbox" checked> Show enclosure shell</label><label>Shell opacity <input id="opacity" type="range" min="0.08" max="1" step=".02" value="1"></label><label>Separate parts <input id="explode" type="range" min="0" max="1" step=".02" value="0"></label><label><input id="envelopes" type="checkbox" checked> Unqualified hardware envelopes</label><label><input id="reserves" type="checkbox"> Cable / clearance reserves</label><label><input id="stand" type="checkbox"> Show test stand</label></fieldset>
+      <fieldset id="pcb-options" disabled hidden><legend>Board detail</legend><label><input id="components" type="checkbox" checked> Show components</label><div class="row"><button data-drawing="top" aria-pressed="false">Top routing</button><button data-drawing="bottom" aria-pressed="false">Bottom routing</button></div><button id="board3d" class="full-width">Return to 3D board</button></fieldset>
+      <p class="note" id="disclaimer">Saved CAD in millimetres. Physical fit and socket engagement remain unqualified. Front is the sensor side (+Y).</p>
+      <details id="parts-panel"><summary>Individual parts</summary><div id="parts"><p class="note">Available when geometry has loaded.</p></div></details>
+      <div class="downloads"><h2>Review files</h2><a href="carrier-populated.step" download>Populated PCB STEP <span>16 MB</span></a><a href="../electronics/out/schematic/carrier.svg">Electrical schematic <span>SVG</span></a><a href="project.html">Specifications &amp; documentation</a><a href="credits.html">CAD sources &amp; licenses</a></div>
+      <p class="note">Reference geometry only. <a href="project.html#release">See what still needs verification.</a></p>
+    </aside>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -45,17 +45,28 @@ From the repository root, build and check the upload bundle:
 
 ```sh
 python3 tools/build-viewer-site.py
+python3 tools/check-viewer-site.py
+node tools/check-viewer-ui.mjs
 python3 tools/check-viewer.py --site-root .vercel/output/static --report-dir .cache/viewer-site-check
 npx --yes vercel@59.15.0 link --yes --project axiom-rover --scope utkarshs-projects-88519d03
 npx --yes vercel@59.15.0 deploy --prebuilt --prod --yes
 ```
 
 The builder emits Vercel's [static Build Output API](https://vercel.com/docs/build-output-api)
-under ignored `.vercel/output/`. The allowlist contains the viewer, three circuit
-drawings, populated PCB STEP download, provenance and license files. It does not
-upload the full repository or local tooling. `.vercel/project.json` is local
-account/project configuration and stays ignored. Deploy the prebuilt output;
-running a source deployment from the repository root would upload unrelated CAD.
+under ignored `.vercel/output/`. Its fixed allowlist contains the viewer and project
+pages, the CAD and circuit downloads linked from them, provenance, and licenses.
+It rejects missing files and Git LFS pointers before replacing the output; run
+`git lfs pull` if the geometry is still a pointer. Only files listed in the
+builder reach the public site. `.vercel/project.json` is local account/project
+configuration and stays ignored. Deploy the prebuilt output; a source deployment
+from the repository root would upload unrelated CAD.
+
+The output configuration serves `/viewer/` explicitly and applies a same-origin
+content policy, basic security headers, and revalidation caching. Revalidation
+matters because the asset URLs do not contain content hashes. The inline import
+map is allowed by a hash generated from the source HTML during packaging.
+The UI check uses Node.js 22+ and `chromium` on `PATH`; it runs against the
+packaged site and writes browser reports under `.cache/viewer-ui/`.
 
 The geometry is compressed losslessly from about 100 MB to 17 MB; the complete
 bundle is about 40 MB. The hosted entry point uses the browser's native
